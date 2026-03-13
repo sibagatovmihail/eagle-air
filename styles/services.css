@@ -1,0 +1,275 @@
+/* =============================================================================
+   Services Section
+   Source: Figma node 15:970
+   ============================================================================= */
+
+
+/* ── Section shell ──────────────────────────────────────────────────────────── */
+
+.services {
+  background: var(--bg-surface);
+  padding-block: var(--spacing-12); /* 4.375rem = 70px */
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem; /* 30px */
+}
+
+
+/* ── Section header ─────────────────────────────────────────────────────────── */
+
+.services__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.services__eyebrow {
+  font-size: var(--text-p3);         /* 12px */
+  font-weight: var(--weight-bold);
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  line-height: var(--leading-p3);
+}
+
+.services__heading {
+  font-size: var(--text-h2);         /* 2.5rem = 40px */
+  font-weight: var(--weight-bold);
+  color: var(--text-heading);
+  line-height: var(--leading-h2);
+}
+
+.services__desc {
+  font-size: var(--text-p1);         /* 1rem = 16px */
+  font-weight: var(--weight-regular);
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 32.5rem;               /* 520px */
+}
+
+
+/* ── Grid ───────────────────────────────────────────────────────────────────── */
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);             /* 2rem = 32px */
+}
+
+
+/* ── Card ───────────────────────────────────────────────────────────────────── */
+
+.services-card {
+  position: relative;               /* for badge absolute positioning */
+  background: var(--bg-surface);
+  border: var(--border-width) solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.services-card:hover {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+/* ── Card image ─────────────────────────────────────────────────────────────── */
+
+.services-card__img-wrap {
+  height: 11.6875rem;               /* 187px */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.services-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ── Card body (title + description) ───────────────────────────────────────── */
+
+.services-card__body {
+  padding: var(--space-md) 1.3125rem 0; /* 16px 21px 0 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;                     /* 4px */
+}
+
+.services-card__title {
+  font-size: var(--text-h4);        /* 1.125rem = 18px */
+  font-weight: var(--weight-bold);
+  color: var(--text-base);
+  line-height: var(--leading-h4);
+}
+
+.services-card__desc {
+  font-size: var(--text-p2);        /* 0.875rem = 14px */
+  font-weight: var(--weight-regular);
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+
+/* ── Card footer (list + button) ────────────────────────────────────────────── */
+
+.services-card__footer {
+  margin-top: auto;
+  padding: 1.3125rem;               /* 21px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.3125rem;                   /* 21px */
+}
+
+.services-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);             /* 0.5rem = 8px */
+}
+
+.services-card__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;                   /* 7px */
+}
+
+.services-card__item-icon {
+  width: 0.875rem;                  /* 14px */
+  height: 0.875rem;
+  flex-shrink: 0;
+  display: block;
+}
+
+.services-card__item-text {
+  font-size: var(--text-p3);        /* 0.75rem = 12px */
+  font-weight: var(--weight-regular);
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+
+/* ── Card buttons ───────────────────────────────────────────────────────────── */
+
+.services-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+  padding: 0.875rem 1.5rem;
+  border: var(--border-width) solid var(--text-heading);
+  border-radius: var(--radius-md);
+  font-size: 0.76875rem;            /* ~12.3px */
+  font-weight: var(--weight-bold);
+  color: var(--text-heading);
+  background: var(--bg-surface);
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.services-card__btn:hover {
+  background-color: var(--text-heading);
+  color: var(--text-inverse);
+}
+
+/* Primary variant — blue filled (Repair Service) */
+.services-card__btn--primary {
+  background: var(--action-primary); /* #59aee3 */
+  border-color: var(--bg-surface);
+  color: var(--text-inverse);
+  box-shadow: 0 0.25rem 1rem rgba(92, 176, 227, 0.35);
+}
+
+.services-card__btn--primary:hover {
+  background-color: var(--action-primary_hover);
+}
+
+.services-card__btn-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  display: block;
+}
+
+.services-card__btn:hover .btn__arrow-wrap {
+  transform: translateX(0.25rem);
+}
+
+
+/* ── Emergency badge ────────────────────────────────────────────────────────── */
+
+.services-card__badge {
+  position: absolute;
+  top: 0.6875rem;                   /* 11px */
+  left: 0.6875rem;
+  background: #dc2626;
+  color: var(--text-inverse);
+  font-size: 0.6875rem;             /* 11px */
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.04125rem;       /* ~0.66px */
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;        /* 4px 10px */
+  border-radius: var(--radius-pill);
+  line-height: 1;
+}
+
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+
+/* ≤1100px — slightly tighter card gap */
+@media (max-width: 68.75rem) {
+  .services__grid {
+    gap: 1.5rem;
+  }
+}
+
+/* ≤1000px — reduce inner card padding */
+@media (max-width: 62.5rem) {
+  .services-card__body {
+    padding: var(--space-md) 1rem 0;
+  }
+
+  .services-card__footer {
+    padding: 1rem;
+  }
+}
+
+/* ≤950px — 2-column; third card spans full row */
+@media (max-width: 59.375rem) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services__grid .services-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ≤600px — 1-column, 1rem gap */
+@media (max-width: 37.5rem) {
+  .services {
+    padding-block: 3rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .services__grid .services-card:last-child {
+    grid-column: auto;
+  }
+
+  .services__heading {
+    font-size: 2rem;
+  }
+}

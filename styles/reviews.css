@@ -1,0 +1,181 @@
+/* =============================================================================
+   Reviews Section
+   Figma node 15:1328 — "What Our Customers Say"
+   ============================================================================= */
+
+/* ── Section shell ─────────────────────────────────────────────────────────── */
+.reviews {
+  background: var(--bg-surface);
+  padding-block: var(--spacing-12); /* 4.375rem / 70px */
+}
+
+/* ── Section header ────────────────────────────────────────────────────────── */
+.reviews__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px */
+  margin-bottom: 3.5rem; /* 56px */
+}
+
+.reviews__eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-p3);    /* 0.75rem / 12px */
+  color: rgba(240, 124, 32, 0.9);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  line-height: 1;
+}
+
+.reviews__heading {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-h2);    /* 2.5rem / 40px */
+  line-height: var(--leading-h2);
+  color: var(--text-heading);
+}
+
+.reviews__desc {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-p1);    /* 1rem / 16px */
+  line-height: 1.5;
+  color: var(--text-heading);
+  max-width: 32.5rem;
+}
+
+/* ── Cards grid ────────────────────────────────────────────────────────────── */
+.reviews__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem; /* 28px */
+}
+
+/* ── Single review card ────────────────────────────────────────────────────── */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem; /* 14px */
+  background: var(--bg-surface);
+  border: var(--border-width) solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.797rem; /* ~12.75px */
+  padding: 1.3125rem; /* 21px */
+  transition: box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* ── Card top row: quote icon + stars ──────────────────────────────────────── */
+.review-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Quote icon — two SVG halves assembled into a 28×28 icon */
+.review-card__quote {
+  position: relative;
+  width: 1.75rem;   /* 28px */
+  height: 1.25rem;  /* 28px */
+  flex-shrink: 0;
+  margin-right: 0.65625rem; /* 10.5px */
+}
+
+.review-card__quote-left,
+.review-card__quote-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.review-card__quote-left {
+  left: 12.5%;
+  right: 58.33%;
+}
+
+.review-card__quote-right {
+  left: 58.33%;
+  right: 12.5%;
+}
+
+.review-card__quote-left img,
+.review-card__quote-right img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Stars row */
+.review-card__stars {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.review-card__star {
+  width: 1.09375rem;  /* 17.5px */
+  height: 1.09375rem; /* 17.5px */
+}
+
+/* ── Review body text ──────────────────────────────────────────────────────── */
+.review-card__text {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  line-height: 1.5;
+  color: #4a5565;
+}
+
+/* ── Author block ──────────────────────────────────────────────────────────── */
+.review-card__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* 4px */
+  margin-top: auto;            /* push to bottom of flex card */
+  padding-top: 1.0625rem; /* 17px */
+  border-top: var(--border-width) solid rgba(0, 0, 0, 0.1);
+}
+
+.review-card__name {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  line-height: 1;
+  color: var(--text-heading);
+}
+
+.review-card__location {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-p3);   /* 0.75rem / 12px */
+  line-height: 1;
+  color: #6a7282;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+/* Tablet portrait ≤ 48rem */
+@media (max-width: 48rem) {
+  .reviews__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Phone ≤ 37.5rem */
+@media (max-width: 37.5rem) {
+  .reviews__heading {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .reviews__header {
+    margin-bottom: 2rem;
+  }
+
+  .review-card {
+    padding: 1rem;
+  }
+}

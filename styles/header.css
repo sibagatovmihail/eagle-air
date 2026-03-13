@@ -1,0 +1,373 @@
+/* =============================================================================
+   EagleAir — Topbar & Header Nav
+   Depends on: styles/tokens.css
+   ============================================================================= */
+
+/* ─── Fixed wrapper ─────────────────────────────────────────────────────────── */
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+/* ─── Topbar ─────────────────────────────────────────────────────────────────── */
+
+.topbar {
+  background-color: var(--bg-dark);
+  border-bottom: var(--border-width) solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  max-height: 2.75rem;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+#site-header.scrolled .topbar {
+  max-height: 0;
+}
+
+.topbar__inner {
+  padding-block: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__text {
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-regular);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+}
+
+.topbar__phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-bold);
+  line-height: 1.5;
+  color: var(--text-inverse);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.topbar__phone:hover {
+  color: var(--action-primary);
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+.topbar__phone-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+
+/* ─── Navbar ─────────────────────────────────────────────────────────────────── */
+
+.navbar {
+  background-color: var(--bg-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__inner {
+  padding-block: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  transition: padding 0.25s ease;
+}
+
+#site-header.scrolled .navbar__inner {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar__logo-full {
+  height: 3.125rem;   /* 50px */
+  width: auto;
+  max-width: 9.625rem; /* 154px */
+  display: block;
+  transition: height 0.25s ease;
+}
+
+.navbar__logo-icon {
+  display: none;       /* hidden on desktop/tablet — shown on phone only */
+  height: 2.5rem;
+  width: auto;
+}
+
+#site-header.scrolled .navbar__logo-full {
+  height: 2.25rem;
+}
+
+#site-header.scrolled .navbar {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Remove box shadow when mobile nav is open */
+.navbar:has(.navbar__nav.open) {
+  box-shadow: none !important;
+}
+
+
+/* Nav links */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__nav a {
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-regular);
+  line-height: 1.5;
+  color: #364153;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar__nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--action-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navbar__nav a:hover {
+  color: var(--action-primary);
+}
+
+.navbar__nav a:hover::before,
+.navbar__nav a.active::before {
+  transform: scaleX(1);
+}
+
+.navbar__nav a.active {
+  color: var(--action-primary);
+}
+
+/* Actions: hamburger + CTA */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+/* CTA button — always visible */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.875rem 1.5rem;
+  background-color: #5cb0e3;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-p1);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  color: var(--text-inverse);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--action-primary_hover);
+}
+
+.btn-cta__icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+
+/* ─── Hamburger button (hidden on desktop) ───────────────────────────────────── */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 1.375rem;
+  height: 2px;
+  background-color: #364153;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animated X state */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────── */
+
+/* ── Tier 1: Tablet landscape (≤ 1024px) ───────────────────────────────────── */
+@media (max-width: 64rem) {
+
+  .navbar__inner {
+    gap: var(--space-md);         /* 1rem — tighter than 2rem desktop */
+  }
+
+  .navbar__nav {
+    gap: 1rem;                    /* tighten link spacing */
+  }
+
+  .navbar__logo-full {
+    height: 2.75rem;              /* 44px — gentle reduction from 3.125rem */
+  }
+}
+
+/* ── Tier 2: Tablet portrait / hamburger threshold (≤ 768px) ────────────────── */
+@media (max-width: 48rem) {
+
+  /* Topbar: stack vertically */
+  .topbar__inner {
+    gap: 0.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .topbar__text {
+    font-size: 0.6875rem;
+    white-space: normal;
+  }
+
+  /* Show hamburger, hide desktop nav */
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar__nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background-color: var(--bg-surface);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: var(--space-sm) 0;
+    z-index: 99;
+    /* Hidden state */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.375rem);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0.22s;
+  }
+
+  .navbar__nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0s;
+  }
+
+  .navbar__nav a {
+    width: 100%;
+    padding: 0.75rem var(--space-lg);
+    border-bottom: var(--border-width) solid var(--border-default);
+  }
+
+  .navbar__nav a:last-child {
+    border-bottom: none;
+  }
+
+  /* Keep navbar position:relative so dropdown is anchored */
+  .navbar {
+    position: relative;
+  }
+
+  .navbar__inner {
+    gap: var(--space-sm);         /* 0.5rem */
+  }
+
+  /* Hamburger to far-right corner at this breakpoint */
+  .btn-cta { order: 1; }
+  .hamburger { order: 2; }
+
+  /* Hide custom underline on mobile nav (border-bottom handles separation) */
+  .navbar__nav a::before {
+    display: none;
+  }
+
+  /* CTA button — no resizing at tablet width */
+}
+
+/* ── Tier 3: Phone (≤ 600px) ────────────────────────────────────────────────── */
+@media (max-width: 37.5rem) {
+
+  /* Logo: swap to icon-only asset */
+  .navbar__logo-full { display: none; }
+  .navbar__logo-icon { display: block; }
+
+  /* CTA: reduce size on actual phone screens */
+  .btn-cta {
+    padding: 0.625rem 1rem;
+    font-size: var(--text-p2);    /* 0.875rem / 14px */
+  }
+}
+
+/* ── Tier 4: Small phone (≤ 480px) ──────────────────────────────────────────── */
+@media (max-width: 30rem) {
+  .topbar__text {
+    display: none;                /* keep phone link, hide service area text */
+  }
+}

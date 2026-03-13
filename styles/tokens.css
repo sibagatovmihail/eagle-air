@@ -1,0 +1,129 @@
+/* =============================================================================
+   EagleAir Design System — CSS Custom Properties
+   Source: Figma Design System v2.0 (node 178:14)
+   Root: 16px · Unit: rem · Color: hsl
+   ============================================================================= */
+
+:root {
+
+  /* ---------------------------------------------------------------------------
+     BACKGROUNDS
+     --------------------------------------------------------------------------- */
+
+  --bg-page:          #f7f7f7;              /* App / page background            */
+  --bg-surface:       #ffffff;              /* Cards, panels, modals            */
+  --bg-surface-alt:   #f5f5f5;              /* Light BG — alternate surfaces    */
+  --bg-dark:          #0f1d24;              /* Nav, dark hero sections          */
+  --bg-blue-tint:     #e4f1fb;              /* Light blue fills                 */
+  --bg-blue-overlay:  rgba(89, 174, 227, 0.2); /* Translucent blue overlay      */
+
+
+  /* ---------------------------------------------------------------------------
+     BORDERS
+     --------------------------------------------------------------------------- */
+
+  --border-default:   rgba(0, 0, 0, 0.08);  /* Card borders, dividers           */
+  --border-width:     1px;
+
+
+  /* ---------------------------------------------------------------------------
+     TEXT
+     --------------------------------------------------------------------------- */
+
+  --text-heading:     #0f1d24;              /* Primary headings (Navy Dark)     */
+  --text-base:        #0a0a0a;              /* Near-black — H4, high-contrast   */
+  --text-body:        #4a5464;              /* Body paragraphs                  */
+  --text-muted:       #4d6280;              /* Labels, secondary / meta text    */
+  --text-inverse:     #ffffff;              /* Text on dark backgrounds         */
+  --text-accent:      #ef7d1f;              /* Highlights, token labels         */
+  --text-link:        #59aee3;              /* Inline links                     */
+
+
+  /* ---------------------------------------------------------------------------
+     ACTIONS
+     --------------------------------------------------------------------------- */
+
+  --action-primary:       hsl(203, 71%, 62%);          /* Blue Primary — buttons, links    */
+  --action-primary_hover: hsl(203, 71%, 50%);
+  --action-primary-text:  #0f1d24;          /* Text on primary blue buttons     */
+  --action-accent:        #ef7d1f;          /* Orange Accent — CTAs             */
+  --action-accent-text:   #ffffff;          /* Text on accent orange buttons    */
+
+
+  /* ---------------------------------------------------------------------------
+     STATUS
+     --------------------------------------------------------------------------- */
+
+  --status-success:   #00a33c;              /* Green Success                    */
+  --status-warning:   #ef7d1f;              /* Warning — shares Orange Accent   */
+
+
+  /* ---------------------------------------------------------------------------
+     TYPOGRAPHY
+     --------------------------------------------------------------------------- */
+
+  /* Font families */
+  --font-sans:        'Helvetica', sans-serif;
+  --font-button:      'Helvetica', sans-serif;
+  --font-mono:        'Helvetica', monospace;
+
+  /* Font sizes */
+  --text-h1:          3.5rem;               /* 56px — Hero heading              */
+  --text-h2:          2.5rem;               /* 40px — Section heading           */
+  --text-h3:          1.5rem;               /* 24px — Sub-section heading       */
+  --text-h4:          1.125rem;             /* 18px — Card / label heading      */
+  --text-p1:          1rem;                 /* 16px — Primary body copy         */
+  --text-p2:          0.875rem;             /* 14px — Secondary body copy       */
+  --text-p3:          0.75rem;              /* 12px — Small / caption           */
+  --text-btn:         0.75rem;              /* 12px — Button label              */
+
+  /* Line heights */
+  --leading-h1:       3.5rem;               /* 56px */
+  --leading-h2:       2.75rem;              /* 44px */
+  --leading-h3:       1.95rem;              /* 31.2px */
+  --leading-h4:       1.575rem;             /* 25.2px */
+  --leading-p1:       1.5rem;               /* 24px */
+  --leading-p2:       1.3125rem;            /* 21px */
+  --leading-p3:       1.125rem;             /* 18px */
+  --leading-btn:      1.05rem;              /* 16.8px */
+
+  /* Font weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-bold:      700;
+
+  /* Letter spacing */
+  --tracking-section: 0.125rem;             /* 2px — section headings uppercase */
+  --tracking-label:   0.075rem;             /* 1.2px — small uppercase labels   */
+
+
+  /* ---------------------------------------------------------------------------
+     SPACING
+     (Named tokens from Figma SpacingSection)
+     --------------------------------------------------------------------------- */
+
+  --spacing-1:        0.25rem;              /* 4px  */
+  --spacing-3:        0.5rem;               /* 8px  */
+  --spacing-6:        1rem;                 /* 16px */
+  --spacing-9:        2rem;                 /* 32px */
+  --spacing-12:       4.375rem;             /* 70px */
+
+  /* Semantic spacing aliases (from layout analysis) */
+  --space-xs:         0.25rem;              /* 4px  */
+  --space-sm:         0.5rem;               /* 8px  */
+  --space-md:         1rem;                 /* 16px */
+  --space-lg:         1.5rem;               /* 24px */
+  --space-xl:         2rem;                 /* 32px */
+  --space-2xl:        4rem;                 /* 64px */
+
+
+  /* ---------------------------------------------------------------------------
+     RADII
+     --------------------------------------------------------------------------- */
+
+  --radius-sm:        0.25rem;              /* 4px   — tight, inline elements   */
+  --radius-md:        0.5rem;               /* 8px   — buttons, tags            */
+  --radius-lg:        0.8rem;               /* 12.8px — cards, panels           */
+  --radius-pill:      6.25rem;              /* 100px — pill / full-round        */
+
+}

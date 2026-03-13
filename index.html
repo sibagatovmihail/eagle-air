@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EagleAir — HVAC Services Sarasota</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/services.css">
+  <link rel="stylesheet" href="styles/mid-banner.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/reviews.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--bg-page); }
+    /* Reusable container — limits width and centers each section's content */
+    .container {
+      max-width: 72.5rem;              /* 1160px */
+      margin-inline: auto;
+      padding-inline: var(--space-lg); /* 1.5rem safety padding on small screens */
+    }
+    @media (max-width: 37.5rem) {
+      .container { padding-inline: 0.875rem; } /* 14px on phones */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SITE HEADER (fixed — topbar + navbar)
+       ═══════════════════════════════════════════════════════ -->
+  <div id="site-header">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar__inner container">
+        <span class="topbar__text">
+          Serving Sarasota &amp; surrounding areas
+        </span>
+        <a class="topbar__phone" href="tel:+19043169933">
+          <img
+            class="topbar__phone-icon"
+            src="assets/icons/phone-topbar.svg"
+            alt=""
+            aria-hidden="true"
+          >
+          +1 904 316 9933
+        </a>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner container">
+
+        <!-- Logo -->
+        <a class="navbar__logo" href="#" aria-label="EagleAir — Home">
+          <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
+          <img class="navbar__logo-icon" src="assets/eagle-air-logo_cropped.png" alt="EagleAir">
+        </a>
+
+        <!-- Desktop navigation -->
+        <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
+          <a href="#" class="active">Home</a>
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Reviews</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <!-- Actions: hamburger + CTA -->
+        <div class="navbar__actions">
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <a class="btn-cta" href="tel:+19043169933">
+            <img
+              class="btn-cta__icon"
+              src="assets/icons/phone-cta.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            Call Now
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+  </div>
+
+  <!-- Spacer — pushes content below the fixed header -->
+  <div id="header-spacer"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero">
+
+      <!-- Background image + dark overlay -->
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__img" src="assets/images/hero-bg.png" alt="">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container hero__container">
+
+        <!-- Text block: badge + heading + sub-paragraph -->
+        <div class="hero__text">
+
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Available Now · Sarasota, FL
+          </div>
+
+          <h1 class="hero__heading">AC Out? We'll Be There Before You Break a Sweat.</h1>
+
+          <p class="hero__sub">
+            Sarasota's trusted HVAC team — same-day repair, flat-rate pricing, and 15 years of quality you can count on.
+          </p>
+
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="hero__actions">
+
+          <a class="hero__btn hero__btn--primary" href="tel:+19043169933">
+            <img class="hero__btn-icon" src="assets/icons/phone-hero.svg" alt="" aria-hidden="true">
+            Call Now — 24/7 Emergency
+          </a>
+
+          <div>
+            <a class="hero__btn hero__btn--secondary" href="#">
+              Get a Free Quote
+              <div class="btn__arrow-wrap"><img class="hero__btn-icon" src="assets/icons/arrow-right.svg" alt="" aria-hidden="true"></div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── SERVICES ─────────────────────────────────────────────── -->
+    <section class="services" id="services">
+      <div class="container services__container">
+
+        <!-- Section header -->
+        <div class="services__header">
+          <p class="services__eyebrow">Our services</p>
+          <h2 class="services__heading">The Right Fix,<br>Right When You Need It</h2>
+          <p class="services__desc">From emergency breakdowns to full system installs — every job backed by our quality guarantee.</p>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="services__grid">
+
+          <!-- Card 1: Repair Service (featured — shadow always on, primary CTA) -->
+          <article class="services-card">
+            <div class="services-card__img-wrap">
+              <img
+                class="services-card__img"
+                src="assets/images/service-repair.png"
+                alt="HVAC technician performing AC repair"
+              >
+            </div>
+            <div class="services-card__body">
+              <h3 class="services-card__title">Repair Service</h3>
+              <p class="services-card__desc">AC quit in the middle of a Florida summer? We respond fast — rapid diagnosis, fixed right the first time.</p>
+            </div>
+            <div class="services-card__footer">
+              <ul class="services-card__list" aria-label="Repair Service includes">
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">24/7 Availability</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">All Brands &amp; Models</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Same-Day Response</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Flat-rate, no surprises</span>
+                </li>
+              </ul>
+              <div>
+                <a class="services-card__btn services-card__btn--primary" href="tel:+19043169933">
+                  <img class="services-card__btn-icon" src="assets/icons/phone-cta.svg" alt="" aria-hidden="true">
+                  Call for Repair
+                </a>
+              </div>
+            </div>
+            <!-- Emergency badge -->
+            <span class="services-card__badge" aria-label="Available 24/7 Emergency">24/7 Emergency</span>
+          </article>
+
+          <!-- Card 2: AC & Maintenance -->
+          <article class="services-card">
+            <div class="services-card__img-wrap">
+              <img
+                class="services-card__img"
+                src="assets/images/service-maintenance.png"
+                alt="Technician performing AC maintenance"
+              >
+            </div>
+            <div class="services-card__body">
+              <h3 class="services-card__title">AC &amp; Maintenance</h3>
+              <p class="services-card__desc">Regular tune-ups, filter changes, and efficiency checks that keep your system running at peak — and your bills down.</p>
+            </div>
+            <div class="services-card__footer">
+              <ul class="services-card__list" aria-label="AC & Maintenance includes">
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">AC Repair &amp; Troubleshooting</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Extended system lifespan</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Preventive Maintenance</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Energy Efficiency Upgrades</span>
+                </li>
+              </ul>
+              <div>
+                <a class="services-card__btn" href="#">Get a free Quote <div class="btn__arrow-wrap"><img class="services-card__btn-icon" src="assets/icons/arrow-right-sm.svg" alt="" aria-hidden="true"></div></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: New Installation -->
+          <article class="services-card">
+            <div class="services-card__img-wrap">
+              <img
+                class="services-card__img"
+                src="assets/images/service-installation.png"
+                alt="New HVAC system installation"
+              >
+            </div>
+            <div class="services-card__body">
+              <h3 class="services-card__title">New Installation</h3>
+              <p class="services-card__desc">Building new or upgrading? We design and install the right system for your space — fully custom, warrantied, and built to last.</p>
+            </div>
+            <div class="services-card__footer">
+              <ul class="services-card__list" aria-label="New Installation includes">
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Full System Design</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Equipment Selection</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Professional Installation</span>
+                </li>
+                <li class="services-card__item">
+                  <img class="services-card__item-icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true">
+                  <span class="services-card__item-text">Warranty Support Included</span>
+                </li>
+              </ul>
+              <div>
+                <a class="services-card__btn" href="#">Request a Consultation <div class="btn__arrow-wrap"><img class="services-card__btn-icon" src="assets/icons/arrow-right-sm.svg" alt="" aria-hidden="true"></div></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── MID BANNER ────────────────────────────────────────────── -->
+    <section class="mid-banner">
+      <div class="container">
+        <div class="mid-banner__card">
+          <div class="mid-banner__text">
+            <p class="mid-banner__heading">Not sure what you need?</p>
+            <p class="mid-banner__sub">Tell us about your situation — we'll assess it and send you a free, no-obligation estimate.</p>
+          </div>
+          <div class="mid-banner__cta-wrap">
+            <a class="mid-banner__cta" href="#">
+              Get a Free Quote
+              <div class="btn__arrow-wrap"><img class="mid-banner__cta-icon" src="assets/icons/arrow-right-sm.svg" alt="" aria-hidden="true"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────────── -->
+    <section class="about" id="about">
+      <div class="container about__container">
+
+        <!-- Left: text + stats -->
+        <div class="about__content">
+
+          <p class="about__eyebrow">About EagleAir</p>
+          <h2 class="about__heading">15 years keeping our customers comfortable</h2>
+
+          <div class="about__body">
+            <p class="about__para">For over 15 years, EagleAIr has been its customers trusted partner for all heating, ventilation, and air conditioning needs. We pride ourselves on delivering exceptional service, quality workmanship, and reliable solutions that keep our customers comfortable year-round.</p>
+            <p class="about__para">Our team of licensed and certified technicians brings extensive experience and expertise to every project. Whether you need emergency repairs, routine maintenance, or a complete system design and installation, we're committed to exceeding your expectations.</p>
+          </div>
+
+          <!-- 2×2 stats grid -->
+          <div class="about__stats">
+            <div class="about__stat-card">
+              <img class="about__stat-icon" src="assets/icons/stat-customers.svg" alt="" aria-hidden="true">
+              <span class="about__stat-number">500+</span>
+              <span class="about__stat-label">Happy Customers</span>
+            </div>
+            <div class="about__stat-card">
+              <img class="about__stat-icon" src="assets/icons/stat-years.svg" alt="" aria-hidden="true">
+              <span class="about__stat-number">15+</span>
+              <span class="about__stat-label">Years Experience</span>
+            </div>
+            <div class="about__stat-card">
+              <img class="about__stat-icon" src="assets/icons/stat-areas.svg" alt="" aria-hidden="true">
+              <span class="about__stat-number">20+</span>
+              <span class="about__stat-label">Areas Served</span>
+            </div>
+            <div class="about__stat-card">
+              <img class="about__stat-icon" src="assets/icons/stat-emergency.svg" alt="" aria-hidden="true">
+              <span class="about__stat-number">24/7</span>
+              <span class="about__stat-label">Emergency Service</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: photo with badge -->
+        <div class="about__img-col">
+          <img
+            class="about__img"
+            src="assets/images/about-photo.png"
+            alt="Professional HVAC technicians at work"
+          >
+          <div class="about__badge" aria-label="Licensed and fully insured">
+            <div class="about__badge-icon-wrap">
+              <img
+                class="about__badge-icon"
+                src="assets/icons/licensed-badge.svg"
+                alt=""
+                aria-hidden="true"
+              >
+            </div>
+            <div class="about__badge-text">
+              <span class="about__badge-title">Licensed</span>
+              <span class="about__badge-sub">&amp; Fully Insured</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── REVIEWS ─────────────────────────────────────────────────────── -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="reviews__header">
+          <p class="reviews__eyebrow">Customer Reviews</p>
+          <h2 class="reviews__heading">What Our Customers Say</h2>
+          <p class="reviews__desc">Real reviews from real homeowners and businesses in Florida.</p>
+        </div>
+
+        <!-- 2×2 cards grid -->
+        <div class="reviews__grid">
+
+          <!-- Card 1 -->
+          <article class="review-card">
+            <div class="review-card__top">
+              <div class="review-card__quote" aria-hidden="true">
+                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
+                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
+              </div>
+              <div class="review-card__stars" aria-label="5 out of 5 stars">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+              </div>
+            </div>
+            <p class="review-card__text">"EagleAIr installed our new central air system last month. The team was professional, punctual, and the installation was flawless. Our home has never been more comfortable!"</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Adebayo Johnson</span>
+              <span class="review-card__location">Maitama, Florida</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="review-card">
+            <div class="review-card__top">
+              <div class="review-card__quote" aria-hidden="true">
+                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
+                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
+              </div>
+              <div class="review-card__stars" aria-label="5 out of 5 stars">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+              </div>
+            </div>
+            <p class="review-card__text">"When our AC broke down during the peak of dry season, EagleAIr came to our rescue within hours. Excellent emergency service and very reasonable pricing."</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Fatima Hassan</span>
+              <span class="review-card__location">Wuse II, Florida</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="review-card">
+            <div class="review-card__top">
+              <div class="review-card__quote" aria-hidden="true">
+                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
+                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
+              </div>
+              <div class="review-card__stars" aria-label="5 out of 5 stars">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+              </div>
+            </div>
+            <p class="review-card__text">"I've been using EagleAIr for maintenance on our office building for 3 years. They're reliable, knowledgeable, and always deliver quality service. Highly recommended!"</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Michael Okafor</span>
+              <span class="review-card__location">Garki, Florida</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="review-card">
+            <div class="review-card__top">
+              <div class="review-card__quote" aria-hidden="true">
+                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
+                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
+              </div>
+              <div class="review-card__stars" aria-label="5 out of 5 stars">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+                <img class="review-card__star" src="assets/icons/star.svg" alt="">
+              </div>
+            </div>
+            <p class="review-card__text">"The technicians were courteous and explained everything they were doing. The repair was completed quickly and our system is running better than ever. Great customer service!"</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Sarah Ibrahim</span>
+              <span class="review-card__location">Asokoro, Florida</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── CONTACT ─────────────────────────────────────────────────────── -->
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="contact__header">
+          <p class="contact__eyebrow">Get in touch</p>
+          <h2 class="contact__heading">Ready to Get Started?</h2>
+          <p class="contact__desc">Ready to improve your comfort? Contact us today for a free consultation and quote.</p>
+        </div>
+
+        <!-- Body: info left + form right -->
+        <div class="contact__body">
+
+          <!-- Left: contact info -->
+          <div class="contact__info">
+
+            <!-- Emergency Line -->
+            <div class="contact__info-item">
+              <div class="contact__info-label">
+                <div class="contact__info-icon-wrap">
+                  <img class="contact__info-icon" src="assets/icons/contact-phone.svg" alt="" aria-hidden="true">
+                </div>
+                <span class="contact__info-title">Emergency Line</span>
+              </div>
+              <div class="contact__info-body">
+                <p class="contact__info-text">+1 904 316 9933</p>
+                <p class="contact__info-sub">24/7 Emergency Line</p>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="contact__info-item">
+              <div class="contact__info-label">
+                <div class="contact__info-icon-wrap">
+                  <img class="contact__info-icon" src="assets/icons/contact-clock.svg" alt="" aria-hidden="true">
+                </div>
+                <span class="contact__info-title">Business Hours</span>
+              </div>
+              <div class="contact__info-body">
+                <div class="contact__info-hours">
+                  <p class="contact__info-hour">Mon - Fri: 8:00 AM - 8:00 PM</p>
+                  <p class="contact__info-hour">Saturday: 9:00 AM - 6:00 PM</p>
+                  <p class="contact__info-hour">Sunday: Emergency Only</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Area -->
+            <div class="contact__info-item">
+              <div class="contact__info-label">
+                <div class="contact__info-icon-wrap">
+                  <img class="contact__info-icon" src="assets/icons/contact-pin.svg" alt="" aria-hidden="true">
+                </div>
+                <span class="contact__info-title">Service Area</span>
+              </div>
+              <div class="contact__info-body">
+                <p class="contact__info-text">Sarasota and the surrounding areas</p>
+                <p class="contact__info-area-sub">North Port etc.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: free quote form -->
+          <div class="contact__form-col">
+            <div class="contact__form-card">
+              <h3 class="contact__form-title">Get a Free Quote</h3>
+              <p class="contact__form-subtitle">Tell us what's going on — we'll reach out with a fast, no-obligation estimate.</p>
+
+              <form
+                class="contact__form"
+                action="mailto:sibagatovmihail@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <!-- Row: Name + Phone -->
+                <div class="contact__form-row">
+                  <div class="contact__field">
+                    <label class="contact__label" for="contact-name">Your Name</label>
+                    <input
+                      class="contact__input"
+                      id="contact-name"
+                      name="name"
+                      type="text"
+                      placeholder="John Smith"
+                      autocomplete="name"
+                    >
+                  </div>
+                  <div class="contact__field">
+                    <label class="contact__label" for="contact-phone">Phone Number</label>
+                    <input
+                      class="contact__input"
+                      id="contact-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="(941) 000-0000"
+                      autocomplete="tel"
+                    >
+                  </div>
+                </div>
+
+                <!-- Service dropdown -->
+                <div class="contact__field">
+                  <label class="contact__label" for="contact-service-trigger">What service do you need?</label>
+                  <div class="custom-select" id="contact-service-wrap">
+                    <input type="hidden" name="service" id="contact-service">
+                    <button
+                      type="button"
+                      class="custom-select__trigger"
+                      id="contact-service-trigger"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                      aria-controls="contact-service-options"
+                    >
+                      <span class="custom-select__value">Select a service</span>
+                      <span class="custom-select__arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul
+                      class="custom-select__options"
+                      id="contact-service-options"
+                      role="listbox"
+                      aria-label="Service options"
+                    >
+                      <li class="custom-select__option" data-value="repair" role="option" tabindex="-1">Repair Service</li>
+                      <li class="custom-select__option" data-value="maintenance" role="option" tabindex="-1">AC &amp; Maintenance</li>
+                      <li class="custom-select__option" data-value="installation" role="option" tabindex="-1">New Installation</li>
+                      <li class="custom-select__option" data-value="emergency" role="option" tabindex="-1">Emergency Service</li>
+                      <li class="custom-select__option" data-value="other" role="option" tabindex="-1">Other</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Description textarea -->
+                <div class="contact__field">
+                  <label class="contact__label" for="contact-desc">
+                    Brief description <span>(optional)</span>
+                  </label>
+                  <textarea
+                    class="contact__textarea"
+                    id="contact-desc"
+                    name="description"
+                    placeholder="e.g. AC not cooling, making a noise, need a mini-split for new room…"
+                  ></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div>
+                  <button class="contact__submit" type="submit">
+                    Send My Request
+                    <div class="btn__arrow-wrap"><img class="contact__submit-icon" src="assets/icons/send-arrow.svg" alt="" aria-hidden="true"></div>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+
+  <footer class="footer">
+    <div class="footer__container">
+
+      <!-- Top 3-column grid -->
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="#" class="footer__logo-wrap">
+            <img src="assets/images/footer-logo.png" alt="EagleAir" class="footer__logo" />
+          </a>
+          <div class="footer__desc">
+            <p>Your trusted HVAC partner in Sarasota. We provide professional heating, ventilation, and air conditioning services with a commitment to excellence and customer satisfaction.</p>
+          </div>
+          <ul class="footer__contact">
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-phone.svg" alt="" /></span>
+              <a href="tel:+19043169933">(904) 316 9933</a>
+            </li>
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-email.svg" alt="" /></span>
+              <a href="mailto:info@eagleair.com">info@eagleair.com</a>
+            </li>
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-pin.svg" alt="" /></span>
+              <span>Sarasota, Florida</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Services column -->
+        <div class="footer__col">
+          <h3 class="footer__col-heading">Services</h3>
+          <ul class="footer__list">
+            <li><a href="#services">Air Conditioning</a></li>
+            <li><a href="#services">Heating Services</a></li>
+            <li><a href="#services">Ventilation</a></li>
+            <li><a href="#services">Maintenance</a></li>
+            <li><a href="#services">Emergency Repair</a></li>
+            <li><a href="#services">Installation</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links + Social column -->
+        <div class="footer__col">
+          <h3 class="footer__col-heading">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <h4 class="footer__col-heading footer__col-heading--social">Follow Us</h4>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-facebook.svg" alt="Facebook" /></a>
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-instagram.svg" alt="Instagram" /></a>
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+
+      </div><!-- /.footer__top -->
+
+      <hr class="footer__divider" />
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 EagleAIr. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">License Info</a>
+        </div>
+      </div>
+
+    </div><!-- /.footer__container -->
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script>
+    const siteHeader = document.getElementById('site-header');
+    const spacer     = document.getElementById('header-spacer');
+    const hamburger  = document.getElementById('hamburger');
+    const navMenu    = document.getElementById('nav-menu');
+
+    /* ── Scroll: shrink header after 50px ── */
+    function onScroll() {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
+      /* Only sync the spacer height — never touch --header-height on scroll
+         so sections using it (e.g. hero) don't jump when the header shrinks */
+      // spacer.style.height = siteHeader.offsetHeight + 'px';
+    }
+
+    /* ── Spacer + CSS var: called once on load and on resize only ── */
+    function updateSpacer() {
+      const h = siteHeader.offsetHeight;
+      spacer.style.height = h + 'px';
+      document.documentElement.style.setProperty('--header-height', h + 'px');
+    }
+
+    /* ── Hamburger: toggle mobile nav ── */
+    hamburger.addEventListener('click', function () {
+      const isOpen = navMenu.classList.toggle('open');
+      this.classList.toggle('active', isOpen);
+      this.setAttribute('aria-expanded', isOpen);
+    });
+
+    /* ── Close mobile nav on link click ── */
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ── Close mobile nav on outside click ── */
+    document.addEventListener('click', function (e) {
+      if (!siteHeader.contains(e.target)) {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', updateSpacer);
+    window.addEventListener('load', updateSpacer);
+
+    /* ── Custom service dropdown ── */
+    (function () {
+      var wrap    = document.getElementById('contact-service-wrap');
+      var trigger = document.getElementById('contact-service-trigger');
+      var hidden  = document.getElementById('contact-service');
+      var valueEl = trigger.querySelector('.custom-select__value');
+      var options = wrap.querySelectorAll('.custom-select__option');
+
+      function open() {
+        wrap.classList.add('custom-select--open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+
+      function close() {
+        wrap.classList.remove('custom-select--open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        wrap.classList.contains('custom-select--open') ? close() : open();
+      });
+
+      options.forEach(function (opt) {
+        opt.addEventListener('click', function () {
+          options.forEach(function (o) { o.classList.remove('custom-select__option--selected'); });
+          opt.classList.add('custom-select__option--selected');
+          valueEl.textContent = opt.textContent;
+          valueEl.classList.add('custom-select__value--chosen');
+          hidden.value = opt.dataset.value;
+          close();
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) close();
+      });
+
+      wrap.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
+    }());
+  </script>
+
+</body>
+</html>

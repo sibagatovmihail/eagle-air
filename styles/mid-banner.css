@@ -1,0 +1,134 @@
+/* =============================================================================
+   Mid Banner — Quote CTA
+   Source: Figma node 114:76
+   ============================================================================= */
+
+
+/* ── Section shell ──────────────────────────────────────────────────────────── */
+
+.mid-banner {
+  background: var(--bg-surface);
+  border-block: var(--border-width) solid rgba(0, 0, 0, 0.06);
+  padding-block: 5.0625rem;         /* 81px */
+}
+
+
+/* ── Inner card ─────────────────────────────────────────────────────────────── */
+
+.mid-banner__card {
+  background: linear-gradient(to right, #dceef9, #ecf4f9);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);         /* 2rem = 32px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+
+/* ── Text block ─────────────────────────────────────────────────────────────── */
+
+.mid-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mid-banner__heading {
+  font-size: 2rem;                  /* 32px */
+  font-weight: var(--weight-bold);
+  color: #0c1b2e;
+  line-height: 1;
+}
+
+.mid-banner__sub {
+  font-size: var(--text-p1);        /* 1rem = 16px */
+  font-weight: var(--weight-regular);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+
+/* ── CTA button ─────────────────────────────────────────────────────────────── */
+
+.mid-banner__cta {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;                     /* 4px */
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: var(--text-p1);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0.25rem 1rem rgba(92, 176, 227, 0.35);
+  transition: background-color 0.2s ease;
+}
+
+.mid-banner__cta:hover {
+  background-color: var(--action-primary_hover);
+}
+
+.mid-banner__cta:hover .btn__arrow-wrap {
+  transform: translateX(0.25rem);
+}
+
+.mid-banner__cta-icon {
+  width: 0.875rem;
+  height: 0.8125rem;                /* 13px */
+  flex-shrink: 0;
+  display: block;
+}
+
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+
+/* Tablet portrait — stack vertically, button aligns right */
+@media (max-width: 48rem) {
+  .mid-banner__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mid-banner__cta-wrap {
+    align-self: flex-end;
+  }
+}
+
+/* Phone — button full width */
+@media (max-width: 37.5rem) {
+  .mid-banner__card {
+    padding: 1.5rem;
+  }
+
+  .mid-banner {
+    padding-block: 3rem;
+  }
+
+  .mid-banner__heading {
+    font-size: 1.5rem;
+  }
+
+  .mid-banner__text {
+    gap: 0.5rem;
+  }
+
+  .mid-banner__cta-wrap {
+    width: 100%;
+  }
+
+  .mid-banner__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ≤500px — reduce CTA button padding to 1rem on all sides */
+@media (max-width: 31.25rem) {
+  .mid-banner__cta {
+    padding: 1rem;
+  }
+}
