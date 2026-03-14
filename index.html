@@ -4,15 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EagleAir — HVAC Services Sarasota</title>
-  <link rel="stylesheet" href="styles/tokens.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/hero.css">
-  <link rel="stylesheet" href="styles/services.css">
-  <link rel="stylesheet" href="styles/mid-banner.css">
-  <link rel="stylesheet" href="styles/about.css">
-  <link rel="stylesheet" href="styles/reviews.css">
-  <link rel="stylesheet" href="styles/contact.css">
-  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preload" as="image" href="assets/images/hero-bg.png" fetchpriority="high">
   <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -116,7 +109,7 @@
 
       <!-- Background image + dark overlay -->
       <div class="hero__bg" aria-hidden="true">
-        <img class="hero__img" src="assets/images/hero-bg.png" alt="">
+        <img class="hero__img" src="assets/images/hero-bg.png" alt="" fetchpriority="high">
         <div class="hero__overlay"></div>
       </div>
 
@@ -181,6 +174,7 @@
                 class="services-card__img"
                 src="assets/images/service-repair.png"
                 alt="HVAC technician performing AC repair"
+                loading="lazy"
               >
             </div>
             <div class="services-card__body">
@@ -224,6 +218,7 @@
                 class="services-card__img"
                 src="assets/images/service-maintenance.png"
                 alt="Technician performing AC maintenance"
+                loading="lazy"
               >
             </div>
             <div class="services-card__body">
@@ -262,6 +257,7 @@
                 class="services-card__img"
                 src="assets/images/service-installation.png"
                 alt="New HVAC system installation"
+                loading="lazy"
               >
             </div>
             <div class="services-card__body">
@@ -364,6 +360,7 @@
             class="about__img"
             src="assets/images/about-photo.png"
             alt="Professional HVAC technicians at work"
+            loading="lazy"
           >
           <div class="about__badge" aria-label="Licensed and fully insured">
             <div class="about__badge-icon-wrap">
@@ -675,7 +672,7 @@
         <!-- Brand column -->
         <div class="footer__brand">
           <a href="#" class="footer__logo-wrap">
-            <img src="assets/images/footer-logo.png" alt="EagleAir" class="footer__logo" />
+            <img src="assets/images/footer-logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
           </a>
           <div class="footer__desc">
             <p>Your trusted HVAC partner in Sarasota. We provide professional heating, ventilation, and air conditioning services with a commitment to excellence and customer satisfaction.</p>
