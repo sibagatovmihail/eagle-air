@@ -88,7 +88,7 @@ Use these four named tiers consistently across **all** stylesheets:
 ## HTML Semantics
 
 Use semantic tags: `<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`, `<article>`.
-Wrap all text nodes (`<span>`, `<p>`, `<h1–h6>`, `<a>`) in a `<div>` cover element — apply layout/spacing styles to the cover, not the text node directly.
+Wrap all text elements (`<span>`, `<p>`, `h1, h2, h3, h4, h5, h6`, `<a>`) in a `<div>` cover element — apply layout/spacing styles to the cover, not the text node directly. Apply this rule to the forms as well. 
 
 ---
 

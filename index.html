@@ -9,7 +9,10 @@
   <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    #hero, #services, #about, #reviews, #contact {
+      scroll-margin-top: var(--header-height, 5rem);
+    }
     body { font-family: var(--font-sans); background-color: var(--bg-page); }
     /* Reusable container — limits width and centers each section's content */
     .container {
@@ -59,11 +62,11 @@
 
         <!-- Desktop navigation -->
         <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
-          <a href="#" class="active">Home</a>
-          <a href="#">Services</a>
-          <a href="#">About</a>
-          <a href="#">Reviews</a>
-          <a href="#">Contact</a>
+          <a href="#hero" class="active">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <!-- Actions: hamburger + CTA -->
@@ -105,7 +108,7 @@
   <main>
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="hero">
+    <section class="hero" id="hero">
 
       <!-- Background image + dark overlay -->
       <div class="hero__bg" aria-hidden="true">
@@ -757,10 +760,29 @@
       document.documentElement.style.setProperty('--header-height', h + 'px');
     }
 
-    /* ── Scroll: toggle scrolled state (no layout side-effects) ── */
+    /* ── Active nav link tracking ── */
+    var navSections = ['hero', 'services', 'about', 'reviews', 'contact'];
+    var navLinks = Array.from(navMenu.querySelectorAll('a[href^="#"]'));
+
+    function updateActiveNav() {
+      var threshold = siteHeader.offsetHeight + 2;
+      var current = navSections[0];
+      for (var i = 0; i < navSections.length; i++) {
+        var el = document.getElementById(navSections[i]);
+        if (el && el.getBoundingClientRect().top <= threshold) {
+          current = navSections[i];
+        }
+      }
+      navLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+
+    /* ── Scroll: toggle scrolled state + update active nav ── */
     function onScroll() {
       var isScrolled = window.scrollY > 50;
       siteHeader.classList.toggle('scrolled', isScrolled);
+      updateActiveNav();
     }
 
     /* ── Hamburger: toggle mobile nav ── */
@@ -790,7 +812,14 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', syncHeaderHeight);
-    window.addEventListener('load', syncHeaderHeight);
+    window.addEventListener('load', function () {
+      syncHeaderHeight();
+      /* Freeze hero offset at load-time full-header height.
+         Never updated on resize/scroll — prevents Safari from
+         growing the hero when the topbar collapses mid-scroll. */
+      document.documentElement.style.setProperty('--hero-offset', siteHeader.offsetHeight + 'px');
+      updateActiveNav();
+    });
 
     /* ── Phone number validation ── */
     document.querySelector('.contact__form').addEventListener('submit', function (e) {
