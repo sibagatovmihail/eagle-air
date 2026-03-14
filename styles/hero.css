@@ -5,7 +5,7 @@
 /* ── Section shell ───────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: calc(100svh - var(--header-height, 5rem));
+  min-height: calc(var(--window-height, 100svh) - var(--header-height, 5rem));
   display: flex;
   align-items: center;
 }

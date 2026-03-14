@@ -517,7 +517,7 @@
                 <span class="contact__info-title">Emergency Line</span>
               </div>
               <div class="contact__info-body">
-                <p class="contact__info-text">+1 904 316 9933</p>
+                <a class="contact__info-text contact__info-phone" href="tel:+19043169933">+1 904 316 9933</a>
                 <p class="contact__info-sub">24/7 Emergency Line</p>
               </div>
             </div>
@@ -592,6 +592,9 @@
                       placeholder="(941) 000-0000"
                       autocomplete="tel"
                     >
+                    <span id="contact-phone-error" class="contact__field-error" hidden>
+                      Please enter a valid phone number (e.g. +1 904 316 9933 or (941) 000-0000).
+                    </span>
                   </div>
                 </div>
 
@@ -749,19 +752,38 @@
     const hamburger  = document.getElementById('hamburger');
     const navMenu    = document.getElementById('nav-menu');
 
-    /* ── Scroll: shrink header after 50px ── */
-    function onScroll() {
-      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
-      /* Only sync the spacer height — never touch --header-height on scroll
-         so sections using it (e.g. hero) don't jump when the header shrinks */
-      // spacer.style.height = siteHeader.offsetHeight + 'px';
-    }
-
-    /* ── Spacer + CSS var: called once on load and on resize only ── */
-    function updateSpacer() {
+    /* ── Sync spacer height + --header-height to current header size ── */
+    function syncHeaderHeight() {
       const h = siteHeader.offsetHeight;
       spacer.style.height = h + 'px';
       document.documentElement.style.setProperty('--header-height', h + 'px');
+    }
+
+    /* ── Set --window-height from window.innerHeight (cross-browser, Safari-safe) ── */
+    function updateWindowHeight() {
+      document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
+    }
+
+    function initLayout() {
+      updateWindowHeight();
+      syncHeaderHeight();
+    }
+
+    /* ── rAF loop: syncs header height during the topbar CSS transition (0.35s) ── */
+    var loopEnd = 0;
+    function syncLoop(now) {
+      syncHeaderHeight();
+      if (now < loopEnd) requestAnimationFrame(syncLoop);
+    }
+
+    /* ── Scroll: toggle scrolled state; when state changes run sync loop ── */
+    function onScroll() {
+      var isScrolled = window.scrollY > 50;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
+        loopEnd = performance.now() + 400; /* 400ms > 0.35s topbar transition */
+        requestAnimationFrame(syncLoop);
+      }
     }
 
     /* ── Hamburger: toggle mobile nav ── */
@@ -790,8 +812,28 @@
     });
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', updateSpacer);
-    window.addEventListener('load', updateSpacer);
+    window.addEventListener('resize', initLayout);
+    window.addEventListener('load', initLayout);
+
+    /* ── Phone number validation ── */
+    document.querySelector('.contact__form').addEventListener('submit', function (e) {
+      var phoneInput = document.getElementById('contact-phone');
+      var errorEl    = document.getElementById('contact-phone-error');
+      var digits     = phoneInput.value.replace(/\D/g, '');
+      if (digits.length < 7 || digits.length > 15) {
+        e.preventDefault();
+        phoneInput.classList.add('contact__input--error');
+        errorEl.hidden = false;
+        phoneInput.focus();
+      } else {
+        phoneInput.classList.remove('contact__input--error');
+        errorEl.hidden = true;
+      }
+    });
+    document.getElementById('contact-phone').addEventListener('input', function () {
+      this.classList.remove('contact__input--error');
+      document.getElementById('contact-phone-error').hidden = true;
+    });
 
     /* ── Custom service dropdown ── */
     (function () {

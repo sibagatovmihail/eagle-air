@@ -109,6 +109,16 @@
   color: var(--bg-dark);
 }
 
+.contact__info-phone {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact__info-phone:hover {
+  color: var(--action-primary);
+  text-decoration: underline;
+}
+
 .contact__info-hours {
   display: flex;
   flex-direction: column;
@@ -236,6 +246,17 @@
 .contact__input:focus,
 .contact__textarea:focus {
   border-color: rgba(92, 176, 227, 0.5);
+}
+
+.contact__input--error {
+  border-color: #e05c5c;
+}
+
+.contact__field-error {
+  font-family: var(--font-sans);
+  font-size: var(--text-p3); /* 0.75rem / 12px */
+  color: #e05c5c;
+  line-height: 1.3;
 }
 
 /* ── Custom select dropdown ────────────────────────────────────────────────── */
