@@ -759,31 +759,10 @@
       document.documentElement.style.setProperty('--header-height', h + 'px');
     }
 
-    /* ── Set --window-height from window.innerHeight (cross-browser, Safari-safe) ── */
-    function updateWindowHeight() {
-      document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
-    }
-
-    function initLayout() {
-      updateWindowHeight();
-      syncHeaderHeight();
-    }
-
-    /* ── rAF loop: syncs header height during the topbar CSS transition (0.35s) ── */
-    var loopEnd = 0;
-    function syncLoop(now) {
-      syncHeaderHeight();
-      if (now < loopEnd) requestAnimationFrame(syncLoop);
-    }
-
-    /* ── Scroll: toggle scrolled state; when state changes run sync loop ── */
+    /* ── Scroll: toggle scrolled state (no layout side-effects) ── */
     function onScroll() {
       var isScrolled = window.scrollY > 50;
-      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
-        siteHeader.classList.toggle('scrolled', isScrolled);
-        loopEnd = performance.now() + 400; /* 400ms > 0.35s topbar transition */
-        requestAnimationFrame(syncLoop);
-      }
+      siteHeader.classList.toggle('scrolled', isScrolled);
     }
 
     /* ── Hamburger: toggle mobile nav ── */
@@ -812,8 +791,8 @@
     });
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', initLayout);
-    window.addEventListener('load', initLayout);
+    window.addEventListener('resize', syncHeaderHeight);
+    window.addEventListener('load', syncHeaderHeight);
 
     /* ── Phone number validation ── */
     document.querySelector('.contact__form').addEventListener('submit', function (e) {
