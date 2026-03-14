@@ -811,12 +811,22 @@
     });
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', syncHeaderHeight);
+
+    /* ── Resize: only react when WIDTH changes ── */
+    /* iOS Safari fires resize on scroll as the address bar shows/hides —
+       viewport height changes but width stays the same. Guarding on width
+       prevents the spacer from updating mid-scroll and shifting the hero. */
+    var lastResizeW = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth === lastResizeW) return;
+      lastResizeW = window.innerWidth;
+      syncHeaderHeight();
+      document.documentElement.style.setProperty('--initial-vh', window.innerHeight + 'px');
+      document.documentElement.style.setProperty('--hero-offset', siteHeader.offsetHeight + 'px');
+    });
+
     window.addEventListener('load', function () {
       syncHeaderHeight();
-      /* Freeze hero offset at load-time full-header height.
-         Never updated on resize/scroll — prevents Safari from
-         growing the hero when the topbar collapses mid-scroll. */
       document.documentElement.style.setProperty('--hero-offset', siteHeader.offsetHeight + 'px');
       updateActiveNav();
     });
