@@ -784,6 +784,11 @@
   justify-content: flex-end;
 }
 
+.service-page-hero__cta-wrap .btn-cta {
+  background-color: var(--bg-dark);
+  padding: 1rem 2rem;
+}
+
 @media (max-width: 48rem) {
   .service-page-hero__heading { font-size: 2rem; }
 }
@@ -791,7 +796,7 @@
 @media (max-width: 37.5rem) {
   .service-page-hero { padding-block: 3rem 2.5rem; }
   .service-page-hero__heading { font-size: 1.75rem; }
-  .service-page-hero__cta-wrap .btn-cta { padding: 0.875rem 1.5rem; }
+  .service-page-hero__cta-wrap .btn-cta { padding: 1rem 2rem; }
 }
 
 /* =============================================================================
