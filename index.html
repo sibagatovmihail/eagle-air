@@ -779,9 +779,21 @@
     /* ── Active nav link tracking ── */
     var navSections = ['hero', 'services', 'about', 'reviews', 'contact'];
     var navLinks = Array.from(navMenu.querySelectorAll('a[href^="#"]'));
+    var scrollingToTarget = null;
+
+    function setActiveSection(sectionId) {
+      navLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId);
+      });
+      var dropdownTrigger = document.querySelector('.nav-dropdown__trigger');
+      if (dropdownTrigger) {
+        dropdownTrigger.classList.toggle('active', sectionId === 'services');
+      }
+    }
 
     function updateActiveNav() {
-      var threshold = siteHeader.offsetHeight + 2;
+      if (scrollingToTarget) return;
+      var threshold = siteHeader.offsetHeight + 62;
       var current = navSections[0];
       for (var i = 0; i < navSections.length; i++) {
         var el = document.getElementById(navSections[i]);
@@ -789,13 +801,7 @@
           current = navSections[i];
         }
       }
-      navLinks.forEach(function (link) {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-      });
-      var dropdownTrigger = document.querySelector('.nav-dropdown__trigger');
-      if (dropdownTrigger) {
-        dropdownTrigger.classList.toggle('active', current === 'services');
-      }
+      setActiveSection(current);
     }
 
     /* ── Scroll: toggle scrolled state + update active nav ── */
@@ -812,6 +818,32 @@
       this.setAttribute('aria-expanded', isOpen);
     });
 
+    /* ── Scroll to a section by ID, lock active state until scroll settles ── */
+    function scrollToSection(targetId) {
+      var targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      scrollingToTarget = targetId;
+      setActiveSection(targetId);
+
+      var scrollTop = targetId === 'hero'
+        ? 0
+        : targetEl.offsetTop - siteHeader.offsetHeight;
+
+      window.scrollTo({ top: Math.max(0, scrollTop), behavior: 'smooth' });
+
+      /* Unlock after scroll settles — scrollend where supported, timeout fallback */
+      var unlock = function () {
+        scrollingToTarget = null;
+        updateActiveNav();
+      };
+      if ('onscrollend' in window) {
+        window.addEventListener('scrollend', unlock, { once: true });
+      } else {
+        setTimeout(unlock, 800);
+      }
+    }
+
     /* ── Close mobile nav on link click + set active + manual scroll ── */
     navMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener('click', function (e) {
@@ -819,18 +851,7 @@
         navMenu.classList.remove('open');
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
-        navLinks.forEach(function (l) { l.classList.remove('active'); });
-        this.classList.add('active');
-
-        var targetId = this.getAttribute('href').slice(1);
-        var targetEl = document.getElementById(targetId);
-        if (!targetEl) return;
-
-        var scrollTop = targetId === 'hero'
-          ? 0
-          : targetEl.offsetTop - document.querySelector('.navbar').offsetHeight;
-
-        window.scrollTo({ top: Math.max(0, scrollTop), behavior: 'smooth' });
+        scrollToSection(this.getAttribute('href').slice(1));
       });
     });
 
@@ -937,12 +958,15 @@
 
       function isMobileNav() { return window.innerWidth <= 768; }
 
-      /* Mobile only: toggle dropdown on trigger click (desktop uses CSS :hover) */
+      /* Mobile: toggle dropdown; Desktop: scroll to services section */
       navDropTrigger.addEventListener('click', function (e) {
-        if (!isMobileNav()) return;
-        e.stopPropagation();
-        var isOpen = navDropMenu.classList.toggle('open');
-        navDropTrigger.setAttribute('aria-expanded', isOpen);
+        if (isMobileNav()) {
+          e.stopPropagation();
+          var isOpen = navDropMenu.classList.toggle('open');
+          navDropTrigger.setAttribute('aria-expanded', isOpen);
+        } else {
+          scrollToSection('services');
+        }
       });
 
       /* Close when clicking outside the dropdown */
