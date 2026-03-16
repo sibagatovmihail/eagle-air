@@ -603,7 +603,7 @@
   border: var(--border-width) solid var(--border-default);
   list-style: none;
   margin: 0;
-  padding: 0.375rem 0;
+  padding: 0;
   z-index: 200;
   /* Hidden state */
   visibility: hidden;
@@ -676,7 +676,6 @@
     border: none;
     border-top: var(--border-width) solid var(--border-default);
     background-color: var(--bg-surface-alt);
-    padding: 0;
     visibility: hidden;
     opacity: 0;
     max-height: 0;
@@ -695,6 +694,7 @@
   .nav-dropdown__menu.open {
     visibility: visible;
     opacity: 1;
+    padding: 0.5rem 0;
     max-height: 20rem;
     pointer-events: auto;
     transition: max-height 0.22s ease, opacity 0.22s ease, visibility 0s linear 0s;
@@ -746,6 +746,42 @@
   color: var(--text-body);
   max-width: 42rem;
   margin-bottom: 2rem;
+}
+
+/* Solutions checklist */
+.service-page-hero__solutions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 2rem;
+  max-width: 42rem;
+}
+
+.service-page-hero__solutions li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.service-page-hero__solutions li img {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.service-page-hero__solutions li span {
+  font-family: var(--font-sans);
+  font-size: var(--text-p1);
+  font-weight: var(--weight-regular);
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+/* CTA right-aligned */
+.service-page-hero__cta-wrap {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 48rem) {
