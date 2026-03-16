@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance — EagleAir HVAC Sarasota</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--bg-page); }
+    .container {
+      max-width: 72.5rem;
+      margin-inline: auto;
+      padding-inline: var(--space-lg);
+    }
+    @media (max-width: 37.5rem) {
+      .container { padding-inline: 0.875rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="site-header">
+
+    <div class="topbar">
+      <div class="topbar__inner container">
+        <span class="topbar__text">
+          Serving Sarasota &amp; surrounding areas
+        </span>
+        <a class="topbar__phone" href="tel:+19043169933">
+          <img class="topbar__phone-icon" src="assets/icons/phone-topbar.svg" alt="" aria-hidden="true">
+          +1 904 316 9933
+        </a>
+      </div>
+    </div>
+
+    <header class="navbar">
+      <div class="navbar__inner container">
+
+        <a class="navbar__logo" href="index.html" aria-label="EagleAir — Home">
+          <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
+          <img class="navbar__logo-icon" src="assets/logo_small.png" alt="EagleAir">
+          <img class="navbar__logo-vertical" src="assets/logo-vertical.png" alt="EagleAir">
+        </a>
+
+        <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
+          <a href="index.html" class="navbar__link">Home</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__trigger active" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="nav-dropdown__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown__menu" role="menu">
+              <li class="nav-dropdown__link" role="none"><a href="air-conditioning.html" role="menuitem">Air Conditioning</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="heating.html" role="menuitem">Heating Services</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="ventilation.html" role="menuitem">Ventilation</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="maintenance.html" role="menuitem">Maintenance</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="emergency-repair.html" role="menuitem">Emergency Repair</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="installation.html" role="menuitem">Installation</a></li>
+            </ul>
+          </div>
+          <a href="index.html#about" class="navbar__link">About</a>
+          <a href="index.html#reviews" class="navbar__link">Reviews</a>
+          <a href="index.html#contact" class="navbar__link">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a class="btn-cta" href="tel:+19043169933">
+            <img class="btn-cta__icon" src="assets/icons/phone-cta.svg" alt="" aria-hidden="true">
+            Call Now
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+  </div>
+
+  <div id="header-spacer"></div>
+
+  <main>
+
+    <section class="service-page-hero">
+      <div class="container">
+        <div class="service-page-hero__eyebrow">HVAC Services</div>
+        <h1 class="service-page-hero__heading">Maintenance</h1>
+        <p class="service-page-hero__desc">
+          Protect your HVAC investment with regular preventive maintenance plans. Our technicians perform thorough inspections, cleanings, and tune-ups to maximize system efficiency, prevent breakdowns, and extend equipment lifespan.
+        </p>
+        <a class="btn-cta" href="tel:+19043169933">
+          <img class="btn-cta__icon" src="assets/icons/phone-cta.svg" alt="" aria-hidden="true">
+          Call Now
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-wrap">
+            <img src="assets/logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
+          </a>
+          <div class="footer__desc">
+            <p>Your trusted HVAC partner in Sarasota. We provide professional heating, ventilation, and air conditioning services with a commitment to excellence and customer satisfaction.</p>
+          </div>
+          <ul class="footer__contact">
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-phone.svg" alt="" /></span>
+              <a href="tel:+19043169933">(904) 316 9933</a>
+            </li>
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-email.svg" alt="" /></span>
+              <a href="mailto:info@eagleair.com">info@eagleair.com</a>
+            </li>
+            <li class="footer__contact-item">
+              <span class="footer__icon-wrap"><img src="assets/icons/footer-pin.svg" alt="" /></span>
+              <span>Sarasota, Florida</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-heading">Services</h3>
+          <ul class="footer__list">
+            <li><a href="air-conditioning.html">Air Conditioning</a></li>
+            <li><a href="heating.html">Heating Services</a></li>
+            <li><a href="ventilation.html">Ventilation</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="emergency-repair.html">Emergency Repair</a></li>
+            <li><a href="installation.html">Installation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-heading">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <h4 class="footer__col-heading footer__col-heading--social">Follow Us</h4>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-facebook.svg" alt="Facebook" /></a>
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-instagram.svg" alt="Instagram" /></a>
+            <a href="#" class="footer__social-link"><img src="assets/icons/footer-linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider" />
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 EagleAir. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">License Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const siteHeader = document.getElementById('site-header');
+    const spacer     = document.getElementById('header-spacer');
+    const hamburger  = document.getElementById('hamburger');
+    const navMenu    = document.getElementById('nav-menu');
+
+    function syncHeaderHeight() {
+      const h = siteHeader.offsetHeight;
+      spacer.style.height = h + 'px';
+      document.documentElement.style.setProperty('--header-height', h + 'px');
+    }
+
+    window.addEventListener('scroll', function () {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    hamburger.addEventListener('click', function () {
+      const isOpen = navMenu.classList.toggle('open');
+      this.classList.toggle('active', isOpen);
+      this.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!siteHeader.contains(e.target)) {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var lastResizeW = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth === lastResizeW) return;
+      lastResizeW = window.innerWidth;
+      syncHeaderHeight();
+      document.documentElement.style.setProperty('--initial-vh', window.innerHeight + 'px');
+    });
+
+    window.addEventListener('load', syncHeaderHeight);
+
+    (function () {
+      var navDropdown    = document.querySelector('.nav-dropdown');
+      var navDropTrigger = document.querySelector('.nav-dropdown__trigger');
+      var navDropMenu    = document.querySelector('.nav-dropdown__menu');
+      if (!navDropdown || !navDropTrigger || !navDropMenu) return;
+      function isMobileNav() { return window.innerWidth <= 768; }
+      navDropTrigger.addEventListener('click', function (e) {
+        if (!isMobileNav()) return;
+        e.stopPropagation();
+        var isOpen = navDropMenu.classList.toggle('open');
+        navDropTrigger.setAttribute('aria-expanded', isOpen);
+      });
+      document.addEventListener('click', function (e) {
+        if (!navDropdown.contains(e.target)) {
+          navDropMenu.classList.remove('open');
+          navDropTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          navDropMenu.classList.remove('open');
+          navDropTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+      hamburger.addEventListener('click', function () {
+        navDropMenu.classList.remove('open');
+        navDropTrigger.setAttribute('aria-expanded', 'false');
+      });
+    }());
+  </script>
+
+</body>
+</html>

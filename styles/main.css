@@ -243,6 +243,12 @@
   width: auto;
 }
 
+.navbar__logo-vertical {
+  display: none;       /* shown only at ≤ 375px */
+  height: 3.5rem;
+  width: auto;
+}
+
 #site-header.scrolled .navbar__logo-full {
   height: 2.25rem;
 }
@@ -274,11 +280,14 @@
   color: #364153;
   text-decoration: none;
   white-space: nowrap;
-  position: relative;
   transition: color 0.2s ease;
 }
 
-.navbar__nav a::before {
+.navbar__link {
+  position: relative;
+}
+
+.navbar__link::before {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -291,16 +300,16 @@
   transition: transform 0.25s ease;
 }
 
-.navbar__nav a:hover {
+.navbar__link:hover {
   color: var(--action-primary);
 }
 
-.navbar__nav a:hover::before,
-.navbar__nav a.active::before {
+.navbar__link:hover::before,
+.navbar__link.active::before {
   transform: scaleX(1);
 }
 
-.navbar__nav a.active {
+.navbar__link.active {
   color: var(--action-primary);
 }
 
@@ -473,7 +482,7 @@
   .hamburger { order: 2; }
 
   /* Hide custom underline on mobile nav (border-bottom handles separation) */
-  .navbar__nav a::before {
+  .navbar__link::before {
     display: none;
   }
 
@@ -483,7 +492,7 @@
 /* ── Tier 3: Phone (≤ 600px) ────────────────────────────────────────────────── */
 @media (max-width: 37.5rem) {
 
-  /* Logo: swap to icon-only asset */
+  /* Logo: swap to small asset */
   .navbar__logo-full { display: none; }
   .navbar__logo-icon { display: block; }
 
@@ -494,12 +503,256 @@
   }
 }
 
+/* ── Tier 3a: Small phone (≤ 375px) — vertical logo ─────────────────────────── */
+@media (max-width: 23.4375rem) {
+  .navbar__logo-icon     { display: none; }
+  .navbar__logo-vertical { display: block; }
+}
+
 /* ── Tier 4: Small phone (≤ 480px) ──────────────────────────────────────────── */
 @media (max-width: 30rem) {
   .topbar__text {
     display: none;                /* keep phone link, hide service area text */
   }
 }
+
+
+/* ─── Services nav dropdown ─────────────────────────────────────────────────── */
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* Trigger button — visually identical to .navbar__nav a */
+.nav-dropdown__trigger {
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-regular);
+  line-height: 1.5;
+  color: #364153;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-dropdown__trigger::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--action-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown__trigger,
+.nav-dropdown__trigger.active,
+.nav-dropdown__trigger[aria-expanded="true"] {
+  color: var(--action-primary);
+}
+
+.nav-dropdown:hover .nav-dropdown__trigger::before,
+.nav-dropdown__trigger.active::before,
+.nav-dropdown__trigger[aria-expanded="true"]::before {
+  transform: scaleX(1);
+}
+
+.nav-dropdown__chevron {
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+}
+
+.nav-dropdown:hover .nav-dropdown__chevron,
+.nav-dropdown__trigger[aria-expanded="true"] .nav-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+/* Transparent bridge — covers the 0.75rem gap between trigger and dropdown
+   so the mouse can travel into the menu without :hover ever leaving .nav-dropdown */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14rem;    /* wider than min-width: 13rem on the menu */
+  height: 0.875rem; /* slightly more than the 0.75rem gap */
+  background: transparent;
+}
+
+/* Dropdown panel */
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-0.375rem);
+  min-width: 13rem;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: var(--border-width) solid var(--border-default);
+  list-style: none;
+  margin: 0;
+  padding: 0.375rem 0;
+  z-index: 200;
+  /* Hidden state */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: 0.625rem 1.125rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-regular);
+  color: #364153;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-dropdown__menu a:hover {
+  background-color: var(--bg-surface-alt);
+  color: var(--action-primary);
+}
+
+/* ─── Services dropdown — mobile overrides ───────────────────────────────────── */
+
+@media (max-width: 48rem) {
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown__trigger {
+    width: 100%;
+    padding: 0.75rem var(--space-lg);
+    border-bottom: var(--border-width) solid var(--border-default);
+    justify-content: space-between;
+  }
+
+  .nav-dropdown__trigger::before,
+  .nav-dropdown::after {
+    display: none;
+  }
+
+  /* Disable CSS-hover chevron rotation on mobile (JS aria-expanded handles it) */
+  .nav-dropdown:hover .nav-dropdown__chevron {
+    transform: none;
+  }
+
+  /* Inline expansion — not absolute */
+  .nav-dropdown__menu {
+    position: static;
+    transform: none;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-top: var(--border-width) solid var(--border-default);
+    background-color: var(--bg-surface-alt);
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.22s ease, opacity 0.22s ease, visibility 0s linear 0.22s;
+  }
+
+  /* Disable CSS hover on mobile */
+  .nav-dropdown:hover .nav-dropdown__menu {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+  }
+
+  .nav-dropdown__menu.open {
+    visibility: visible;
+    opacity: 1;
+    max-height: 20rem;
+    pointer-events: auto;
+    transition: max-height 0.22s ease, opacity 0.22s ease, visibility 0s linear 0s;
+  }
+
+  .nav-dropdown__menu a {
+    padding: 0.75rem var(--space-lg);
+    padding-left: calc(var(--space-lg) + 1rem);
+    border-bottom: var(--border-width) solid var(--border-default);
+  }
+
+  .nav-dropdown__menu li:last-child a {
+    border-bottom: none;
+  }
+}
+
+/* ─── Service page content ───────────────────────────────────────────────────── */
+
+.service-page-hero {
+  padding-block: 5rem 4rem;
+  background-color: var(--bg-surface);
+  border-bottom: var(--border-width) solid var(--border-default);
+}
+
+.service-page-hero__eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-p2);
+  font-weight: var(--weight-medium);
+  color: var(--action-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.service-page-hero__heading {
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.15;
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+}
+
+.service-page-hero__desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-p1);
+  font-weight: var(--weight-regular);
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 42rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .service-page-hero__heading { font-size: 2rem; }
+}
+
+@media (max-width: 37.5rem) {
+  .service-page-hero { padding-block: 3rem 2.5rem; }
+  .service-page-hero__heading { font-size: 1.75rem; }
+}
+
 /* =============================================================================
    EagleAir — Hero Section
    ============================================================================= */
@@ -2012,9 +2265,7 @@
 }
 
 .footer__container {
-  max-width: 70rem;
-  margin-inline: auto;
-  padding: 2.5rem 1.75rem;
+  padding-block: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -2259,10 +2510,6 @@
    --------------------------------------------------------- */
 
 @media (max-width: 37.5rem) {
-  .footer__container {
-    padding-inline: 1.5rem;
-  }
-
   .footer__top {
     grid-template-columns: 1fr;
     gap: 2.5rem;

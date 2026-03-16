@@ -57,16 +57,32 @@
         <!-- Logo -->
         <a class="navbar__logo" href="#" aria-label="EagleAir — Home">
           <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
-          <img class="navbar__logo-icon" src="assets/eagle-air-logo_cropped.png" alt="EagleAir">
+          <img class="navbar__logo-icon" src="assets/logo_small.png" alt="EagleAir">
+          <img class="navbar__logo-vertical" src="assets/logo-vertical.png" alt="EagleAir">
         </a>
 
         <!-- Desktop navigation -->
         <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
-          <a href="#hero" class="active">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#contact">Contact</a>
+          <a href="#hero" class="navbar__link active">Home</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="nav-dropdown__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown__menu" role="menu">
+              <li class="nav-dropdown__link" role="none"><a href="air-conditioning.html" role="menuitem">Air Conditioning</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="heating.html" role="menuitem">Heating Services</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="ventilation.html" role="menuitem">Ventilation</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="maintenance.html" role="menuitem">Maintenance</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="emergency-repair.html" role="menuitem">Emergency Repair</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="installation.html" role="menuitem">Installation</a></li>
+            </ul>
+          </div>
+          <a href="#about" class="navbar__link">About</a>
+          <a href="#reviews" class="navbar__link">Reviews</a>
+          <a href="#contact" class="navbar__link">Contact</a>
         </nav>
 
         <!-- Actions: hamburger + CTA -->
@@ -667,7 +683,7 @@
        ═══════════════════════════════════════════════════════ -->
 
   <footer class="footer">
-    <div class="footer__container">
+    <div class="footer__container container">
 
       <!-- Top 3-column grid -->
       <div class="footer__top">
@@ -675,7 +691,7 @@
         <!-- Brand column -->
         <div class="footer__brand">
           <a href="#" class="footer__logo-wrap">
-            <img src="assets/images/footer-logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
+            <img src="assets/logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
           </a>
           <div class="footer__desc">
             <p>Your trusted HVAC partner in Sarasota. We provide professional heating, ventilation, and air conditioning services with a commitment to excellence and customer satisfaction.</p>
@@ -700,12 +716,12 @@
         <div class="footer__col">
           <h3 class="footer__col-heading">Services</h3>
           <ul class="footer__list">
-            <li><a href="#services">Air Conditioning</a></li>
-            <li><a href="#services">Heating Services</a></li>
-            <li><a href="#services">Ventilation</a></li>
-            <li><a href="#services">Maintenance</a></li>
-            <li><a href="#services">Emergency Repair</a></li>
-            <li><a href="#services">Installation</a></li>
+            <li><a href="air-conditioning.html">Air Conditioning</a></li>
+            <li><a href="heating.html">Heating Services</a></li>
+            <li><a href="ventilation.html">Ventilation</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="emergency-repair.html">Emergency Repair</a></li>
+            <li><a href="installation.html">Installation</a></li>
           </ul>
         </div>
 
@@ -732,7 +748,7 @@
 
       <!-- Bottom bar -->
       <div class="footer__bottom">
-        <span class="footer__copy">© 2026 EagleAIr. All rights reserved.</span>
+        <span class="footer__copy">© 2026 EagleAir. All rights reserved.</span>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -776,6 +792,10 @@
       navLinks.forEach(function (link) {
         link.classList.toggle('active', link.getAttribute('href') === '#' + current);
       });
+      var dropdownTrigger = document.querySelector('.nav-dropdown__trigger');
+      if (dropdownTrigger) {
+        dropdownTrigger.classList.toggle('active', current === 'services');
+      }
     }
 
     /* ── Scroll: toggle scrolled state + update active nav ── */
@@ -792,12 +812,25 @@
       this.setAttribute('aria-expanded', isOpen);
     });
 
-    /* ── Close mobile nav on link click ── */
-    navMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
+    /* ── Close mobile nav on link click + set active + manual scroll ── */
+    navMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
         navMenu.classList.remove('open');
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
+        navLinks.forEach(function (l) { l.classList.remove('active'); });
+        this.classList.add('active');
+
+        var targetId = this.getAttribute('href').slice(1);
+        var targetEl = document.getElementById(targetId);
+        if (!targetEl) return;
+
+        var scrollTop = targetId === 'hero'
+          ? 0
+          : targetEl.offsetTop - document.querySelector('.navbar').offsetHeight;
+
+        window.scrollTo({ top: Math.max(0, scrollTop), behavior: 'smooth' });
       });
     });
 
@@ -891,6 +924,47 @@
 
       wrap.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') close();
+      });
+    }());
+
+    /* ── Services nav dropdown ── */
+    (function () {
+      var navDropdown    = document.querySelector('.nav-dropdown');
+      var navDropTrigger = document.querySelector('.nav-dropdown__trigger');
+      var navDropMenu    = document.querySelector('.nav-dropdown__menu');
+
+      if (!navDropdown || !navDropTrigger || !navDropMenu) return;
+
+      function isMobileNav() { return window.innerWidth <= 768; }
+
+      /* Mobile only: toggle dropdown on trigger click (desktop uses CSS :hover) */
+      navDropTrigger.addEventListener('click', function (e) {
+        if (!isMobileNav()) return;
+        e.stopPropagation();
+        var isOpen = navDropMenu.classList.toggle('open');
+        navDropTrigger.setAttribute('aria-expanded', isOpen);
+      });
+
+      /* Close when clicking outside the dropdown */
+      document.addEventListener('click', function (e) {
+        if (!navDropdown.contains(e.target)) {
+          navDropMenu.classList.remove('open');
+          navDropTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      /* Close on Escape */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          navDropMenu.classList.remove('open');
+          navDropTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      /* Close dropdown whenever the hamburger is toggled */
+      hamburger.addEventListener('click', function () {
+        navDropMenu.classList.remove('open');
+        navDropTrigger.setAttribute('aria-expanded', 'false');
       });
     }());
   </script>
