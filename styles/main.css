@@ -612,13 +612,17 @@
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
 }
 
-.nav-dropdown:hover .nav-dropdown__menu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+@media (min-width:48.0625rem) {
+   .nav-dropdown:hover .nav-dropdown__menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+  }
 }
+
+
 
 .nav-dropdown__menu a {
   display: block;
@@ -681,12 +685,12 @@
   }
 
   /* Disable CSS hover on mobile */
-  .nav-dropdown:hover .nav-dropdown__menu {
+  /* .nav-dropdown:hover .nav-dropdown__menu {
     visibility: hidden;
     opacity: 0;
     max-height: 0;
     pointer-events: none;
-  }
+  } */
 
   .nav-dropdown__menu.open {
     visibility: visible;
