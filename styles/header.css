@@ -422,13 +422,11 @@
   transition: transform 0.25s ease;
 }
 
-.nav-dropdown:hover .nav-dropdown__trigger,
 .nav-dropdown__trigger.active,
 .nav-dropdown__trigger[aria-expanded="true"] {
   color: var(--action-primary);
 }
 
-.nav-dropdown:hover .nav-dropdown__trigger::before,
 .nav-dropdown__trigger.active::before,
 .nav-dropdown__trigger[aria-expanded="true"]::before {
   transform: scaleX(1);
@@ -439,7 +437,6 @@
   flex-shrink: 0;
 }
 
-.nav-dropdown:hover .nav-dropdown__chevron,
 .nav-dropdown__trigger[aria-expanded="true"] .nav-dropdown__chevron {
   transform: rotate(180deg);
 }
@@ -479,12 +476,28 @@
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
 }
 
-.nav-dropdown:hover .nav-dropdown__menu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+/* Desktop-only: all :hover-driven behaviour — kept out of mobile so
+   the JS-managed .open class is the sole controller at ≤768px */
+@media (min-width: 48.0625rem) {
+  .nav-dropdown:hover .nav-dropdown__trigger {
+    color: var(--action-primary);
+  }
+
+  .nav-dropdown:hover .nav-dropdown__trigger::before {
+    transform: scaleX(1);
+  }
+
+  .nav-dropdown:hover .nav-dropdown__chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown:hover .nav-dropdown__menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+  }
 }
 
 .nav-dropdown__link {
@@ -549,12 +562,7 @@
     transition: max-height 0.22s ease, opacity 0.22s ease, visibility 0s linear 0.22s;
   }
 
-  /* Disable chevron rotation on CSS hover (mobile uses click) */
-  .nav-dropdown:hover .nav-dropdown__chevron {
-    transform: none;
-  }
-
-  /* Higher specificity than the desktop :hover rule — open state always wins */
+  /* Open state — controlled exclusively by JS toggle */
   .nav-dropdown .nav-dropdown__menu.open {
     visibility: visible;
     opacity: 1;
