@@ -959,20 +959,45 @@
       updateActiveNav();
     });
 
-    /* ── Phone number validation ── */
+    /* ── Contact form: validate + submit via fetch, clear on success ── */
     document.querySelector('.contact__form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form       = this;
       var phoneInput = document.getElementById('contact-phone');
       var errorEl    = document.getElementById('contact-phone-error');
       var digits     = phoneInput.value.replace(/\D/g, '');
+
       if (digits.length < 7 || digits.length > 15) {
-        e.preventDefault();
         phoneInput.classList.add('contact__input--error');
         errorEl.hidden = false;
         phoneInput.focus();
-      } else {
-        phoneInput.classList.remove('contact__input--error');
-        errorEl.hidden = true;
+        return;
       }
+      phoneInput.classList.remove('contact__input--error');
+      errorEl.hidden = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            form.reset();
+            /* Reset custom select */
+            var valueEl = document.querySelector('#contact-service-trigger .custom-select__value');
+            if (valueEl) {
+              valueEl.textContent = 'Select a service';
+              valueEl.classList.remove('custom-select__value--chosen');
+            }
+            document.getElementById('contact-service').value = '';
+            document.querySelectorAll('#contact-service-wrap .custom-select__option').forEach(function (o) {
+              o.classList.remove('custom-select__option--selected');
+            });
+          }
+        })
+        .catch(function () { /* silent — native fallback not needed */ });
     });
     document.getElementById('contact-phone').addEventListener('input', function () {
       this.classList.remove('contact__input--error');
