@@ -484,7 +484,7 @@
 }
 
 .form-success-modal {
-  background: var(--color-bg-surface);
+  background: var(--bg-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
   max-width: 25rem;
@@ -508,26 +508,26 @@
 }
 
 .form-success-modal__title {
-  font-size: var(--text-h3-size);
-  line-height: var(--text-h3-lh);
-  color: var(--color-text-heading);
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  color: var(--text-heading);
   font-weight: 700;
 }
 
 .form-success-modal__msg {
-  font-size: var(--text-p1-size);
-  line-height: var(--text-p1-lh);
-  color: var(--color-text-body);
+  font-size: var(--text-p1);
+  line-height: var(--leading-p1);
+  color: var(--text-body);
 }
 
 .form-success-modal__close {
   margin-top: var(--space-sm);
   padding: 0.75rem var(--space-xl);
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
+  background: var(--action-primary);
+  color: var(--text-inverse);
   border: none;
   border-radius: var(--radius-pill);
-  font-size: var(--text-btn-size);
+  font-size: var(--text-btn);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -536,5 +536,5 @@
 }
 
 .form-success-modal__close:hover {
-  background: var(--color-primary-hover);
+  background: var(--action-primary_hover);
 }
