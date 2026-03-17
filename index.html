@@ -995,6 +995,10 @@
             document.querySelectorAll('#contact-service-wrap .custom-select__option').forEach(function (o) {
               o.classList.remove('custom-select__option--selected');
             });
+            /* Show success popup */
+            var overlay = document.getElementById('form-success-overlay');
+            overlay.classList.add('open');
+            overlay.setAttribute('aria-hidden', 'false');
           }
         })
         .catch(function () { /* silent — native fallback not needed */ });
@@ -1090,7 +1094,44 @@
         navDropTrigger.setAttribute('aria-expanded', 'false');
       });
     }());
+
+    /* ── Success popup close handler ── */
+    (function () {
+      var overlay  = document.getElementById('form-success-overlay');
+      var closeBtn = document.getElementById('form-success-close');
+
+      function closeModal() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+      });
+    }());
   </script>
+
+  <!-- ── Success popup ── -->
+  <div class="form-success-overlay" id="form-success-overlay" aria-hidden="true">
+    <div class="form-success-modal" role="dialog" aria-modal="true" aria-labelledby="form-success-title">
+      <div class="form-success-modal__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24" fill="#00a33c" fill-opacity="0.12"/>
+          <circle cx="24" cy="24" r="18" fill="#00a33c"/>
+          <path d="M15 24l6.5 6.5L33 18" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div><h3 class="form-success-modal__title" id="form-success-title">Request Sent!</h3></div>
+      <div><p class="form-success-modal__msg">Thank you — we'll be in touch shortly with your free quote.</p></div>
+      <div>
+        <button class="form-success-modal__close" id="form-success-close" type="button">Got it</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
