@@ -10,52 +10,72 @@
      BACKGROUNDS
      --------------------------------------------------------------------------- */
 
-  --bg-page:          #f7f7f7;              /* App / page background            */
-  --bg-surface:       #ffffff;              /* Cards, panels, modals            */
-  --bg-surface-alt:   #f5f5f5;              /* Light BG — alternate surfaces    */
-  --bg-dark:          #0f1d24;              /* Nav, dark hero sections          */
-  --bg-blue-tint:     #e4f1fb;              /* Light blue fills                 */
-  --bg-blue-overlay:  rgba(89, 174, 227, 0.2); /* Translucent blue overlay      */
+  --bg-page: #f7f7f7;
+  /* App / page background            */
+  --bg-surface: #ffffff;
+  /* Cards, panels, modals            */
+  --bg-surface-alt: #f5f5f5;
+  /* Light BG — alternate surfaces    */
+  --bg-dark: #0f1d24;
+  /* Nav, dark hero sections          */
+  --bg-blue-tint: #e4f1fb;
+  /* Light blue fills                 */
+  --bg-blue-overlay: rgba(89, 174, 227, 0.2);
+  /* Translucent blue overlay      */
 
 
   /* ---------------------------------------------------------------------------
      BORDERS
      --------------------------------------------------------------------------- */
 
-  --border-default:   rgba(0, 0, 0, 0.08);  /* Card borders, dividers           */
-  --border-width:     1px;
+  --border-default: rgba(0, 0, 0, 0.08);
+  /* Card borders, dividers           */
+  --border-width: 1px;
 
 
   /* ---------------------------------------------------------------------------
      TEXT
      --------------------------------------------------------------------------- */
 
-  --text-heading:     #0f1d24;              /* Primary headings (Navy Dark)     */
-  --text-base:        #0a0a0a;              /* Near-black — H4, high-contrast   */
-  --text-body:        #4a5464;              /* Body paragraphs                  */
-  --text-muted:       #4d6280;              /* Labels, secondary / meta text    */
-  --text-inverse:     #ffffff;              /* Text on dark backgrounds         */
-  --text-accent:      #ef7d1f;              /* Highlights, token labels         */
-  --text-link:        #59aee3;              /* Inline links                     */
+  --text-heading: #0f1d24;
+  /* Primary headings (Navy Dark)     */
+  --text-base: #0a0a0a;
+  /* Near-black — H4, high-contrast   */
+  --text-body: #4a5464;
+  /* Body paragraphs                  */
+  --text-muted: #4d6280;
+  /* Labels, secondary / meta text    */
+  --text-inverse: #ffffff;
+  /* Text on dark backgrounds         */
+  --text-accent: #ef7d1f;
+  /* Highlights, token labels         */
+  --text-link: #59aee3;
+  /* Inline links                     */
 
 
   /* ---------------------------------------------------------------------------
      ACTIONS
      --------------------------------------------------------------------------- */
 
-  --action-primary:       hsl(203, 71%, 62%);          /* Blue Primary — buttons, links    */
+  --action-primary: hsl(203, 71%, 62%);
+  /* Blue Primary — buttons, links    */
   --action-primary_hover: hsl(203, 71%, 50%);
-  --action-primary-text:  #0f1d24;          /* Text on primary blue buttons     */
-  --action-accent:        #ef7d1f;          /* Orange Accent — CTAs             */
-  --action-accent-text:   #ffffff;          /* Text on accent orange buttons    */
+  --action-primary-text: #0f1d24;
+  /* Text on primary blue buttons     */
+  --action-accent: #ef7d1f;
+  /* Orange Accent — CTAs             */
+  --action-accent-text: #ffffff;
+  /* Text on accent orange buttons    */
 
 
   /* ---------------------------------------------------------------------------
      STATUS
      --------------------------------------------------------------------------- */
 
-  --status-success:   #00a33c;              /* Green Success                    */
-  --status-warning:   #ef7d1f;              /* Warning — shares Orange Accent   */
+  --status-success: #00a33c;
+  /* Green Success                    */
+  --status-warning: #ef7d1f;
+  /* Warning — shares Orange Accent   */
 
 
   /* ---------------------------------------------------------------------------
@@ -63,38 +83,56 @@
      --------------------------------------------------------------------------- */
 
   /* Font families */
-  --font-sans:        'Helvetica', sans-serif;
-  --font-button:      'Helvetica', sans-serif;
-  --font-mono:        'Helvetica', monospace;
+  --font-sans: 'Helvetica', sans-serif;
+  --font-button: 'Helvetica', sans-serif;
+  --font-mono: 'Helvetica', monospace;
 
   /* Font sizes */
-  --text-h1:          3.5rem;               /* 56px — Hero heading              */
-  --text-h2:          2.5rem;               /* 40px — Section heading           */
-  --text-h3:          1.5rem;               /* 24px — Sub-section heading       */
-  --text-h4:          1.125rem;             /* 18px — Card / label heading      */
-  --text-p1:          1rem;                 /* 16px — Primary body copy         */
-  --text-p2:          0.875rem;             /* 14px — Secondary body copy       */
-  --text-p3:          0.75rem;              /* 12px — Small / caption           */
-  --text-btn:         0.75rem;              /* 12px — Button label              */
+  --text-h1: 3.5rem;
+  /* 56px — Hero heading              */
+  --text-h2: 2.5rem;
+  /* 40px — Section heading           */
+  --text-h3: 1.5rem;
+  /* 24px — Sub-section heading       */
+  --text-h4: 1.125rem;
+  /* 18px — Card / label heading      */
+  --text-p1: 1rem;
+  /* 16px — Primary body copy         */
+  --text-p2: 0.875rem;
+  /* 14px — Secondary body copy       */
+  --text-p3: 0.75rem;
+  /* 12px — Small / caption           */
+  --text-btn: 0.75rem;
+  /* 12px — Button label              */
 
   /* Line heights */
-  --leading-h1:       3.5rem;               /* 56px */
-  --leading-h2:       2.75rem;              /* 44px */
-  --leading-h3:       1.95rem;              /* 31.2px */
-  --leading-h4:       1.575rem;             /* 25.2px */
-  --leading-p1:       1.5rem;               /* 24px */
-  --leading-p2:       1.3125rem;            /* 21px */
-  --leading-p3:       1.125rem;             /* 18px */
-  --leading-btn:      1.05rem;              /* 16.8px */
+  --leading-h1: 3.5rem;
+  /* 56px */
+  --leading-h2: 2.75rem;
+  /* 44px */
+  --leading-h3: 1.95rem;
+  /* 31.2px */
+  --leading-h4: 1.575rem;
+  /* 25.2px */
+  --leading-p1: 1.5rem;
+  /* 24px */
+  --leading-p2: 1.3125rem;
+  /* 21px */
+  --leading-p3: 1.125rem;
+  /* 18px */
+  --leading-btn: 1.05rem;
+  /* 16.8px */
 
   /* Font weights */
-  --weight-regular:   400;
-  --weight-medium:    500;
-  --weight-bold:      700;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
 
   /* Letter spacing */
-  --tracking-section: 0.125rem;             /* 2px — section headings uppercase */
-  --tracking-label:   0.075rem;             /* 1.2px — small uppercase labels   */
+  --tracking-section: 0.125rem;
+  /* 2px — section headings uppercase */
+  --tracking-label: 0.075rem;
+  /* 1.2px — small uppercase labels   */
 
 
   /* ---------------------------------------------------------------------------
@@ -102,31 +140,47 @@
      (Named tokens from Figma SpacingSection)
      --------------------------------------------------------------------------- */
 
-  --spacing-1:        0.25rem;              /* 4px  */
-  --spacing-3:        0.5rem;               /* 8px  */
-  --spacing-6:        1rem;                 /* 16px */
-  --spacing-9:        2rem;                 /* 32px */
-  --spacing-12:       4.375rem;             /* 70px */
+  --spacing-1: 0.25rem;
+  /* 4px  */
+  --spacing-3: 0.5rem;
+  /* 8px  */
+  --spacing-6: 1rem;
+  /* 16px */
+  --spacing-9: 2rem;
+  /* 32px */
+  --spacing-12: 4.375rem;
+  /* 70px */
 
   /* Semantic spacing aliases (from layout analysis) */
-  --space-xs:         0.25rem;              /* 4px  */
-  --space-sm:         0.5rem;               /* 8px  */
-  --space-md:         1rem;                 /* 16px */
-  --space-lg:         1.5rem;               /* 24px */
-  --space-xl:         2rem;                 /* 32px */
-  --space-2xl:        4rem;                 /* 64px */
+  --space-xs: 0.25rem;
+  /* 4px  */
+  --space-sm: 0.5rem;
+  /* 8px  */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 4rem;
+  /* 64px */
 
 
   /* ---------------------------------------------------------------------------
      RADII
      --------------------------------------------------------------------------- */
 
-  --radius-sm:        0.25rem;              /* 4px   — tight, inline elements   */
-  --radius-md:        0.5rem;               /* 8px   — buttons, tags            */
-  --radius-lg:        0.8rem;               /* 12.8px — cards, panels           */
-  --radius-pill:      6.25rem;              /* 100px — pill / full-round        */
+  --radius-sm: 0.25rem;
+  /* 4px   — tight, inline elements   */
+  --radius-md: 0.5rem;
+  /* 8px   — buttons, tags            */
+  --radius-lg: 0.8rem;
+  /* 12.8px — cards, panels           */
+  --radius-pill: 6.25rem;
+  /* 100px — pill / full-round        */
 
 }
+
 /* =============================================================================
    EagleAir — Topbar & Header Nav
    Depends on: styles/tokens.css
@@ -230,21 +284,25 @@
 }
 
 .navbar__logo-full {
-  height: 3.125rem;   /* 50px */
+  height: 3.125rem;
+  /* 50px */
   width: auto;
-  max-width: 9.625rem; /* 154px */
+  max-width: 9.625rem;
+  /* 154px */
   display: block;
   transition: height 0.25s ease;
 }
 
 .navbar__logo-icon {
-  display: none;       /* hidden on desktop/tablet — shown on phone only */
+  display: none;
+  /* hidden on desktop/tablet — shown on phone only */
   height: 2.5rem;
   width: auto;
 }
 
 .navbar__logo-vertical {
-  display: none;       /* shown only at ≤ 375px */
+  display: none;
+  /* shown only at ≤ 375px */
   height: 3.5rem;
   width: auto;
 }
@@ -382,10 +440,12 @@
 .hamburger.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .hamburger.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -397,15 +457,18 @@
 @media (max-width: 64rem) {
 
   .navbar__inner {
-    gap: var(--space-md);         /* 1rem — tighter than 2rem desktop */
+    gap: var(--space-md);
+    /* 1rem — tighter than 2rem desktop */
   }
 
   .navbar__nav {
-    gap: 1rem;                    /* tighten link spacing */
+    gap: 1rem;
+    /* tighten link spacing */
   }
 
   .navbar__logo-full {
-    height: 2.75rem;              /* 44px — gentle reduction from 3.125rem */
+    height: 2.75rem;
+    /* 44px — gentle reduction from 3.125rem */
   }
 }
 
@@ -474,12 +537,18 @@
   }
 
   .navbar__inner {
-    gap: var(--space-sm);         /* 0.5rem */
+    gap: var(--space-sm);
+    /* 0.5rem */
   }
 
   /* Hamburger to far-right corner at this breakpoint */
-  .btn-cta { order: 1; }
-  .hamburger { order: 2; }
+  .btn-cta {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
+  }
 
   /* Hide custom underline on mobile nav (border-bottom handles separation) */
   .navbar__link::before {
@@ -493,26 +562,38 @@
 @media (max-width: 37.5rem) {
 
   /* Logo: swap to small asset */
-  .navbar__logo-full { display: none; }
-  .navbar__logo-icon { display: block; }
+  .navbar__logo-full {
+    display: none;
+  }
+
+  .navbar__logo-icon {
+    display: block;
+  }
 
   /* CTA: reduce size on actual phone screens */
   .btn-cta {
     padding: 0.625rem 1rem;
-    font-size: var(--text-p2);    /* 0.875rem / 14px */
+    font-size: var(--text-p2);
+    /* 0.875rem / 14px */
   }
 }
 
 /* ── Tier 3a: Small phone (≤ 375px) — vertical logo ─────────────────────────── */
 @media (max-width: 23.4375rem) {
-  .navbar__logo-icon     { display: none; }
-  .navbar__logo-vertical { display: block; }
+  .navbar__logo-icon {
+    display: none;
+  }
+
+  .navbar__logo-vertical {
+    display: block;
+  }
 }
 
 /* ── Tier 4: Small phone (≤ 480px) ──────────────────────────────────────────── */
 @media (max-width: 30rem) {
   .topbar__text {
-    display: none;                /* keep phone link, hide service area text */
+    display: none;
+    /* keep phone link, hide service area text */
   }
 }
 
@@ -574,7 +655,7 @@
 
 .nav-dropdown:hover .nav-dropdown__chevron,
 .nav-dropdown__trigger[aria-expanded="true"] .nav-dropdown__chevron {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 /* Transparent bridge — covers the 0.75rem gap between trigger and dropdown
@@ -585,8 +666,10 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 14rem;    /* wider than min-width: 13rem on the menu */
-  height: 0.875rem; /* slightly more than the 0.75rem gap */
+  width: 14rem;
+  /* wider than min-width: 13rem on the menu */
+  height: 0.875rem;
+  /* slightly more than the 0.75rem gap */
   background: transparent;
 }
 
@@ -605,6 +688,7 @@
   margin: 0;
   padding: 0;
   z-index: 200;
+  overflow: hidden;
   /* Hidden state */
   visibility: hidden;
   opacity: 0;
@@ -613,7 +697,7 @@
 }
 
 @media (min-width:48.0625rem) {
-   .nav-dropdown:hover .nav-dropdown__menu {
+  .nav-dropdown:hover .nav-dropdown__menu {
     visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
@@ -798,13 +882,23 @@
 }
 
 @media (max-width: 48rem) {
-  .service-page-hero__heading { font-size: 2rem; }
+  .service-page-hero__heading {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 37.5rem) {
-  .service-page-hero { padding-block: 3rem 2.5rem; }
-  .service-page-hero__heading { font-size: 1.75rem; }
-  .service-page-hero__cta-wrap .btn-cta { padding: 1rem 2rem; }
+  .service-page-hero {
+    padding-block: 3rem 2.5rem;
+  }
+
+  .service-page-hero__heading {
+    font-size: 1.75rem;
+  }
+
+  .service-page-hero__cta-wrap .btn-cta {
+    padding: 1rem 2rem;
+  }
 }
 
 /* =============================================================================
@@ -843,33 +937,41 @@
 
 /* ── Content container ────────────────────────────────────────────────────────── */
 .hero__container {
-  position: relative;             /* sit above the absolute bg */
-  width: 100%;                    /* fill flex parent so max-width kicks in */
-  padding-block: 8.5625rem;       /* vertical breathing room   */
+  position: relative;
+  /* sit above the absolute bg */
+  width: 100%;
+  /* fill flex parent so max-width kicks in */
+  padding-block: 8.5625rem;
+  /* vertical breathing room   */
   display: flex;
   flex-direction: column;
-  gap: 3.75rem;                   /* 60px gap: text block → buttons */
+  gap: 3.75rem;
+  /* 60px gap: text block → buttons */
 }
 
 /* ── Text block (badge + h1 + sub) ───────────────────────────────────────────── */
 .hero__text {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;                   /* 20px gap inside text block */
+  gap: 1.25rem;
+  /* 20px gap inside text block */
 }
 
 /* Badge pill */
 .hero__badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4375rem;                 /* 7px */
-  padding: 0.4375rem 0.8125rem;   /* 7px 13px */
+  gap: 0.4375rem;
+  /* 7px */
+  padding: 0.4375rem 0.8125rem;
+  /* 7px 13px */
   background: rgba(92, 176, 227, 0.2);
   border: 1px solid rgba(92, 176, 227, 0.3);
   border-radius: var(--radius-pill);
   color: #5cb0e3;
   font-family: var(--font-sans);
-  font-size: var(--text-p3);      /* 12px */
+  font-size: var(--text-p3);
+  /* 12px */
   font-weight: var(--weight-regular);
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
@@ -877,7 +979,8 @@
 }
 
 .hero__badge-dot {
-  width: 0.4375rem;               /* 7px */
+  width: 0.4375rem;
+  /* 7px */
   height: 0.4375rem;
   border-radius: var(--radius-sm);
   background: #5cb0e3;
@@ -887,24 +990,29 @@
 /* Heading */
 .hero__heading {
   font-family: var(--font-sans);
-  font-size: var(--text-h1);      /* 3.5rem / 56px */
+  font-size: var(--text-h1);
+  /* 3.5rem / 56px */
   font-weight: var(--weight-bold);
-  line-height: 3.375rem;          /* 54px — matches Figma */
+  line-height: 3.375rem;
+  /* 54px — matches Figma */
   background: linear-gradient(90deg, #ffffff 0%, #e5f2fb 112.51%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  max-width: 59.1875rem;          /* ~947px */
+  max-width: 59.1875rem;
+  /* ~947px */
 }
 
 /* Sub-paragraph */
 .hero__sub {
   color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-sans);
-  font-size: var(--text-p1);      /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   font-weight: var(--weight-regular);
   line-height: 1.5;
-  max-width: 29.75rem;            /* ~476px */
+  max-width: 29.75rem;
+  /* ~476px */
 }
 
 /* ── CTA buttons ──────────────────────────────────────────────────────────────── */
@@ -912,26 +1020,27 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;                   /* 20px */
+  gap: 1.25rem;
+  /* 20px */
 }
 
 .hero__btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;                    /* 8px */
+  gap: 0.5rem;
+  /* 8px */
   font-family: var(--font-button);
-  font-size: var(--text-p1);      /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   font-weight: var(--weight-bold);
   border-radius: var(--radius-md);
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  transition:  0.2s ease;
+  transition: 0.2s ease;
 }
 
-.hero__btn:hover {
-  
-}
+.hero__btn:hover {}
 
 .hero__btn-icon {
   width: 1rem;
@@ -948,7 +1057,7 @@
   box-shadow: 0 4px 16px rgba(92, 176, 227, 0.46);
 }
 
-.hero__btn--primary:hover{
+.hero__btn--primary:hover {
   background-color: var(--action-primary_hover);
 }
 
@@ -981,7 +1090,8 @@
 /* Tablet portrait (≤ 768px) — scale heading + badge, expand sub; buttons stay side-by-side */
 @media (max-width: 48rem) {
   .hero__badge {
-    font-size: 0.6875rem;         /* 11px — scales with heading */
+    font-size: 0.6875rem;
+    /* 11px — scales with heading */
     padding: 0.375rem 0.75rem;
   }
 
@@ -998,7 +1108,8 @@
 /* Phone (≤ 600px) — stack buttons full-width; preserve 60px gap above them */
 @media (max-width: 37.5rem) {
   .hero__badge {
-    font-size: 0.625rem;          /* 10px — scales with 2rem heading */
+    font-size: 0.625rem;
+    /* 10px — scales with 2rem heading */
     padding: 0.3125rem 0.625rem;
   }
 
@@ -1019,13 +1130,16 @@
   }
 
   .hero__btn {
-    font-size: var(--text-p2);    /* 0.875rem / 14px */
+    font-size: var(--text-p2);
+    /* 0.875rem / 14px */
     padding: 0.75rem 1.25rem;
     justify-content: center;
     width: 100%;
   }
+
   /* DOM order: primary (Call Now) first → renders on top */
 }
+
 /* =============================================================================
    Services Section
    Source: Figma node 15:970
@@ -1036,13 +1150,15 @@
 
 .services {
   background: var(--bg-surface);
-  padding-block: var(--spacing-12); /* 4.375rem = 70px */
+  padding-block: var(--spacing-12);
+  /* 4.375rem = 70px */
 }
 
 .services__container {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem; /* 30px */
+  gap: 1.875rem;
+  /* 30px */
 }
 
 
@@ -1055,7 +1171,8 @@
 }
 
 .services__eyebrow {
-  font-size: var(--text-p3);         /* 12px */
+  font-size: var(--text-p3);
+  /* 12px */
   font-weight: var(--weight-bold);
   color: var(--text-accent);
   text-transform: uppercase;
@@ -1064,18 +1181,21 @@
 }
 
 .services__heading {
-  font-size: var(--text-h2);         /* 2.5rem = 40px */
+  font-size: var(--text-h2);
+  /* 2.5rem = 40px */
   font-weight: var(--weight-bold);
   color: var(--text-heading);
   line-height: var(--leading-h2);
 }
 
 .services__desc {
-  font-size: var(--text-p1);         /* 1rem = 16px */
+  font-size: var(--text-p1);
+  /* 1rem = 16px */
   font-weight: var(--weight-regular);
   color: var(--text-muted);
   line-height: 1.5;
-  max-width: 32.5rem;               /* 520px */
+  max-width: 32.5rem;
+  /* 520px */
 }
 
 
@@ -1084,14 +1204,16 @@
 .services__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);             /* 2rem = 32px */
+  gap: var(--space-xl);
+  /* 2rem = 32px */
 }
 
 
 /* ── Card ───────────────────────────────────────────────────────────────────── */
 
 .services-card {
-  position: relative;               /* for badge absolute positioning */
+  position: relative;
+  /* for badge absolute positioning */
   background: var(--bg-surface);
   border: var(--border-width) solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-lg);
@@ -1109,7 +1231,8 @@
 /* ── Card image ─────────────────────────────────────────────────────────────── */
 
 .services-card__img-wrap {
-  height: 11.6875rem;               /* 187px */
+  height: 11.6875rem;
+  /* 187px */
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -1125,21 +1248,25 @@
 /* ── Card body (title + description) ───────────────────────────────────────── */
 
 .services-card__body {
-  padding: var(--space-md) 1.3125rem 0; /* 16px 21px 0 */
+  padding: var(--space-md) 1.3125rem 0;
+  /* 16px 21px 0 */
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;                     /* 4px */
+  gap: 0.25rem;
+  /* 4px */
 }
 
 .services-card__title {
-  font-size: var(--text-h4);        /* 1.125rem = 18px */
+  font-size: var(--text-h4);
+  /* 1.125rem = 18px */
   font-weight: var(--weight-bold);
   color: var(--text-base);
   line-height: var(--leading-h4);
 }
 
 .services-card__desc {
-  font-size: var(--text-p2);        /* 0.875rem = 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem = 14px */
   font-weight: var(--weight-regular);
   color: var(--text-body);
   line-height: 1.5;
@@ -1150,33 +1277,39 @@
 
 .services-card__footer {
   margin-top: auto;
-  padding: 1.3125rem;               /* 21px */
+  padding: 1.3125rem;
+  /* 21px */
   display: flex;
   flex-direction: column;
-  gap: 1.3125rem;                   /* 21px */
+  gap: 1.3125rem;
+  /* 21px */
 }
 
 .services-card__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);             /* 0.5rem = 8px */
+  gap: var(--space-sm);
+  /* 0.5rem = 8px */
 }
 
 .services-card__item {
   display: flex;
   align-items: center;
-  gap: 0.4375rem;                   /* 7px */
+  gap: 0.4375rem;
+  /* 7px */
 }
 
 .services-card__item-icon {
-  width: 0.875rem;                  /* 14px */
+  width: 0.875rem;
+  /* 14px */
   height: 0.875rem;
   flex-shrink: 0;
   display: block;
 }
 
 .services-card__item-text {
-  font-size: var(--text-p3);        /* 0.75rem = 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem = 12px */
   font-weight: var(--weight-regular);
   color: var(--text-body);
   line-height: 1.5;
@@ -1193,7 +1326,8 @@
   padding: 0.875rem 1.5rem;
   border: var(--border-width) solid var(--text-heading);
   border-radius: var(--radius-md);
-  font-size: 0.76875rem;            /* ~12.3px */
+  font-size: 0.76875rem;
+  /* ~12.3px */
   font-weight: var(--weight-bold);
   color: var(--text-heading);
   background: var(--bg-surface);
@@ -1211,7 +1345,8 @@
 
 /* Primary variant — blue filled (Repair Service) */
 .services-card__btn--primary {
-  background: var(--action-primary); /* #59aee3 */
+  background: var(--action-primary);
+  /* #59aee3 */
   border-color: var(--bg-surface);
   color: var(--text-inverse);
   box-shadow: 0 0.25rem 1rem rgba(92, 176, 227, 0.35);
@@ -1237,15 +1372,19 @@
 
 .services-card__badge {
   position: absolute;
-  top: 0.6875rem;                   /* 11px */
+  top: 0.6875rem;
+  /* 11px */
   left: 0.6875rem;
   background: #dc2626;
   color: var(--text-inverse);
-  font-size: 0.6875rem;             /* 11px */
+  font-size: 0.6875rem;
+  /* 11px */
   font-weight: var(--weight-bold);
-  letter-spacing: 0.04125rem;       /* ~0.66px */
+  letter-spacing: 0.04125rem;
+  /* ~0.66px */
   text-transform: uppercase;
-  padding: 0.25rem 0.625rem;        /* 4px 10px */
+  padding: 0.25rem 0.625rem;
+  /* 4px 10px */
   border-radius: var(--radius-pill);
   line-height: 1;
 }
@@ -1301,6 +1440,7 @@
     font-size: 2rem;
   }
 }
+
 /* =============================================================================
    Mid Banner — Quote CTA
    Source: Figma node 114:76
@@ -1312,7 +1452,8 @@
 .mid-banner {
   background: var(--bg-surface);
   border-block: var(--border-width) solid rgba(0, 0, 0, 0.06);
-  padding-block: 5.0625rem;         /* 81px */
+  padding-block: 5.0625rem;
+  /* 81px */
 }
 
 
@@ -1321,7 +1462,8 @@
 .mid-banner__card {
   background: linear-gradient(to right, #dceef9, #ecf4f9);
   border-radius: var(--radius-md);
-  padding: var(--space-xl);         /* 2rem = 32px */
+  padding: var(--space-xl);
+  /* 2rem = 32px */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1338,14 +1480,16 @@
 }
 
 .mid-banner__heading {
-  font-size: 2rem;                  /* 32px */
+  font-size: 2rem;
+  /* 32px */
   font-weight: var(--weight-bold);
   color: #0c1b2e;
   line-height: 1;
 }
 
 .mid-banner__sub {
-  font-size: var(--text-p1);        /* 1rem = 16px */
+  font-size: var(--text-p1);
+  /* 1rem = 16px */
   font-weight: var(--weight-regular);
   color: var(--text-muted);
   line-height: 1.5;
@@ -1358,7 +1502,8 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 0.25rem;                     /* 4px */
+  gap: 0.25rem;
+  /* 4px */
   background: var(--bg-dark);
   color: var(--text-inverse);
   padding: 0.875rem 1.5rem;
@@ -1381,7 +1526,8 @@
 
 .mid-banner__cta-icon {
   width: 0.875rem;
-  height: 0.8125rem;                /* 13px */
+  height: 0.8125rem;
+  /* 13px */
   flex-shrink: 0;
   display: block;
 }
@@ -1435,6 +1581,7 @@
     padding: 1rem;
   }
 }
+
 /* =============================================================================
    About Section
    Figma node 15:1279 — "15 years keeping our customers comfortable"
@@ -1443,23 +1590,27 @@
 /* ── Section shell ─────────────────────────────────────────────────────────── */
 .about {
   background: linear-gradient(-90deg, #f4f8fb 0%, #eaf4fb 100%);
-  padding-block: var(--spacing-12); /* 4.375rem / 70px */
+  padding-block: var(--spacing-12);
+  /* 4.375rem / 70px */
 }
 
 /* ── Two-column layout ─────────────────────────────────────────────────────── */
 .about__container {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* 40px */
+  gap: 2.5rem;
+  /* 40px */
 }
 
 /* ── Image column ──────────────────────────────────────────────────────────── */
 .about__img-col {
   flex: 1;
-  order: -1; /* image left on desktop regardless of HTML order */
+  order: -1;
+  /* image left on desktop regardless of HTML order */
   position: relative;
   aspect-ratio: 362 / 287;
-  border-radius: 0.547rem; /* ~8.75px */
+  border-radius: 0.547rem;
+  /* ~8.75px */
   overflow: hidden;
   box-shadow:
     0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.1),
@@ -1515,7 +1666,8 @@
 .about__badge-title {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-p2);    /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   color: var(--text-heading);
   text-transform: uppercase;
   line-height: 1;
@@ -1524,7 +1676,8 @@
 .about__badge-sub {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p3);    /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   color: var(--text-muted);
   text-transform: uppercase;
   line-height: 1;
@@ -1535,13 +1688,15 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* 16px */
+  gap: 1rem;
+  /* 16px */
 }
 
 .about__eyebrow {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-p3);    /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   color: var(--text-accent);
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
@@ -1551,7 +1706,8 @@
 .about__heading {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-h2);    /* 2.5rem / 40px */
+  font-size: var(--text-h2);
+  /* 2.5rem / 40px */
   line-height: var(--leading-h2);
   color: var(--text-heading);
   max-width: 32rem;
@@ -1566,7 +1722,8 @@
 .about__para {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p1);    /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   line-height: 1.5;
   color: var(--text-body);
 }
@@ -1575,7 +1732,8 @@
 .about__stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem; /* 12px */
+  gap: 0.75rem;
+  /* 12px */
   padding-top: 0.5rem;
 }
 
@@ -1585,11 +1743,14 @@
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  height: 7.5rem; /* 120px */
+  height: 7.5rem;
+  /* 120px */
   background: var(--bg-surface);
   border: var(--border-width) solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.75rem; /* ~12px */
-  padding: 0.9375rem; /* 15px */
+  border-radius: 0.75rem;
+  /* ~12px */
+  padding: 0.9375rem;
+  /* 15px */
 }
 
 .about__stat-icon {
@@ -1600,7 +1761,8 @@
 .about__stat-number {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: 1.3125rem; /* 21px */
+  font-size: 1.3125rem;
+  /* 21px */
   line-height: 1.75rem;
   color: var(--text-heading);
   text-align: center;
@@ -1609,7 +1771,8 @@
 .about__stat-label {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: 0.769rem; /* ~12.3px */
+  font-size: 0.769rem;
+  /* ~12.3px */
   line-height: 1.09375rem;
   color: var(--text-body);
   text-align: center;
@@ -1631,7 +1794,8 @@
   }
 
   .about__img-col {
-    order: 2; /* image below text in column layout */
+    order: 2;
+    /* image below text in column layout */
     width: 100%;
     max-width: 32rem;
     align-self: center;
@@ -1665,26 +1829,27 @@
     padding: 0.75rem;
   }
 }
+
 /* =============================================================================
-   Reviews Section
-   Figma node 15:1328 — "What Our Customers Say"
+   Trust / Objection Busters Section
+   "Why Choose Us" — between About and Reviews
    ============================================================================= */
 
 /* ── Section shell ─────────────────────────────────────────────────────────── */
-.reviews {
+.trust {
   background: var(--bg-surface);
   padding-block: var(--spacing-12); /* 4.375rem / 70px */
 }
 
 /* ── Section header ────────────────────────────────────────────────────────── */
-.reviews__header {
+.trust__header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem; /* 8px */
   margin-bottom: 3.5rem; /* 56px */
 }
 
-.reviews__eyebrow {
+.trust__eyebrow {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
   font-size: var(--text-p3);    /* 0.75rem / 12px */
@@ -1694,7 +1859,7 @@
   line-height: 1;
 }
 
-.reviews__heading {
+.trust__heading {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
   font-size: var(--text-h2);    /* 2.5rem / 40px */
@@ -1702,7 +1867,7 @@
   color: var(--text-heading);
 }
 
-.reviews__desc {
+.trust__desc {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
   font-size: var(--text-p1);    /* 1rem / 16px */
@@ -1712,21 +1877,176 @@
 }
 
 /* ── Cards grid ────────────────────────────────────────────────────────────── */
+.trust__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem; /* 28px */
+}
+
+/* ── Single trust card ─────────────────────────────────────────────────────── */
+.trust-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 12px */
+  background: linear-gradient(-90deg, #f4f8fb 0%, #eaf4fb 100%);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg); /* 1.5rem / 24px */
+  transition: box-shadow 0.2s ease;
+}
+
+.trust-card:hover {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* ── Icon ──────────────────────────────────────────────────────────────────── */
+.trust-card__icon {
+  width: 2.5rem;  /* 40px */
+  height: 2.5rem; /* 40px */
+  flex-shrink: 0;
+}
+
+.trust-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+.trust-card__title {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-h4);    /* 1.125rem / 18px */
+  line-height: var(--leading-h4);
+  color: var(--text-heading);
+}
+
+.trust-card__text {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-p2);    /* 0.875rem / 14px */
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+/* Tablet landscape ≤ 64rem */
+@media (max-width: 64rem) {
+  .trust__grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet portrait ≤ 48rem */
+@media (max-width: 48rem) {
+  .trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Phone ≤ 37.5rem */
+@media (max-width: 37.5rem) {
+  .trust__heading {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .trust__header {
+    margin-bottom: 2rem;
+  }
+
+  .trust__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trust-card {
+    padding: var(--space-md); /* 1rem / 16px */
+  }
+}
+
+/* ── Section divider ───────────────────────────────────────────────────────── */
+.section-rule {
+  border: none;
+  border-top: var(--border-width) solid rgba(0, 0, 0, 0.1);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+/* =============================================================================
+   Reviews Section
+   Figma node 15:1328 — "What Our Customers Say"
+   ============================================================================= */
+
+/* ── Section shell ─────────────────────────────────────────────────────────── */
+.reviews {
+  background: var(--bg-surface);
+  padding-block: var(--spacing-12);
+  /* 4.375rem / 70px */
+}
+
+/* ── Section header ────────────────────────────────────────────────────────── */
+.reviews__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* 8px */
+  margin-bottom: 3.5rem;
+  /* 56px */
+}
+
+.reviews__eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
+  color: rgba(240, 124, 32, 0.9);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  line-height: 1;
+}
+
+.reviews__heading {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-h2);
+  /* 2.5rem / 40px */
+  line-height: var(--leading-h2);
+  color: var(--text-heading);
+}
+
+.reviews__desc {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
+  line-height: 1.5;
+  color: var(--text-heading);
+  max-width: 32.5rem;
+}
+
+/* ── Cards grid ────────────────────────────────────────────────────────────── */
 .reviews__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.75rem; /* 28px */
+  gap: 1.75rem;
+  /* 28px */
 }
 
 /* ── Single review card ────────────────────────────────────────────────────── */
 .review-card {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem; /* 14px */
+  gap: 0.875rem;
+  /* 14px */
   background: var(--bg-surface);
   border: var(--border-width) solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.797rem; /* ~12.75px */
-  padding: 1.3125rem; /* 21px */
+  border-radius: 0.797rem;
+  /* ~12.75px */
+  padding: 1.3125rem;
+  /* 21px */
   transition: box-shadow 0.2s ease;
 }
 
@@ -1744,10 +2064,13 @@
 /* Quote icon — two SVG halves assembled into a 28×28 icon */
 .review-card__quote {
   position: relative;
-  width: 1.75rem;   /* 28px */
-  height: 1.25rem;  /* 28px */
+  width: 1.75rem;
+  /* 28px */
+  height: 1.25rem;
+  /* 28px */
   flex-shrink: 0;
-  margin-right: 0.65625rem; /* 10.5px */
+  margin-right: 0.65625rem;
+  /* 10.5px */
 }
 
 .review-card__quote-left,
@@ -1782,15 +2105,18 @@
 }
 
 .review-card__star {
-  width: 1.09375rem;  /* 17.5px */
-  height: 1.09375rem; /* 17.5px */
+  width: 1.09375rem;
+  /* 17.5px */
+  height: 1.09375rem;
+  /* 17.5px */
 }
 
 /* ── Review body text ──────────────────────────────────────────────────────── */
 .review-card__text {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   line-height: 1.5;
   color: #4a5565;
 }
@@ -1799,16 +2125,20 @@
 .review-card__author {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem; /* 4px */
-  margin-top: auto;            /* push to bottom of flex card */
-  padding-top: 1.0625rem; /* 17px */
+  gap: 0.25rem;
+  /* 4px */
+  margin-top: auto;
+  /* push to bottom of flex card */
+  padding-top: 1.0625rem;
+  /* 17px */
   border-top: var(--border-width) solid rgba(0, 0, 0, 0.1);
 }
 
 .review-card__name {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   line-height: 1;
   color: var(--text-heading);
 }
@@ -1816,7 +2146,8 @@
 .review-card__location {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p3);   /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   line-height: 1;
   color: #6a7282;
 }
@@ -1846,6 +2177,7 @@
     padding: 1rem;
   }
 }
+
 /* =============================================================================
    Contact Section
    Figma node 15:1440 — "Ready to Get Started?"
@@ -1854,21 +2186,26 @@
 /* ── Section shell ─────────────────────────────────────────────────────────── */
 .contact {
   background: linear-gradient(+90deg, #f4f8fb 0%, #eaf4fb 100%);
-  padding-block: var(--spacing-12); /* 4.375rem / 70px */
+  padding-block: var(--spacing-12);
+  /* 4.375rem / 70px */
 }
 
 /* ── Section header ────────────────────────────────────────────────────────── */
 .contact__header {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* 8px */
-  margin-bottom: 3.5rem; /* 56px */  /* Figma top: 148px = header block ~92px + gap ~56px */
+  gap: 0.5rem;
+  /* 8px */
+  margin-bottom: 3.5rem;
+  /* 56px */
+  /* Figma top: 148px = header block ~92px + gap ~56px */
 }
 
 .contact__eyebrow {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-p3);    /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   color: rgba(240, 124, 32, 0.9);
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
@@ -1878,7 +2215,8 @@
 .contact__heading {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-h2);    /* 2.5rem / 40px */
+  font-size: var(--text-h2);
+  /* 2.5rem / 40px */
   line-height: var(--leading-h2);
   color: var(--bg-dark);
 }
@@ -1886,7 +2224,8 @@
 .contact__desc {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p1);    /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   line-height: 1.5;
   color: var(--text-body);
   max-width: 42rem;
@@ -1896,49 +2235,60 @@
 .contact__body {
   display: flex;
   align-items: flex-start;
-  gap: 4rem; /* 28px */
+  gap: 4rem;
+  /* 28px */
 }
 
 /* ── Left column: contact info ─────────────────────────────────────────────── */
 .contact__info {
-  width: 21rem; /* 336px */
+  width: 21rem;
+  /* 336px */
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 2.25rem; /* 36px */
+  gap: 2.25rem;
+  /* 36px */
 }
 
 .contact__info-item {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem;
+  /* 20px */
 }
 
 .contact__info-label {
   display: flex;
   align-items: center;
-  gap: 0.25rem; /* 4px */
+  gap: 0.25rem;
+  /* 4px */
 }
 
 .contact__info-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.53125rem; /* 24.5px */
-  height: 1.09375rem; /* 17.5px */
+  width: 1.53125rem;
+  /* 24.5px */
+  height: 1.09375rem;
+  /* 17.5px */
   flex-shrink: 0;
-  padding-right: 0.4375rem; /* 7px */
+  padding-right: 0.4375rem;
+  /* 7px */
 }
 
 .contact__info-icon {
-  width: 1.09375rem; /* 17.5px */
-  height: 1.09375rem; /* 17.5px */
+  width: 1.09375rem;
+  /* 17.5px */
+  height: 1.09375rem;
+  /* 17.5px */
 }
 
 .contact__info-title {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-h4);   /* 1.125rem / 18px */
+  font-size: var(--text-h4);
+  /* 1.125rem / 18px */
   line-height: 1;
   color: var(--bg-dark);
 }
@@ -1946,13 +2296,15 @@
 .contact__info-body {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* 8px */
+  gap: 0.5rem;
+  /* 8px */
 }
 
 .contact__info-text {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p1);   /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   line-height: 1.5;
   color: var(--bg-dark);
 }
@@ -1970,13 +2322,15 @@
 .contact__info-hours {
   display: flex;
   flex-direction: column;
-  gap: 0.21875rem; /* 3.5px */
+  gap: 0.21875rem;
+  /* 3.5px */
 }
 
 .contact__info-hour {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p1);   /* 1rem / 16px */
+  font-size: var(--text-p1);
+  /* 1rem / 16px */
   line-height: 1.5;
   color: var(--text-body);
 }
@@ -1984,16 +2338,19 @@
 .contact__info-sub {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p3);   /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   line-height: 1;
   color: #6a7282;
-  padding-bottom: 0.65625rem; /* 10.5px */
+  padding-bottom: 0.65625rem;
+  /* 10.5px */
 }
 
 .contact__info-area-sub {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p3);   /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   line-height: 1;
   color: #6a7282;
 }
@@ -2008,23 +2365,27 @@
   background: var(--bg-surface);
   border: var(--border-width) solid rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
-  padding: 1.5625rem; /* 25px */
+  padding: 1.5625rem;
+  /* 25px */
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 1.265625rem; /* 20.25px — spacing between header block and form */
+  gap: 1.265625rem;
+  /* 20.25px — spacing between header block and form */
 }
 
 .contact__form-header {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* 8px — spacing between title and subtitle */
+  gap: 0.5rem;
+  /* 8px — spacing between title and subtitle */
 }
 
 .contact__form-title {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-h4);   /* 1.125rem / 18px */
+  font-size: var(--text-h4);
+  /* 1.125rem / 18px */
   line-height: 1;
   color: #0a0a0a;
 }
@@ -2032,7 +2393,8 @@
 .contact__form-subtitle {
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   line-height: 1.3;
   color: var(--text-muted);
 }
@@ -2041,25 +2403,29 @@
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: 1.268rem; /* 20.3px */
+  gap: 1.268rem;
+  /* 20.3px */
 }
 
 .contact__form-row {
   display: flex;
-  gap: 0.875rem; /* 14px */
+  gap: 0.875rem;
+  /* 14px */
 }
 
 .contact__field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* 8px */
+  gap: 0.5rem;
+  /* 8px */
   flex: 1;
 }
 
 .contact__label {
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   line-height: 1;
   color: #505d62;
 }
@@ -2074,11 +2440,14 @@
   width: 100%;
   background: #f3f3f5;
   border: var(--border-width) solid transparent;
-  border-radius: 0.5rem; /* 8px */
-  padding: 0.75rem; /* 12px */
+  border-radius: 0.5rem;
+  /* 8px */
+  padding: 0.75rem;
+  /* 12px */
   font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--text-p2);   /* 0.875rem / 14px */
+  font-size: var(--text-p2);
+  /* 0.875rem / 14px */
   color: var(--text-heading);
   line-height: 1;
   outline: none;
@@ -2102,7 +2471,8 @@
 
 .contact__field-error {
   font-family: var(--font-sans);
-  font-size: var(--text-p3); /* 0.75rem / 12px */
+  font-size: var(--text-p3);
+  /* 0.75rem / 12px */
   color: #e05c5c;
   line-height: 1.3;
 }
@@ -2183,8 +2553,9 @@
   border-radius: 0 0 0.5rem 0.5rem;
   list-style: none;
   margin: 0;
-  padding: 0.25rem 0;
+  padding: 0;
   z-index: 100;
+  overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   /* hidden by default */
   display: none;
@@ -2216,7 +2587,8 @@
 }
 
 .contact__textarea {
-  min-height: 7.5rem; /* 120px */
+  min-height: 7.5rem;
+  /* 120px */
   resize: none;
   line-height: 1.5;
 }
@@ -2226,7 +2598,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem; /* 10px */
+  gap: 0.625rem;
+  /* 10px */
   width: 100%;
   background: #5cb0e3;
   border: none;
@@ -2234,7 +2607,8 @@
   padding: 0.875rem 1.5rem;
   font-family: var(--font-sans);
   font-weight: var(--weight-bold);
-  font-size: var(--text-btn);  /* 0.75rem / 12px */
+  font-size: var(--text-btn);
+  /* 0.75rem / 12px */
   line-height: 1.09375rem;
   color: var(--text-inverse);
   text-align: center;
@@ -2310,6 +2684,7 @@
     margin-bottom: 2rem;
   }
 }
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -2400,7 +2775,8 @@
 .footer__icon-wrap {
   display: flex;
   align-items: center;
-  width: 1.53125rem;  /* 14px icon + 10.5px right margin */
+  width: 1.53125rem;
+  /* 14px icon + 10.5px right margin */
   flex-shrink: 0;
 }
 
@@ -2414,7 +2790,7 @@
    --------------------------------------------------------- */
 
 /* Both service/quick-links columns — right-aligned in multi-column layout */
-.footer__top > .footer__col {
+.footer__top>.footer__col {
   justify-self: end;
   text-align: right;
   align-items: flex-end;
@@ -2546,7 +2922,7 @@
     grid-column: 1 / -1;
   }
 
-   .footer__top > .footer__col {
+  .footer__top>.footer__col {
     justify-self: auto;
     text-align: left;
     align-items: flex-start;
