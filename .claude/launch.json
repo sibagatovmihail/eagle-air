@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "eagleair",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-ehttpd", ".", "-p5500"],
+      "port": 5500
+    }
+  ]
+}
