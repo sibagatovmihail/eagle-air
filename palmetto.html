@@ -115,11 +115,12 @@
               <li class="nav-dropdown__link" role="none"><a href="maintenance.html" role="menuitem">Maintenance</a></li>
               <li class="nav-dropdown__link" role="none"><a href="emergency-repair.html" role="menuitem">Emergency Repair</a></li>
               <li class="nav-dropdown__link" role="none"><a href="installation.html" role="menuitem">Installation</a></li>
+              <li class="nav-dropdown__link" role="none"><a href="mini-split.html" role="menuitem">Mini-Split Systems</a></li>
             </ul>
           </div>
           <a href="#about" class="navbar__link">About</a>
           <a href="#reviews" class="navbar__link">Reviews</a>
-          <a href="#contact" class="navbar__link">Contact</a>
+          <a href="#contact-form" class="navbar__link">Contact</a>
         </nav>
 
         <!-- Actions: hamburger + CTA -->
@@ -692,7 +693,7 @@
               </div>
 
               <form
-                class="contact__form"
+                id="contact-form" class="contact__form"
                 action="https://api.web3forms.com/submit"
                 method="post"
               >
@@ -726,6 +727,22 @@
                   </div>
                 </div>
 
+                <!-- Zip Code -->
+                <div class="contact__field">
+                  <label class="contact__label" for="contact-zip">Zip Code</label>
+                  <input
+                    class="contact__input"
+                    id="contact-zip"
+                    name="zip_code"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]{5}"
+                    maxlength="5"
+                    placeholder="34236"
+                    autocomplete="postal-code"
+                  >
+                </div>
+
                 <!-- Service dropdown -->
                 <div class="contact__field">
                   <label class="contact__label" for="contact-service-trigger">What service do you need?</label>
@@ -751,6 +768,7 @@
                       <li class="custom-select__option" data-value="repair" role="option" tabindex="-1">Repair Service</li>
                       <li class="custom-select__option" data-value="maintenance" role="option" tabindex="-1">AC &amp; Maintenance</li>
                       <li class="custom-select__option" data-value="installation" role="option" tabindex="-1">New Installation</li>
+                      <li class="custom-select__option" data-value="mini-split" role="option" tabindex="-1">Mini-Split Systems</li>
                       <li class="custom-select__option" data-value="emergency" role="option" tabindex="-1">Emergency Service</li>
                       <li class="custom-select__option" data-value="other" role="option" tabindex="-1">Other</li>
                     </ul>
@@ -833,6 +851,7 @@
             <li><a href="maintenance.html">Maintenance</a></li>
             <li><a href="emergency-repair.html">Emergency Repair</a></li>
             <li><a href="installation.html">Installation</a></li>
+            <li><a href="mini-split.html">Mini-Split Systems</a></li>
           </ul>
         </div>
 
@@ -843,7 +862,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-form">Contact</a></li>
           </ul>
           <h4 class="footer__col-heading footer__col-heading--social">Follow Us</h4>
           <div class="footer__social">
