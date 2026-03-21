@@ -1622,7 +1622,8 @@
   height: 100.35%;
   object-fit: cover;
   top: -0.11%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ── Licensed badge overlay ────────────────────────────────────────────────── */
