@@ -201,22 +201,6 @@
   line-height: 1;
 }
 
-.footer__credit {
-  font-size: 0.75rem;
-  color: #d1d5dc;
-  line-height: 1;
-}
-
-.footer__credit a {
-  color: #d1d5dc;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer__credit a:hover {
-  color: #ffffff;
-}
-
 .footer__legal {
   display: flex;
   gap: 1.5rem;
