@@ -147,4 +147,18 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Legal pages -->
+  <url>
+    <loc>https://eagleair-hvac.com/privacy-policy.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://eagleair-hvac.com/business-info.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
 </urlset>
