@@ -1891,13 +1891,12 @@
   border: var(--border-width) solid var(--border-default);
   border-radius: var(--radius-lg);
   padding: var(--space-lg); /* 1.5rem / 24px */
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease;
 }
 
-/* Reversed hover — shadow shows by default, flattens on hover */
+/* Flat by default — shadow only on hover */
 .trust-card:hover {
-  box-shadow: none;
+  box-shadow: 0 0.5rem 1.5rem rgba(15, 29, 36, 0.14);
 }
 
 /* ── Icon ──────────────────────────────────────────────────────────────────── */
@@ -1965,6 +1964,136 @@
 
   .trust-card {
     padding: var(--space-md); /* 1rem / 16px */
+  }
+}
+
+/* ── Bento layout (homepage only — .trust--bento) ──────────────────────────── */
+.trust--bento .trust__grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 1.25rem; /* 20px */
+}
+
+.trust--bento .trust-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Icon chip */
+.trust--bento .trust-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;  /* 52px */
+  height: 3.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: var(--border-width) solid var(--border-default);
+}
+
+.trust--bento .trust-card__icon img {
+  width: 2.5rem;  /* 40px */
+  height: 2.5rem;
+}
+
+/* Featured card (24/7 Emergency) — spans 2×2 on desktop */
+.trust--bento .trust-card--featured {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  gap: 1rem;
+  background: linear-gradient(150deg, #14323f 0%, var(--bg-dark) 45%, #103a52 100%);
+  border-color: transparent;
+}
+
+.trust--bento .trust-card--featured::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(89, 174, 227, 0.28) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.trust--bento .trust-card--featured .trust-card__icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.trust--bento .trust-card--featured .trust-card__icon img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.trust--bento .trust-card__featured-foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.trust--bento .trust-card__badge {
+  align-self: flex-start;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--action-accent);
+  color: var(--action-accent-text);
+  font-size: var(--text-p3);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.trust--bento .trust-card--featured .trust-card__title {
+  color: var(--text-inverse);
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+}
+
+.trust--bento .trust-card--featured .trust-card__text {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: var(--text-p1);
+}
+
+/* Bento responsive — columns re-specified at each breakpoint to keep the
+   bento selector's specificity above the base grid rules */
+@media (max-width: 64rem) {
+  .trust--bento .trust__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Tablet portrait — 2 columns, featured becomes a full-width banner */
+@media (max-width: 48rem) {
+  .trust--bento .trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .trust--bento .trust-card--featured {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+/* Phone — single column, featured first */
+@media (max-width: 37.5rem) {
+  .trust--bento .trust__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust--bento .trust-card--featured {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .trust--bento .trust-card--featured .trust-card__title {
+    font-size: var(--text-h4);
+    line-height: var(--leading-h4);
   }
 }
 
