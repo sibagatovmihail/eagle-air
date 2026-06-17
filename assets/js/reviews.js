@@ -212,19 +212,21 @@
     rvGoTo(Math.min(reviewsCurrentIdx, rvMaxIndex()), false);
   }
 
-  /* ── Modal (full review text) ──────────────────────────── */
+  /* ── Modal — full text of every review; clicked one renders first ──────── */
   function rvModalRender() {
     if (!rvModalBody) return;
-    var r = reviewsData[reviewsModalIdx];
-    if (!r) return;
-    rvModalBody.innerHTML =
-      '<div class="rv-card__header">'
-      +   buildAuthorBlock(r)
-      +   GOOGLE_G
-      + '</div>'
-      + '<div class="rv-card__stars">' + buildStars(r.rating) + '</div>'
-      + '<div class="rv-card__text-cover"><p class="rv-card__text">&ldquo;' + esc(r.text) + '&rdquo;</p></div>'
-      + (r.author_url ? '<div class="rv-card__link-cover"><a href="' + esc(r.author_url) + '" target="_blank" rel="noopener" class="rv-card__link">View on Google &rarr;</a></div>' : '');
+    var total = reviewsData.length;
+    var html = '';
+    for (var j = 0; j < total; j++) {
+      var r = reviewsData[(reviewsModalIdx + j) % total];
+      html += '<article class="rv-card">'
+        + '<div class="rv-card__header">' + buildAuthorBlock(r) + GOOGLE_G + '</div>'
+        + '<div class="rv-card__stars">' + buildStars(r.rating) + '</div>'
+        + '<div class="rv-card__text-cover"><p class="rv-card__text">&ldquo;' + esc(r.text) + '&rdquo;</p></div>'
+        + (r.author_url ? '<div class="rv-card__link-cover"><a href="' + esc(r.author_url) + '" target="_blank" rel="noopener" class="rv-card__link">View on Google &rarr;</a></div>' : '')
+        + '</article>';
+    }
+    rvModalBody.innerHTML = html;
   }
 
   function rvModalOpen(idx) {
@@ -233,6 +235,7 @@
     rvModalRender();
     rvModal.hidden = false;
     document.body.classList.add('rv-scroll-locked');
+    if (rvModalBody) rvModalBody.scrollTop = 0; /* clicked review (first) at top */
     if (rvModalClose) rvModalClose.focus();
   }
 
