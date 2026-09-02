@@ -1,20 +1,20 @@
 /* =============================================================================
    EagleAir — Reviews slider (Google Places ready)
    -----------------------------------------------------------------------------
-   The slider renders from a JS data array and is ready to be wired to the
-   Google Maps Places API. Until the two keys below are filled in, it shows the
-   static fallback reviews. Once filled, it pulls live Google reviews, updates
-   the rating badge and the "Write a review" link automatically.
+   Data comes from /api/reviews — a serverless function that calls the Google
+   Places API server-side and is cached on Vercel's CDN for 24 hours, so Google
+   is queried at most once per day no matter how much traffic the site gets.
+   No API key is ever shipped to the browser and no Maps SDK is loaded.
 
-   ► To go live: set REVIEWS_PLACE_ID and REVIEWS_API_KEY below.
-     See GOOGLE-REVIEWS-SETUP.md for the step-by-step guide.
+   ► To go live: set GOOGLE_PLACES_API_KEY and GOOGLE_PLACE_ID as environment
+     variables on the Vercel project. See GOOGLE-REVIEWS-SETUP.md.
+     Until then the static fallback reviews below are shown.
    ============================================================================= */
 (function () {
   'use strict';
 
-  /* ── Config — fill in before going live (see GOOGLE-REVIEWS-SETUP.md) ─────── */
-  var REVIEWS_PLACE_ID = '';   // e.g. 'ChIJN1t_tDeuEmsRUsoyG83frY4'
-  var REVIEWS_API_KEY  = '';   // e.g. 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFh3l4'
+  /* ── Config — the key lives on the server, not here ──────────────────────── */
+  var REVIEWS_ENDPOINT = '/api/reviews';
 
   /* ── Static fallback reviews (replaced by live Google reviews once wired) ── */
   var REVIEWS_STATIC = [
@@ -245,50 +245,58 @@
     document.body.classList.remove('rv-scroll-locked');
   }
 
-  /* ── Google Places loader (falls back to static) ───────── */
+  /* ── Reviews loader: cached server endpoint, static fallback ───────────── */
+  function rvFallback(reason, detail) {
+    /* eslint-disable-next-line no-console */
+    console.warn('[reviews] Live Google reviews unavailable — ' + reason
+      + (detail ? ': ' + detail : '') + '. Showing the static fallback reviews.');
+    reviewsData = REVIEWS_STATIC;
+    rvRender();
+  }
+
   function rvLoadData() {
-    if (!REVIEWS_PLACE_ID || !REVIEWS_API_KEY) {
-      reviewsData = REVIEWS_STATIC;
-      rvRender();
-      return;
-    }
+    /* 8s abort so a hanging request never leaves the slider empty. */
+    var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 8000);
 
-    window._rvMapsReady = function () {
-      var service = new google.maps.places.PlacesService(document.createElement('div'));
-      service.getDetails({
-        placeId: REVIEWS_PLACE_ID,
-        fields: ['reviews', 'rating', 'user_ratings_total']
-      }, function (place, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews && place.reviews.length) {
-          reviewsData = place.reviews.map(function (r) {
-            return {
-              author_name:               r.author_name,
-              rating:                    r.rating,
-              text:                      r.text,
-              relative_time_description: r.relative_time_description,
-              profile_photo_url:         r.profile_photo_url,
-              author_url:                r.author_url
-            };
-          });
-          var scoreEl = document.querySelector('.reviews-badge__score');
-          var countEl = document.querySelector('.reviews-badge__count');
-          if (scoreEl && place.rating)             scoreEl.textContent = place.rating.toFixed(1);
-          if (countEl && place.user_ratings_total) countEl.textContent = place.user_ratings_total + ' reviews';
-          var writeBtn = document.querySelector('.reviews__cta');
-          if (writeBtn) writeBtn.setAttribute('href', 'https://search.google.com/local/writereview?placeid=' + REVIEWS_PLACE_ID);
-        } else {
-          reviewsData = REVIEWS_STATIC;
+    fetch(REVIEWS_ENDPOINT, { headers: { accept: 'application/json' },
+                             signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); })
+      .then(function (r) {
+        clearTimeout(timer);
+        var d = r.body || {};
+        if (!d.ok || !d.reviews || !d.reviews.length) {
+          rvFallback(d.configured === false
+            ? 'GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID are not set on the server'
+            : 'no reviews in the response (HTTP ' + r.status + ')', d.reason || '');
+          return;
         }
-        rvRender();
-      });
-    };
 
-    var s = document.createElement('script');
-    s.src = 'https://maps.googleapis.com/maps/api/js?key=' + REVIEWS_API_KEY + '&libraries=places&callback=_rvMapsReady';
-    s.async = true;
-    s.defer = true;
-    s.onerror = function () { reviewsData = REVIEWS_STATIC; rvRender(); };
-    document.head.appendChild(s);
+        reviewsData = d.reviews.map(function (x) {
+          return {
+            author_name:               x.author,
+            rating:                    x.rating,
+            text:                      x.text,
+            relative_time_description: x.relativeTime,
+            profile_photo_url:         x.photo,
+            author_url:                x.authorUrl
+          };
+        });
+
+        var scoreEl = document.querySelector('.reviews-badge__score');
+        var countEl = document.querySelector('.reviews-badge__count');
+        if (scoreEl && d.rating) scoreEl.textContent = d.rating.toFixed(1);
+        if (countEl && d.total)  countEl.textContent = d.total + ' reviews';
+        var writeBtn = document.querySelector('.reviews__cta');
+        if (writeBtn && d.writeReviewUrl) writeBtn.setAttribute('href', d.writeReviewUrl);
+
+        rvRender();
+      })
+      .catch(function (e) {
+        clearTimeout(timer);
+        rvFallback('request to ' + REVIEWS_ENDPOINT + ' failed',
+          e && e.name === 'AbortError' ? 'timed out after 8s' : (e && e.message));
+      });
   }
 
   /* ── Init ──────────────────────────────────────────────── */
