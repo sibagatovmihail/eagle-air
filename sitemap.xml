@@ -3,160 +3,160 @@
 
   <!-- Main page -->
   <url>
-    <loc>https://eagleair-hvac.com/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Service pages -->
   <url>
-    <loc>https://eagleair-hvac.com/air-conditioning.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/air-conditioning.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/heating.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/heating.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/ventilation.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/ventilation.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/maintenance.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/maintenance.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/emergency-repair.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/emergency-repair.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/installation.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/installation.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/mini-split.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://www.eagleair-hvac.com/mini-split.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Location pages -->
   <url>
-    <loc>https://eagleair-hvac.com/bradenton.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/bradenton.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/venice.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/venice.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/north-port.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/north-port.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/lakewood-ranch.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/lakewood-ranch.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/englewood.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/englewood.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/palmetto.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/palmetto.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/osprey.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/osprey.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/nokomis.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/nokomis.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/siesta-key.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/siesta-key.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/longboat-key.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/longboat-key.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- North Port area -->
   <url>
-    <loc>https://eagleair-hvac.com/port-charlotte.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/port-charlotte.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/punta-gorda.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/punta-gorda.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/rotonda-west.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/rotonda-west.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/deep-creek.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/deep-creek.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/murdock.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/murdock.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Legal pages -->
   <url>
-    <loc>https://eagleair-hvac.com/privacy-policy.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/privacy-policy.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://eagleair-hvac.com/business-info.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://www.eagleair-hvac.com/business-info.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
