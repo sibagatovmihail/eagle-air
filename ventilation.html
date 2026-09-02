@@ -648,26 +648,61 @@
           <p class="faq__sub">Common ventilation questions from Sarasota, Manatee and Charlotte county customers.</p>
         </div>
         <div class="faq__list">
-          <details class="faq__item" open>
-            <summary class="faq__q"><h3>Why does my Florida house feel humid even with the AC running?</h3><svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg></summary>
-            <div class="faq__a"><p>Because an oversized air conditioner cools the air faster than it dehumidifies it. Removing moisture requires long, steady runtime across a cold coil; a unit that is too large for the house satisfies the thermostat in short bursts and shuts off before much moisture condenses, leaving a house that is cold and clammy. The fixes are correct equipment sizing by Manual J load calculation, a variable-speed or two-stage system that runs longer at lower capacity, a dedicated dehumidifier, or sealing duct and envelope leaks that pull humid outdoor air in.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q"><h3>What indoor humidity should a Florida home hold?</h3><svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg></summary>
-            <div class="faq__a"><p>Between 45 and 55 percent relative humidity. Above 60 percent, mould and dust mites thrive and the house feels warmer than the thermostat reads. Below 40 percent is rarely achievable in Florida without over-drying. A simple hygrometer in the main living area tells you whether the problem is temperature or moisture, which are two different repairs.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q"><h3>What is an ERV and is it worth it in Florida?</h3><svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg></summary>
-            <div class="faq__a"><p>An energy recovery ventilator brings controlled fresh air into a tightly built house while transferring heat and moisture between the incoming and outgoing air streams, so it ventilates without dumping the full humidity load onto the air conditioner. In Florida's hot-humid climate an ERV is generally preferred over an HRV, which transfers heat but not moisture. ERVs make the most sense in newer, tighter homes where natural infiltration alone no longer supplies enough fresh air.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q"><h3>Does air duct cleaning actually help?</h3><svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg></summary>
-            <div class="faq__a"><p>Duct cleaning helps in specific situations and is not a routine efficiency upgrade. It is worth doing when there is visible mould inside the ducts or on the coil, evidence of rodents or insects, heavy construction or renovation dust, or water intrusion into the duct system. What duct cleaning does not fix is the most common Florida airflow complaint, which is leakage: a typical duct system loses 20 to 30 percent of the air it carries, and an undersized or crushed return starves the coil no matter how clean the ducts are. Sealing, repairing and resizing address those problems; cleaning does not.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q"><h3>How much fresh air does a house actually need?</h3><svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg></summary>
-            <div class="faq__a"><p>ASHRAE Standard 62.2 puts the requirement at 0.03 cfm per square foot of conditioned floor area plus 7.5 cfm for each bedroom plus one, so a 2,000 square foot three-bedroom house needs about 90 cfm of continuous whole-house ventilation. Older, leaky Florida houses often meet that figure by accident through infiltration, while newer, tighter construction usually does not, which is why a modern home can feel stuffy and still hold high humidity. Supplying that air deliberately through a controlled intake or an ERV beats letting it in through attic and duct leaks, because deliberate air can be filtered and dehumidified before it reaches the rooms.</p></div>
-          </details>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-ventilation-1" id="faq-trigger-ventilation-1">
+                <span class="faq__q-text">Why does my Florida house feel humid even with the AC running?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-ventilation-1" role="region" aria-labelledby="faq-trigger-ventilation-1">
+              <div class="faq__a"><p>Because an oversized air conditioner cools the air faster than it dehumidifies it. Removing moisture requires long, steady runtime across a cold coil; a unit that is too large for the house satisfies the thermostat in short bursts and shuts off before much moisture condenses, leaving a house that is cold and clammy. The fixes are correct equipment sizing by Manual J load calculation, a variable-speed or two-stage system that runs longer at lower capacity, a dedicated dehumidifier, or sealing duct and envelope leaks that pull humid outdoor air in.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-ventilation-2" id="faq-trigger-ventilation-2">
+                <span class="faq__q-text">What indoor humidity should a Florida home hold?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-ventilation-2" role="region" aria-labelledby="faq-trigger-ventilation-2">
+              <div class="faq__a"><p>Between 45 and 55 percent relative humidity. Above 60 percent, mould and dust mites thrive and the house feels warmer than the thermostat reads. Below 40 percent is rarely achievable in Florida without over-drying. A simple hygrometer in the main living area tells you whether the problem is temperature or moisture, which are two different repairs.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-ventilation-3" id="faq-trigger-ventilation-3">
+                <span class="faq__q-text">What is an ERV and is it worth it in Florida?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-ventilation-3" role="region" aria-labelledby="faq-trigger-ventilation-3">
+              <div class="faq__a"><p>An energy recovery ventilator brings controlled fresh air into a tightly built house while transferring heat and moisture between the incoming and outgoing air streams, so it ventilates without dumping the full humidity load onto the air conditioner. In Florida's hot-humid climate an ERV is generally preferred over an HRV, which transfers heat but not moisture. ERVs make the most sense in newer, tighter homes where natural infiltration alone no longer supplies enough fresh air.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-ventilation-4" id="faq-trigger-ventilation-4">
+                <span class="faq__q-text">Does air duct cleaning actually help?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-ventilation-4" role="region" aria-labelledby="faq-trigger-ventilation-4">
+              <div class="faq__a"><p>Duct cleaning helps in specific situations and is not a routine efficiency upgrade. It is worth doing when there is visible mould inside the ducts or on the coil, evidence of rodents or insects, heavy construction or renovation dust, or water intrusion into the duct system. What duct cleaning does not fix is the most common Florida airflow complaint, which is leakage: a typical duct system loses 20 to 30 percent of the air it carries, and an undersized or crushed return starves the coil no matter how clean the ducts are. Sealing, repairing and resizing address those problems; cleaning does not.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-ventilation-5" id="faq-trigger-ventilation-5">
+                <span class="faq__q-text">How much fresh air does a house actually need?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-ventilation-5" role="region" aria-labelledby="faq-trigger-ventilation-5">
+              <div class="faq__a"><p>ASHRAE Standard 62.2 puts the requirement at 0.03 cfm per square foot of conditioned floor area plus 7.5 cfm for each bedroom plus one, so a 2,000 square foot three-bedroom house needs about 90 cfm of continuous whole-house ventilation. Older, leaky Florida houses often meet that figure by accident through infiltration, while newer, tighter construction usually does not, which is why a modern home can feel stuffy and still hold high humidity. Supplying that air deliberately through a controlled intake or an ERV beats letting it in through attic and duct leaks, because deliberate air can be filtered and dehumidified before it reaches the rooms.</p></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -810,6 +845,7 @@
     }());
   </script>
 
+<script defer src="assets/js/faq.js"></script>
 <script defer src="assets/js/cookie-consent.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
