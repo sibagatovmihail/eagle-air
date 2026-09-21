@@ -409,7 +409,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Service Areas",
-          "item": "https://www.eagleair-hvac.com/business-info.html"
+          "item": "https://www.eagleair-hvac.com/service-areas.html"
         },
         {
           "@type": "ListItem",
@@ -433,14 +433,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes, and the warranty is the reason. Most manufacturers require documented annual professional service to keep the parts warranty valid, and a denied compressor claim is far more expensive than the visits. New systems also drift out of correct refrigerant charge and accumulate drain-line biofilm exactly like older ones — Florida humidity does not care how new the equipment is."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How often should an air conditioner be serviced in Florida?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Twice a year. Florida systems run close to year-round, so a Sarasota AC accumulates far more runtime hours than the same unit in a northern state where cooling season lasts three or four months. A spring visit before peak load and a second visit in autumn catch the failures that actually strand people: a clogged condensate drain, a weak start capacitor, low refrigerant, and a coil packed with dust. EagleAir maintenance visits cover coil cleaning, drain-line flushing, refrigerant pressure check, electrical and capacitor inspection, and a thermostat calibration."
           }
         },
         {
@@ -469,17 +461,25 @@
         },
         {
           "@type": "Question",
-          "name": "Do you offer 24/7 emergency HVAC repair?",
+          "name": "My Lakewood Ranch house is cool but feels damp. What is wrong?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. EagleAir answers emergency calls 24 hours a day, seven days a week, including nights, weekends and holidays, across Sarasota, Manatee and Charlotte counties. A no-cool call in August in Florida is a health issue, not an inconvenience, particularly for older residents and households with infants. Call (904) 316-9933 and describe what the system is doing — no cooling at all, running without cooling, tripping the breaker, or making a specific noise — so the right parts come on the truck."
+            "text": "The system is almost certainly short-cycling. Cooling removes humidity only while the system is actually running, and a generously sized unit in a tight, well-insulated Lakewood Ranch home reaches the set temperature in short bursts that never run long enough to dry the air. Indoor relative humidity should sit between 45 and 55 percent. EagleAir measures it, checks airflow and the charge, and looks at whether the equipment is oversized for the actual load, because the fix is longer run times, not more tonnage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will a bigger air conditioner fix the humidity in my new-build home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, it will make it worse. Larger equipment reaches the thermostat setting faster, which means shorter cycles and even less moisture removed. The equipment that solves this is two-stage or variable-speed, sized from a Manual J load calculation rather than from the builder's margin, because a variable-speed compressor runs long and slow at part load and that is what dehumidifies. Before replacing anything, EagleAir checks thermostat dehumidification settings, airflow and refrigerant charge, since those are cheaper and often sufficient."
           }
         }
       ]
     }
   ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
   <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
@@ -531,7 +531,7 @@
       <div class="navbar__inner container">
 
         <!-- Logo -->
-        <a class="navbar__logo" href="#" aria-label="EagleAir — Home">
+        <a class="navbar__logo" href="index.html" aria-label="EagleAir — Home">
           <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
           <img class="navbar__logo-icon" src="assets/logo_small.png" alt="EagleAir">
           <img class="navbar__logo-vertical" src="assets/logo-vertical.png" alt="EagleAir">
@@ -539,7 +539,7 @@
 
         <!-- Desktop navigation -->
         <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
-          <a href="#hero" class="navbar__link active">Home</a>
+          <a href="index.html" class="navbar__link">Home</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
               Services
@@ -557,8 +557,9 @@
               <li class="nav-dropdown__link" role="none"><a href="mini-split.html" role="menuitem">Mini-Split Systems</a></li>
             </ul>
           </div>
-          <a href="#about" class="navbar__link">About</a>
-          <a href="#reviews" class="navbar__link">Reviews</a>
+          <a href="service-areas.html" class="navbar__link active">Service Areas</a>
+          <a href="index.html#about" class="navbar__link">About</a>
+          <a href="index.html#reviews" class="navbar__link">Reviews</a>
           <a href="#contact-form" class="navbar__link">Contact</a>
         </nav>
 
@@ -620,7 +621,7 @@
             Available Now · Lakewood Ranch, FL
           </div>
 
-          <h1 class="hero__heading">AC Out? We'll Be There Before You Break a Sweat.</h1>
+          <h1 class="hero__heading">AC Repair &amp; HVAC Service in Lakewood Ranch, FL</h1>
 
           <p class="hero__sub">
             Lakewood Ranch's trusted HVAC team — same-day repair, flat-rate pricing, and 15 years of quality you can count on.
@@ -657,7 +658,7 @@
         <div class="services__header">
           <p class="services__eyebrow">Our services</p>
           <h2 class="services__heading">The Right Fix,<br>Right When You Need It</h2>
-          <p class="services__desc">From emergency breakdowns to full system installs — every job backed by our quality guarantee.</p>
+          <p class="services__desc">Everything EagleAir does for Lakewood Ranch homes and businesses — from emergency breakdowns to full system installs, every job backed by our quality guarantee.</p>
         </div>
 
         <!-- Cards grid -->
@@ -789,274 +790,7 @@
       </div>
     </section>
 
-
-    <!-- ── MID BANNER ────────────────────────────────────────────── -->
-    <section class="mid-banner">
-      <div class="container">
-        <div class="mid-banner__card">
-          <div class="mid-banner__text">
-            <p class="mid-banner__heading">Not sure what you need?</p>
-            <p class="mid-banner__sub">Tell us about your situation — we'll assess it and send you a free, no-obligation estimate.</p>
-          </div>
-          <div class="mid-banner__cta-wrap">
-            <a class="mid-banner__cta" href="#contact-form">
-              Get a Free Quote
-              <div class="btn__arrow-wrap"><img class="mid-banner__cta-icon" src="assets/icons/arrow-right-sm.svg" alt="" aria-hidden="true"></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ── ABOUT ─────────────────────────────────────────────────────── -->
-    <section class="about" id="about">
-      <div class="container about__container">
-
-        <!-- Left: text + stats -->
-        <div class="about__content">
-
-          <p class="about__eyebrow">About EagleAir</p>
-          <h2 class="about__heading">15 years keeping our customers comfortable</h2>
-
-          <div class="about__body">
-            <p class="about__para">For over 15 years, EagleAIr has been its customers trusted partner for all heating, ventilation, and air conditioning needs. We pride ourselves on delivering exceptional service, quality workmanship, and reliable solutions that keep our customers comfortable year-round.</p>
-            <p class="about__para">Our team of skilled and dedicated technicians brings extensive experience and expertise to every project. Whether you need emergency repairs, routine maintenance, or a complete system design and installation, we're committed to exceeding your expectations.</p>
-          </div>
-
-          <!-- 2×2 stats grid -->
-          <div class="about__stats">
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-customers.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">500+</span>
-              <span class="about__stat-label">Happy Customers</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-years.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">15+</span>
-              <span class="about__stat-label">Years Experience</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-areas.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">20+</span>
-              <span class="about__stat-label">Areas Served</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-emergency.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">24/7</span>
-              <span class="about__stat-label">Emergency Service</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: photo with badge -->
-        <div class="about__img-col">
-          <img
-            class="about__img"
-            src="assets/images/about-us.webp"
-            alt="EagleAir HVAC technician beside a residential air conditioning unit in Florida"
-            loading="lazy"
-          >
-          <div class="about__badge" aria-label="Locally owned and operated">
-            <div class="about__badge-icon-wrap">
-              <img
-                class="about__badge-icon"
-                src="assets/icons/licensed-badge.svg"
-                alt=""
-                aria-hidden="true"
-              >
-            </div>
-            <div class="about__badge-text">
-              <span class="about__badge-title">Locally</span>
-              <span class="about__badge-sub">Owned &amp; Operated</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── TRUST / WHY CHOOSE US ──────────────────────────────────────── -->
-    <section class="trust">
-      <div class="container">
-
-        <!-- Section header -->
-        <div class="trust__header">
-          <div><p class="trust__eyebrow">Why Choose Us</p></div>
-          <div><h2 class="trust__heading">The EagleAir Difference</h2></div>
-          <div><p class="trust__desc">We know you have choices when it comes to your home's comfort. Here's why thousands of Florida families choose EagleAir year after year.</p></div>
-        </div>
-
-        <!-- Cards grid -->
-        <div class="trust__grid">
-
-          <!-- 1 — Upfront Pricing -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-pricing.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Upfront Pricing</h3></div>
-            <div><p class="trust-card__text">No hidden fees or surprise charges. We provide clear, honest quotes before any work begins.</p></div>
-          </div>
-
-          <!-- 2 — Locally Owned & Operated -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-licensed.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Locally Owned &amp; Operated</h3></div>
-            <div><p class="trust-card__text">Born and based right here in Sarasota. We know the local climate, respond fast, and stand behind every job we do.</p></div>
-          </div>
-
-          <!-- 3 — On-Time, Every Time -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-ontime.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">On-Time, Every Time</h3></div>
-            <div><p class="trust-card__text">We respect your schedule. Our technicians arrive within the promised service window.</p></div>
-          </div>
-
-          <!-- 4 — Satisfaction Guaranteed -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-satisfaction.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Satisfaction Guaranteed</h3></div>
-            <div><p class="trust-card__text">Not happy with the job? We'll make it right. Your comfort is our top priority.</p></div>
-          </div>
-
-          <!-- 5 — Family-Owned & Trusted -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-family.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Family-Owned &amp; Trusted</h3></div>
-            <div><p class="trust-card__text">Proudly family-operated and rooted in our community — we treat every home like our own.</p></div>
-          </div>
-
-          <!-- 6 — 24/7 Emergency Service -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-phone.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">24/7 Emergency Service</h3></div>
-            <div><p class="trust-card__text">HVAC emergencies don't wait, and neither do we. Day or night, help is just one call away.</p></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <div class="section-rule"></div>
-
-    <!-- ── REVIEWS ─────────────────────────────────────────────────────── -->
-    <section class="reviews" id="reviews">
-      <div class="container">
-
-        <!-- Section header -->
-        <div class="reviews__header">
-          <p class="reviews__eyebrow">Customer Reviews</p>
-          <h2 class="reviews__heading">What Our Customers Say</h2>
-          <p class="reviews__desc">Real reviews from real homeowners and businesses in Florida.</p>
-        </div>
-
-        <!-- 2×2 cards grid -->
-        <div class="reviews__grid">
-
-          <!-- Card 1 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"EagleAIr installed our new central air system last month. The team was professional, punctual, and the installation was flawless. Our home has never been more comfortable!"</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Adebayo Johnson</span>
-              <span class="review-card__location">Maitama, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"When our AC broke down during the peak of dry season, EagleAIr came to our rescue within hours. Excellent emergency service and very reasonable pricing."</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Fatima Hassan</span>
-              <span class="review-card__location">Wuse II, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"I've been using EagleAIr for maintenance on our office building for 3 years. They're reliable, knowledgeable, and always deliver quality service. Highly recommended!"</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Michael Okafor</span>
-              <span class="review-card__location">Garki, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"The technicians were courteous and explained everything they were doing. The repair was completed quickly and our system is running better than ever. Great customer service!"</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Sarah Ibrahim</span>
-              <span class="review-card__location">Asokoro, Florida</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
 
 
     <!-- ── CONTACT ─────────────────────────────────────────────────────── -->
@@ -1071,11 +805,32 @@
           <p>Lakewood Ranch is a large master-planned community straddling the Manatee and Sarasota county line east of I-75, and it is one of the newest housing stocks in EagleAir's service area. Most homes here were built after 2000 to a tighter, better-insulated standard than older coastal Sarasota properties, which changes what goes wrong with the air conditioning.</p>
           <p>Tight, new houses rarely have the duct-leakage and insulation problems that dominate older neighbourhoods. What they have instead is humidity. A well-sealed house has little natural infiltration, and a system sized generously for the builder's margin cools it in short bursts that never run long enough to pull moisture out — so the house reads 74°F and still feels damp. The answer is usually longer runtime at lower capacity, not more tonnage.</p>
           <p>Lakewood Ranch homes are also young enough that most equipment is still inside the manufacturer's parts warranty. Those warranties generally require documented annual professional maintenance, so a lapsed service history can turn a covered compressor into an out-of-pocket one.</p>
+        <div class="local__more">
+          <h3 class="local__subheading">The humidity problem in a new house</h3>
+          <p>A Lakewood Ranch homeowner who says the house is cold but feels clammy has described a run-time problem, not a capacity problem. Air conditioning removes moisture only while the coil is cold and air is moving across it. A generously sized system in a tight, well-insulated post-2000 house hits the thermostat setting in a short burst, shuts off, and leaves the moisture behind. The thermostat is satisfied and the house is uncomfortable, which is why the instinct to buy more tonnage is exactly backwards: a larger system shortens the cycles further and makes the house damper.</p>
+          <p>The fixes run in order of cost. Raising the set point by a degree and letting the system run longer sometimes helps on its own. A thermostat with a genuine dehumidification mode, which extends the cycle past the temperature target while watching humidity, helps more. Correcting airflow so the coil runs at its designed temperature helps more again. Where the equipment is genuinely oversized for the load, the durable answer is two-stage or variable-speed equipment sized from an actual Manual J calculation rather than from the builder's margin, because variable-speed compressors run long and slow, which is precisely what dehumidification requires. Indoor relative humidity should sit between 45 and 55 percent; if yours does not, the number is measurable and the cause is findable.</p>
+        </div>
         </div>
         </div>
       </div>
     </section>
 
+
+
+    <!-- Neighbouring service areas -->
+    <section class="nearby" aria-labelledby="nearby-heading">
+      <div class="container">
+        <div class="nearby__inner">
+          <h2 class="nearby__heading" id="nearby-heading">EagleAir also covers, close to Lakewood Ranch</h2>
+          <ul class="nearby__list">
+            <li><a href="bradenton.html">HVAC service in Bradenton</a></li>
+            <li><a href="palmetto.html">HVAC service in Palmetto</a></li>
+            <li><a href="longboat-key.html">HVAC service in Longboat Key</a></li>
+          </ul>
+          <p class="nearby__all"><a href="service-areas.html">All 15 EagleAir service areas &rarr;</a></p>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ: question-headed answer blocks (SEO/GEO) -->
     <section class="faq" id="faq" aria-labelledby="faq-heading">
@@ -1095,17 +850,6 @@
             </h3>
             <div class="faq__panel" id="faq-panel-lakewood-ranch-1" role="region" aria-labelledby="faq-trigger-lakewood-ranch-1">
               <div class="faq__a"><p>Yes, and the warranty is the reason. Most manufacturers require documented annual professional service to keep the parts warranty valid, and a denied compressor claim is far more expensive than the visits. New systems also drift out of correct refrigerant charge and accumulate drain-line biofilm exactly like older ones — Florida humidity does not care how new the equipment is.</p></div>
-            </div>
-          </div>
-          <div class="faq__item">
-            <h3 class="faq__q-heading">
-              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-lakewood-ranch-2" id="faq-trigger-lakewood-ranch-2">
-                <span class="faq__q-text">How often should an air conditioner be serviced in Florida?</span>
-                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
-              </button>
-            </h3>
-            <div class="faq__panel" id="faq-panel-lakewood-ranch-2" role="region" aria-labelledby="faq-trigger-lakewood-ranch-2">
-              <div class="faq__a"><p>Twice a year. Florida systems run close to year-round, so a Sarasota AC accumulates far more runtime hours than the same unit in a northern state where cooling season lasts three or four months. A spring visit before peak load and a second visit in autumn catch the failures that actually strand people: a clogged condensate drain, a weak start capacitor, low refrigerant, and a coil packed with dust. EagleAir maintenance visits cover coil cleaning, drain-line flushing, refrigerant pressure check, electrical and capacitor inspection, and a thermostat calibration.</p></div>
             </div>
           </div>
           <div class="faq__item">
@@ -1143,13 +887,24 @@
           </div>
           <div class="faq__item">
             <h3 class="faq__q-heading">
-              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-lakewood-ranch-6" id="faq-trigger-lakewood-ranch-6">
-                <span class="faq__q-text">Do you offer 24/7 emergency HVAC repair?</span>
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-lakewood-ranch-7" id="faq-trigger-lakewood-ranch-7">
+                <span class="faq__q-text">My Lakewood Ranch house is cool but feels damp. What is wrong?</span>
                 <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
               </button>
             </h3>
-            <div class="faq__panel" id="faq-panel-lakewood-ranch-6" role="region" aria-labelledby="faq-trigger-lakewood-ranch-6">
-              <div class="faq__a"><p>Yes. EagleAir answers emergency calls 24 hours a day, seven days a week, including nights, weekends and holidays, across Sarasota, Manatee and Charlotte counties. A no-cool call in August in Florida is a health issue, not an inconvenience, particularly for older residents and households with infants. Call (904) 316-9933 and describe what the system is doing — no cooling at all, running without cooling, tripping the breaker, or making a specific noise — so the right parts come on the truck.</p></div>
+            <div class="faq__panel" id="faq-panel-lakewood-ranch-7" role="region" aria-labelledby="faq-trigger-lakewood-ranch-7">
+              <div class="faq__a"><p>The system is almost certainly short-cycling. Cooling removes humidity only while the system is actually running, and a generously sized unit in a tight, well-insulated Lakewood Ranch home reaches the set temperature in short bursts that never run long enough to dry the air. Indoor relative humidity should sit between 45 and 55 percent. EagleAir measures it, checks airflow and the charge, and looks at whether the equipment is oversized for the actual load, because the fix is longer run times, not more tonnage.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-lakewood-ranch-8" id="faq-trigger-lakewood-ranch-8">
+                <span class="faq__q-text">Will a bigger air conditioner fix the humidity in my new-build home?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-lakewood-ranch-8" role="region" aria-labelledby="faq-trigger-lakewood-ranch-8">
+              <div class="faq__a"><p>No, it will make it worse. Larger equipment reaches the thermostat setting faster, which means shorter cycles and even less moisture removed. The equipment that solves this is two-stage or variable-speed, sized from a Manual J load calculation rather than from the builder's margin, because a variable-speed compressor runs long and slow at part load and that is what dehumidifies. Before replacing anything, EagleAir checks thermostat dehumidification settings, airflow and refrigerant charge, since those are cheaper and often sufficient.</p></div>
             </div>
           </div>
         </div>
@@ -1354,7 +1109,7 @@
 
         <!-- Brand column -->
         <div class="footer__brand">
-          <a href="#" class="footer__logo-wrap">
+          <a href="index.html" class="footer__logo-wrap">
             <img src="assets/logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
           </a>
           <div class="footer__desc">
@@ -1394,20 +1149,57 @@
         <div class="footer__col">
           <h3 class="footer__col-heading">Quick Links</h3>
           <ul class="footer__list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact-form">Contact</a></li>
           </ul>
-          <h4 class="footer__col-heading footer__col-heading--social">Follow Us</h4>
-          <div class="footer__social">
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-facebook.svg" alt="Facebook" /></a>
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-instagram.svg" alt="Instagram" /></a>
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-linkedin.svg" alt="LinkedIn" /></a>
-          </div>
         </div>
 
       </div><!-- /.footer__top -->
+
+      <hr class="footer__divider" />
+
+      <!-- Service areas - keeps every city page linked from every page -->
+      <nav class="footer__areas" aria-label="Service areas">
+        <div class="footer__areas-head">
+          <h3 class="footer__col-heading">Service Areas</h3>
+          <p class="footer__areas-note">24/7 HVAC service across Sarasota, Manatee and Charlotte counties.</p>
+        </div>
+        <div class="footer__areas-grid">
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Manatee County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="palmetto.html">HVAC in Palmetto</a></li>
+              <li><a href="bradenton.html">HVAC in Bradenton</a></li>
+              <li><span class="footer__areas-current" aria-current="page">Lakewood Ranch</span></li>
+              <li><a href="longboat-key.html">HVAC in Longboat Key</a></li>
+            </ul>
+          </div>
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Sarasota County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="siesta-key.html">HVAC in Siesta Key</a></li>
+              <li><a href="osprey.html">HVAC in Osprey</a></li>
+              <li><a href="nokomis.html">HVAC in Nokomis</a></li>
+              <li><a href="venice.html">HVAC in Venice</a></li>
+              <li><a href="north-port.html">HVAC in North Port</a></li>
+              <li><a href="englewood.html">HVAC in Englewood</a></li>
+            </ul>
+          </div>
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Charlotte County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="port-charlotte.html">HVAC in Port Charlotte</a></li>
+              <li><a href="murdock.html">HVAC in Murdock</a></li>
+              <li><a href="deep-creek.html">HVAC in Deep Creek</a></li>
+              <li><a href="punta-gorda.html">HVAC in Punta Gorda</a></li>
+              <li><a href="rotonda-west.html">HVAC in Rotonda West</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__areas-all"><a href="service-areas.html">All service areas &rarr;</a></div>
+      </nav>
 
       <hr class="footer__divider" />
 
@@ -1416,7 +1208,6 @@
         <span class="footer__copy">© 2026 EagleAir. All rights reserved. <a href="https://viasmedia.com" class="footer__vias" target="_blank" rel="noopener">Vias Media</a></span>
         <div class="footer__legal">
           <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
           <a href="business-info.html">Business Info</a>
         </div>
       </div>

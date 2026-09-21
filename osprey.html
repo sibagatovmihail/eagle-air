@@ -409,7 +409,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Service Areas",
-          "item": "https://www.eagleair-hvac.com/business-info.html"
+          "item": "https://www.eagleair-hvac.com/service-areas.html"
         },
         {
           "@type": "ListItem",
@@ -433,14 +433,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. EagleAir's 24/7 emergency coverage includes Osprey and the rest of south Sarasota County. Call (904) 316-9933 at any hour; describing the specific symptom on the call lets the technician arrive with the likely parts already on the truck."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How often should an air conditioner be serviced in Florida?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Twice a year. Florida systems run close to year-round, so a Sarasota AC accumulates far more runtime hours than the same unit in a northern state where cooling season lasts three or four months. A spring visit before peak load and a second visit in autumn catch the failures that actually strand people: a clogged condensate drain, a weak start capacitor, low refrigerant, and a coil packed with dust. EagleAir maintenance visits cover coil cleaning, drain-line flushing, refrigerant pressure check, electrical and capacitor inspection, and a thermostat calibration."
           }
         },
         {
@@ -469,17 +461,25 @@
         },
         {
           "@type": "Question",
-          "name": "Do you offer 24/7 emergency HVAC repair?",
+          "name": "Does my Osprey home need coastal AC maintenance or inland maintenance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. EagleAir answers emergency calls 24 hours a day, seven days a week, including nights, weekends and holidays, across Sarasota, Manatee and Charlotte counties. A no-cool call in August in Florida is a health issue, not an inconvenience, particularly for older residents and households with infants. Call (904) 316-9933 and describe what the system is doing — no cooling at all, running without cooling, tripping the breaker, or making a specific noise — so the right parts come on the truck."
+            "text": "It depends on how close you are to the Intracoastal. Look at the aluminium fins on your outdoor unit: chalky white deposits, powdery corrosion or fins that crumble when touched mean salt is reaching the coil and it should be rinsed with fresh water regularly. Homes further inland in Osprey follow the ordinary Florida pattern instead, where capacitors, drain-line clogs and dirty coils are the recurring issues. EagleAir will tell you which category your unit is in at the first visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What fails most often on air conditioners in Osprey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In order: run capacitors, which fail from heat and age and are among the cheapest parts to replace; condensate drain lines, which clog because Florida humidity feeds algae growth inside them and then back water into the pan; and evaporator coils, which lose capacity as they load with dust. Low refrigerant is a fourth, but it is never a consumable, so a low charge always means a leak that has to be located rather than simply topped up. On Intracoastal-side properties, condenser corrosion joins the list."
           }
         }
       ]
     }
   ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
   <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
@@ -531,7 +531,7 @@
       <div class="navbar__inner container">
 
         <!-- Logo -->
-        <a class="navbar__logo" href="#" aria-label="EagleAir — Home">
+        <a class="navbar__logo" href="index.html" aria-label="EagleAir — Home">
           <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
           <img class="navbar__logo-icon" src="assets/logo_small.png" alt="EagleAir">
           <img class="navbar__logo-vertical" src="assets/logo-vertical.png" alt="EagleAir">
@@ -539,7 +539,7 @@
 
         <!-- Desktop navigation -->
         <nav class="navbar__nav" id="nav-menu" aria-label="Main navigation">
-          <a href="#hero" class="navbar__link active">Home</a>
+          <a href="index.html" class="navbar__link">Home</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
               Services
@@ -557,8 +557,9 @@
               <li class="nav-dropdown__link" role="none"><a href="mini-split.html" role="menuitem">Mini-Split Systems</a></li>
             </ul>
           </div>
-          <a href="#about" class="navbar__link">About</a>
-          <a href="#reviews" class="navbar__link">Reviews</a>
+          <a href="service-areas.html" class="navbar__link active">Service Areas</a>
+          <a href="index.html#about" class="navbar__link">About</a>
+          <a href="index.html#reviews" class="navbar__link">Reviews</a>
           <a href="#contact-form" class="navbar__link">Contact</a>
         </nav>
 
@@ -620,7 +621,7 @@
             Available Now · Osprey, FL
           </div>
 
-          <h1 class="hero__heading">AC Out? We'll Be There Before You Break a Sweat.</h1>
+          <h1 class="hero__heading">AC Repair &amp; HVAC Service in Osprey, FL</h1>
 
           <p class="hero__sub">
             Osprey's trusted HVAC team — same-day repair, flat-rate pricing, and 15 years of quality you can count on.
@@ -657,7 +658,7 @@
         <div class="services__header">
           <p class="services__eyebrow">Our services</p>
           <h2 class="services__heading">The Right Fix,<br>Right When You Need It</h2>
-          <p class="services__desc">From emergency breakdowns to full system installs — every job backed by our quality guarantee.</p>
+          <p class="services__desc">Everything EagleAir does for Osprey homes and businesses — from emergency breakdowns to full system installs, every job backed by our quality guarantee.</p>
         </div>
 
         <!-- Cards grid -->
@@ -789,274 +790,7 @@
       </div>
     </section>
 
-
-    <!-- ── MID BANNER ────────────────────────────────────────────── -->
-    <section class="mid-banner">
-      <div class="container">
-        <div class="mid-banner__card">
-          <div class="mid-banner__text">
-            <p class="mid-banner__heading">Not sure what you need?</p>
-            <p class="mid-banner__sub">Tell us about your situation — we'll assess it and send you a free, no-obligation estimate.</p>
-          </div>
-          <div class="mid-banner__cta-wrap">
-            <a class="mid-banner__cta" href="#contact-form">
-              Get a Free Quote
-              <div class="btn__arrow-wrap"><img class="mid-banner__cta-icon" src="assets/icons/arrow-right-sm.svg" alt="" aria-hidden="true"></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ── ABOUT ─────────────────────────────────────────────────────── -->
-    <section class="about" id="about">
-      <div class="container about__container">
-
-        <!-- Left: text + stats -->
-        <div class="about__content">
-
-          <p class="about__eyebrow">About EagleAir</p>
-          <h2 class="about__heading">15 years keeping our customers comfortable</h2>
-
-          <div class="about__body">
-            <p class="about__para">For over 15 years, EagleAIr has been its customers trusted partner for all heating, ventilation, and air conditioning needs. We pride ourselves on delivering exceptional service, quality workmanship, and reliable solutions that keep our customers comfortable year-round.</p>
-            <p class="about__para">Our team of skilled and dedicated technicians brings extensive experience and expertise to every project. Whether you need emergency repairs, routine maintenance, or a complete system design and installation, we're committed to exceeding your expectations.</p>
-          </div>
-
-          <!-- 2×2 stats grid -->
-          <div class="about__stats">
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-customers.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">500+</span>
-              <span class="about__stat-label">Happy Customers</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-years.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">15+</span>
-              <span class="about__stat-label">Years Experience</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-areas.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">20+</span>
-              <span class="about__stat-label">Areas Served</span>
-            </div>
-            <div class="about__stat-card">
-              <img class="about__stat-icon" src="assets/icons/stat-emergency.svg" alt="" aria-hidden="true">
-              <span class="about__stat-number">24/7</span>
-              <span class="about__stat-label">Emergency Service</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: photo with badge -->
-        <div class="about__img-col">
-          <img
-            class="about__img"
-            src="assets/images/about-us.webp"
-            alt="EagleAir HVAC technician beside a residential air conditioning unit in Florida"
-            loading="lazy"
-          >
-          <div class="about__badge" aria-label="Locally owned and operated">
-            <div class="about__badge-icon-wrap">
-              <img
-                class="about__badge-icon"
-                src="assets/icons/licensed-badge.svg"
-                alt=""
-                aria-hidden="true"
-              >
-            </div>
-            <div class="about__badge-text">
-              <span class="about__badge-title">Locally</span>
-              <span class="about__badge-sub">Owned &amp; Operated</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── TRUST / WHY CHOOSE US ──────────────────────────────────────── -->
-    <section class="trust">
-      <div class="container">
-
-        <!-- Section header -->
-        <div class="trust__header">
-          <div><p class="trust__eyebrow">Why Choose Us</p></div>
-          <div><h2 class="trust__heading">The EagleAir Difference</h2></div>
-          <div><p class="trust__desc">We know you have choices when it comes to your home's comfort. Here's why thousands of Florida families choose EagleAir year after year.</p></div>
-        </div>
-
-        <!-- Cards grid -->
-        <div class="trust__grid">
-
-          <!-- 1 — Upfront Pricing -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-pricing.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Upfront Pricing</h3></div>
-            <div><p class="trust-card__text">No hidden fees or surprise charges. We provide clear, honest quotes before any work begins.</p></div>
-          </div>
-
-          <!-- 2 — Locally Owned & Operated -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-licensed.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Locally Owned &amp; Operated</h3></div>
-            <div><p class="trust-card__text">Born and based right here in Sarasota. We know the local climate, respond fast, and stand behind every job we do.</p></div>
-          </div>
-
-          <!-- 3 — On-Time, Every Time -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-ontime.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">On-Time, Every Time</h3></div>
-            <div><p class="trust-card__text">We respect your schedule. Our technicians arrive within the promised service window.</p></div>
-          </div>
-
-          <!-- 4 — Satisfaction Guaranteed -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-satisfaction.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Satisfaction Guaranteed</h3></div>
-            <div><p class="trust-card__text">Not happy with the job? We'll make it right. Your comfort is our top priority.</p></div>
-          </div>
-
-          <!-- 5 — Family-Owned & Trusted -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-family.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">Family-Owned &amp; Trusted</h3></div>
-            <div><p class="trust-card__text">Proudly family-operated and rooted in our community — we treat every home like our own.</p></div>
-          </div>
-
-          <!-- 6 — 24/7 Emergency Service -->
-          <div class="trust-card">
-            <div class="trust-card__icon">
-              <img src="assets/icons/trust-phone.svg" alt="" width="40" height="40">
-            </div>
-            <div><h3 class="trust-card__title">24/7 Emergency Service</h3></div>
-            <div><p class="trust-card__text">HVAC emergencies don't wait, and neither do we. Day or night, help is just one call away.</p></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <div class="section-rule"></div>
-
-    <!-- ── REVIEWS ─────────────────────────────────────────────────────── -->
-    <section class="reviews" id="reviews">
-      <div class="container">
-
-        <!-- Section header -->
-        <div class="reviews__header">
-          <p class="reviews__eyebrow">Customer Reviews</p>
-          <h2 class="reviews__heading">What Our Customers Say</h2>
-          <p class="reviews__desc">Real reviews from real homeowners and businesses in Florida.</p>
-        </div>
-
-        <!-- 2×2 cards grid -->
-        <div class="reviews__grid">
-
-          <!-- Card 1 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"EagleAir installed our new central air system last month. Ruben was professional, showed up right on time, and the installation was flawless. Our home has never been more comfortable, even during the hottest part of summer."</p>
-            <div class="review-card__author">
-              <span class="review-card__name">David Mitchell</span>
-              <span class="review-card__location">Sarasota, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"When our AC broke down on the hottest day of the year, EagleAir came to our rescue within two hours. Ruben diagnosed the issue quickly and had it running again the same afternoon. Excellent emergency service and very fair pricing."</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Jennifer Caldwell</span>
-              <span class="review-card__location">Bradenton, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"I've been using EagleAir for maintenance on our office building for three years now. Ruben is reliable, knowledgeable, and always delivers quality service. The annual tune-ups have kept our system running perfectly. Highly recommended!"</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Robert Tanner</span>
-              <span class="review-card__location">Lakewood Ranch, Florida</span>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-card__quote" aria-hidden="true">
-                <div class="review-card__quote-left"><img src="assets/icons/quote-left-teal.svg" alt=""></div>
-                <div class="review-card__quote-right"><img src="assets/icons/quote-right-teal.svg" alt=""></div>
-              </div>
-              <div class="review-card__stars" aria-label="5 out of 5 stars">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-                <img class="review-card__star" src="assets/icons/star.svg" alt="">
-              </div>
-            </div>
-            <p class="review-card__text">"Ruben was courteous and explained everything he was doing step by step. The repair was completed quickly and our system is running better than it has in years. Outstanding customer service from start to finish."</p>
-            <div class="review-card__author">
-              <span class="review-card__name">Maria Gonzalez</span>
-              <span class="review-card__location">Venice, Florida</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
 
 
     <!-- ── CONTACT ─────────────────────────────────────────────────────── -->
@@ -1070,11 +804,32 @@
         <div class="local__body">
           <p>Osprey sits along the Intracoastal Waterway between Sarasota and Venice in Sarasota County, and EagleAir covers it as part of its south-county service area. It is a smaller community with a mix of older waterfront homes and newer inland construction, close enough to the water that coastal air reaches many outdoor units.</p>
           <p>Properties nearer the Intracoastal see the same accelerated condenser corrosion as the barrier islands, just at a lower rate, and benefit from more frequent coil cleaning than a purely inland home. Further inland the pattern is ordinary Florida wear: drain-line clogs from humidity, capacitors failing from heat and age, and coils that lose capacity as they load with dust.</p>
+        <div class="local__more">
+          <h3 class="local__subheading">How close to the water are you?</h3>
+          <p>Osprey sits on a gradient rather than in a single category, and which side of it your house is on changes the maintenance schedule. Properties near the Intracoastal take salt-bearing air on the outdoor condenser, at a lower rate than the barrier islands but well above inland. The practical marker is visible: look at the aluminium fins on the outdoor unit. Chalky white deposits, powdery corrosion or fins that crumble at a touch mean the coil is in the corrosion zone and should be rinsed with fresh water on a regular schedule, and that coastal-rated equipment deserves consideration at replacement time.</p>
+          <p>Further inland the profile is ordinary Florida wear, and the failures come in a predictable order. Run capacitors fail from heat and age and are among the least expensive parts in the system. Condensate drain lines clog because Florida humidity feeds algae growth inside them, which backs water into the pan. Coils lose capacity as they load with dust, and refrigerant, which is never consumed, runs low only because there is a leak to be found rather than topped up. None of these is exotic, and all of them are cheaper caught at a maintenance visit than discovered on the hottest afternoon of the year.</p>
+        </div>
         </div>
         </div>
       </div>
     </section>
 
+
+
+    <!-- Neighbouring service areas -->
+    <section class="nearby" aria-labelledby="nearby-heading">
+      <div class="container">
+        <div class="nearby__inner">
+          <h2 class="nearby__heading" id="nearby-heading">EagleAir also covers, close to Osprey</h2>
+          <ul class="nearby__list">
+            <li><a href="nokomis.html">HVAC service in Nokomis</a></li>
+            <li><a href="siesta-key.html">HVAC service in Siesta Key</a></li>
+            <li><a href="venice.html">HVAC service in Venice</a></li>
+          </ul>
+          <p class="nearby__all"><a href="service-areas.html">All 15 EagleAir service areas &rarr;</a></p>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ: question-headed answer blocks (SEO/GEO) -->
     <section class="faq" id="faq" aria-labelledby="faq-heading">
@@ -1094,17 +849,6 @@
             </h3>
             <div class="faq__panel" id="faq-panel-osprey-1" role="region" aria-labelledby="faq-trigger-osprey-1">
               <div class="faq__a"><p>Yes. EagleAir's 24/7 emergency coverage includes Osprey and the rest of south Sarasota County. Call (904) 316-9933 at any hour; describing the specific symptom on the call lets the technician arrive with the likely parts already on the truck.</p></div>
-            </div>
-          </div>
-          <div class="faq__item">
-            <h3 class="faq__q-heading">
-              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-osprey-2" id="faq-trigger-osprey-2">
-                <span class="faq__q-text">How often should an air conditioner be serviced in Florida?</span>
-                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
-              </button>
-            </h3>
-            <div class="faq__panel" id="faq-panel-osprey-2" role="region" aria-labelledby="faq-trigger-osprey-2">
-              <div class="faq__a"><p>Twice a year. Florida systems run close to year-round, so a Sarasota AC accumulates far more runtime hours than the same unit in a northern state where cooling season lasts three or four months. A spring visit before peak load and a second visit in autumn catch the failures that actually strand people: a clogged condensate drain, a weak start capacitor, low refrigerant, and a coil packed with dust. EagleAir maintenance visits cover coil cleaning, drain-line flushing, refrigerant pressure check, electrical and capacitor inspection, and a thermostat calibration.</p></div>
             </div>
           </div>
           <div class="faq__item">
@@ -1142,13 +886,24 @@
           </div>
           <div class="faq__item">
             <h3 class="faq__q-heading">
-              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-osprey-6" id="faq-trigger-osprey-6">
-                <span class="faq__q-text">Do you offer 24/7 emergency HVAC repair?</span>
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-osprey-7" id="faq-trigger-osprey-7">
+                <span class="faq__q-text">Does my Osprey home need coastal AC maintenance or inland maintenance?</span>
                 <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
               </button>
             </h3>
-            <div class="faq__panel" id="faq-panel-osprey-6" role="region" aria-labelledby="faq-trigger-osprey-6">
-              <div class="faq__a"><p>Yes. EagleAir answers emergency calls 24 hours a day, seven days a week, including nights, weekends and holidays, across Sarasota, Manatee and Charlotte counties. A no-cool call in August in Florida is a health issue, not an inconvenience, particularly for older residents and households with infants. Call (904) 316-9933 and describe what the system is doing — no cooling at all, running without cooling, tripping the breaker, or making a specific noise — so the right parts come on the truck.</p></div>
+            <div class="faq__panel" id="faq-panel-osprey-7" role="region" aria-labelledby="faq-trigger-osprey-7">
+              <div class="faq__a"><p>It depends on how close you are to the Intracoastal. Look at the aluminium fins on your outdoor unit: chalky white deposits, powdery corrosion or fins that crumble when touched mean salt is reaching the coil and it should be rinsed with fresh water regularly. Homes further inland in Osprey follow the ordinary Florida pattern instead, where capacitors, drain-line clogs and dirty coils are the recurring issues. EagleAir will tell you which category your unit is in at the first visit.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q-heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-panel-osprey-8" id="faq-trigger-osprey-8">
+                <span class="faq__q-text">What fails most often on air conditioners in Osprey?</span>
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8L10 13L15 8"/></svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-panel-osprey-8" role="region" aria-labelledby="faq-trigger-osprey-8">
+              <div class="faq__a"><p>In order: run capacitors, which fail from heat and age and are among the cheapest parts to replace; condensate drain lines, which clog because Florida humidity feeds algae growth inside them and then back water into the pan; and evaporator coils, which lose capacity as they load with dust. Low refrigerant is a fourth, but it is never a consumable, so a low charge always means a leak that has to be located rather than simply topped up. On Intracoastal-side properties, condenser corrosion joins the list.</p></div>
             </div>
           </div>
         </div>
@@ -1353,7 +1108,7 @@
 
         <!-- Brand column -->
         <div class="footer__brand">
-          <a href="#" class="footer__logo-wrap">
+          <a href="index.html" class="footer__logo-wrap">
             <img src="assets/logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
           </a>
           <div class="footer__desc">
@@ -1393,20 +1148,57 @@
         <div class="footer__col">
           <h3 class="footer__col-heading">Quick Links</h3>
           <ul class="footer__list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact-form">Contact</a></li>
           </ul>
-          <h4 class="footer__col-heading footer__col-heading--social">Follow Us</h4>
-          <div class="footer__social">
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-facebook.svg" alt="Facebook" /></a>
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-instagram.svg" alt="Instagram" /></a>
-            <a href="#" class="footer__social-link"><img src="assets/icons/footer-linkedin.svg" alt="LinkedIn" /></a>
-          </div>
         </div>
 
       </div><!-- /.footer__top -->
+
+      <hr class="footer__divider" />
+
+      <!-- Service areas - keeps every city page linked from every page -->
+      <nav class="footer__areas" aria-label="Service areas">
+        <div class="footer__areas-head">
+          <h3 class="footer__col-heading">Service Areas</h3>
+          <p class="footer__areas-note">24/7 HVAC service across Sarasota, Manatee and Charlotte counties.</p>
+        </div>
+        <div class="footer__areas-grid">
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Manatee County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="palmetto.html">HVAC in Palmetto</a></li>
+              <li><a href="bradenton.html">HVAC in Bradenton</a></li>
+              <li><a href="lakewood-ranch.html">HVAC in Lakewood Ranch</a></li>
+              <li><a href="longboat-key.html">HVAC in Longboat Key</a></li>
+            </ul>
+          </div>
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Sarasota County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="siesta-key.html">HVAC in Siesta Key</a></li>
+              <li><span class="footer__areas-current" aria-current="page">Osprey</span></li>
+              <li><a href="nokomis.html">HVAC in Nokomis</a></li>
+              <li><a href="venice.html">HVAC in Venice</a></li>
+              <li><a href="north-port.html">HVAC in North Port</a></li>
+              <li><a href="englewood.html">HVAC in Englewood</a></li>
+            </ul>
+          </div>
+          <div class="footer__areas-group">
+            <h4 class="footer__areas-county">Charlotte County</h4>
+            <ul class="footer__areas-list">
+              <li><a href="port-charlotte.html">HVAC in Port Charlotte</a></li>
+              <li><a href="murdock.html">HVAC in Murdock</a></li>
+              <li><a href="deep-creek.html">HVAC in Deep Creek</a></li>
+              <li><a href="punta-gorda.html">HVAC in Punta Gorda</a></li>
+              <li><a href="rotonda-west.html">HVAC in Rotonda West</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__areas-all"><a href="service-areas.html">All service areas &rarr;</a></div>
+      </nav>
 
       <hr class="footer__divider" />
 
@@ -1415,7 +1207,6 @@
         <span class="footer__copy">© 2026 EagleAir. All rights reserved. <a href="https://viasmedia.com" class="footer__vias" target="_blank" rel="noopener">Vias Media</a></span>
         <div class="footer__legal">
           <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
           <a href="business-info.html">Business Info</a>
         </div>
       </div>
