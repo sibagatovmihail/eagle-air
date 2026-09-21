@@ -9,6 +9,32 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Guides -->
+  <url>
+    <loc>https://www.eagleair-hvac.com/guides.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.eagleair-hvac.com/ac-leaking-water.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.eagleair-hvac.com/ac-repair-or-replace-2026.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.eagleair-hvac.com/hurricane-hvac-checklist.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
   <!-- Service areas hub -->
   <url>
     <loc>https://www.eagleair-hvac.com/service-areas.html</loc>

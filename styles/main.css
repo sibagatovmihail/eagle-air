@@ -4577,3 +4577,83 @@ body.rv-scroll-locked {
     padding-block-start: var(--space-lg);
   }
 }
+
+/* =============================================================================
+   GUIDES (guides.html + the individual guide articles)
+   ============================================================================= */
+
+.guide__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.guide__meta-sep {
+  opacity: 0.5;
+}
+
+/* The "short answer" callout at the top of each guide */
+.guide__answer {
+  padding: var(--space-lg);
+  background: var(--bg-blue-tint);
+  border-inline-start: 0.1875rem solid var(--action-primary);
+  border-radius: var(--radius-md);
+}
+
+.guide__answer p {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.guide__body h2 {
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+  color: var(--text-heading);
+  margin-block-start: var(--space-xl);
+  margin-block-end: var(--space-md);
+}
+
+.guide__body h2:first-child {
+  margin-block-start: 0;
+}
+
+.guide__body p + p {
+  margin-block-start: var(--space-md);
+}
+
+.guide__body a,
+.guide__answer a {
+  color: var(--text-heading);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.guide__body a:hover,
+.guide__answer a:hover {
+  color: var(--action-primary_hover);
+}
+
+.guide__body strong {
+  color: var(--text-heading);
+  font-weight: var(--weight-bold);
+}
+
+/* Date on the index cards */
+.guide-card__date {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-block-start: 0.25rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .guide__body h2 { font-size: 1.3125rem; }
+  .guide__answer { padding: var(--space-md); }
+  .guide__answer p { font-size: 1rem; }
+}
