@@ -439,7 +439,8 @@
 }
   </script>
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-portrait.webp" media="(max-aspect-ratio: 3/5)" fetchpriority="high">
+  <link rel="preload" as="image" imagesrcset="assets/images/hero-640.webp 640w, assets/images/hero-960.webp 960w, assets/images/hero-1280.webp 1280w, assets/images/hero-1600.webp 1600w, assets/images/hero.webp 2000w" imagesizes="(max-aspect-ratio: 16/10) 165vh, 100vw" media="(min-aspect-ratio: 601/1000)" fetchpriority="high">
   <script>document.documentElement.style.setProperty('--initial-vh',window.innerHeight+'px')</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -490,9 +491,9 @@
 
         <!-- Logo -->
         <a class="navbar__logo" href="index.html" aria-label="EagleAir — Home">
-          <img class="navbar__logo-full" src="assets/logo.png" alt="EagleAir">
-          <img class="navbar__logo-icon" src="assets/logo_small.png" alt="EagleAir">
-          <img class="navbar__logo-vertical" src="assets/logo-vertical.png" alt="EagleAir">
+          <img class="navbar__logo-full" src="assets/logo-174.png" srcset="assets/logo-174.png 1x, assets/logo-348.png 2x, assets/logo-522.png 3x" width="174" height="50" alt="EagleAir">
+          <img class="navbar__logo-icon" src="assets/logo_small-140.png" srcset="assets/logo_small-140.png 1x, assets/logo_small-280.png 2x, assets/logo_small-420.png 3x" width="140" height="40" alt="EagleAir">
+          <img class="navbar__logo-vertical" src="assets/logo-vertical-85.png" srcset="assets/logo-vertical-85.png 1x, assets/logo-vertical-170.png 2x, assets/logo-vertical-255.png 3x" width="85" height="56" alt="EagleAir">
         </a>
 
         <!-- Desktop navigation -->
@@ -564,7 +565,7 @@
 
       <!-- Background image + dark overlay -->
       <div class="hero__bg" aria-hidden="true">
-        <img class="hero__img" src="assets/images/hero.webp" alt="" fetchpriority="high">
+        <picture><source media="(max-aspect-ratio: 3/5)" srcset="assets/images/hero-portrait.webp" width="800" height="1104"><img class="hero__img" src="assets/images/hero.webp" srcset="assets/images/hero-640.webp 640w, assets/images/hero-960.webp 960w, assets/images/hero-1280.webp 1280w, assets/images/hero-1600.webp 1600w, assets/images/hero.webp 2000w" sizes="(max-aspect-ratio: 16/10) 165vh, 100vw" width="2000" height="1104" alt="" fetchpriority="high"></picture>
         <div class="hero__overlay"></div>
       </div>
 
@@ -627,7 +628,7 @@
             <div class="services-card__img-wrap">
               <img
                 class="services-card__img"
-                src="assets/images/mini-split.webp"
+                src="assets/images/mini-split-800.webp" srcset="assets/images/mini-split-480.webp 480w, assets/images/mini-split-800.webp 800w, assets/images/mini-split-1200.webp 1200w" sizes="(max-width: 37.5rem) 100vw, (max-width: 59.375rem) 50vw, 24rem" width="2000" height="1104"
                 alt="HVAC technician installing a Daikin mini-split system on an exterior wall"
                 loading="lazy"
               >
@@ -671,7 +672,7 @@
             <div class="services-card__img-wrap">
               <img
                 class="services-card__img"
-                src="assets/images/ac-outside.webp"
+                src="assets/images/ac-outside-800.webp" srcset="assets/images/ac-outside-480.webp 480w, assets/images/ac-outside-800.webp 800w, assets/images/ac-outside-1200.webp 1200w" sizes="(max-width: 37.5rem) 100vw, (max-width: 59.375rem) 50vw, 24rem" width="2000" height="1088"
                 alt="HVAC technician servicing an outdoor Daikin air conditioning unit"
                 loading="lazy"
               >
@@ -710,7 +711,7 @@
             <div class="services-card__img-wrap">
               <img
                 class="services-card__img"
-                src="assets/images/ductwork.webp"
+                src="assets/images/ductwork-800.webp" srcset="assets/images/ductwork-480.webp 480w, assets/images/ductwork-800.webp 800w, assets/images/ductwork-1200.webp 1200w" sizes="(max-width: 37.5rem) 100vw, (max-width: 59.375rem) 50vw, 24rem" width="2000" height="1328"
                 alt="HVAC ductwork installation in a residential attic"
                 loading="lazy"
               >
@@ -813,7 +814,7 @@
         <div class="about__img-col">
           <img
             class="about__img"
-            src="assets/images/about-us.webp"
+            src="assets/images/about-us-1000.webp" srcset="assets/images/about-us-640.webp 640w, assets/images/about-us-1000.webp 1000w, assets/images/about-us-1600.webp 1600w" sizes="(max-width: 48rem) 125vw, 46rem" width="2500" height="1677"
             alt="EagleAir HVAC technician beside a residential air conditioning unit in Florida"
             loading="lazy"
           >
@@ -978,7 +979,7 @@
               <svg class="reviews-badge__icon" viewBox="0 0 24 24" role="img" aria-label="Google"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.65l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38Z"/></svg>
               <div class="reviews-badge__rating">
                 <span class="reviews-badge__score">5.0</span>
-                <div class="reviews-badge__stars" aria-label="5 out of 5 stars">
+                <div class="reviews-badge__stars" role="img" aria-label="5 out of 5 stars">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 1.333 2.06 4.174 4.607.674-3.334 3.248.787 4.588L8 11.513l-4.12 2.504.787-4.588L1.333 6.18l4.607-.674L8 1.333Z" fill="#ef7d1f"/></svg>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 1.333 2.06 4.174 4.607.674-3.334 3.248.787 4.588L8 11.513l-4.12 2.504.787-4.588L1.333 6.18l4.607-.674L8 1.333Z" fill="#ef7d1f"/></svg>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 1.333 2.06 4.174 4.607.674-3.334 3.248.787 4.588L8 11.513l-4.12 2.504.787-4.588L1.333 6.18l4.607-.674L8 1.333Z" fill="#ef7d1f"/></svg>
@@ -1335,7 +1336,7 @@
         <!-- Brand column -->
         <div class="footer__brand">
           <a href="index.html" class="footer__logo-wrap">
-            <img src="assets/logo.png" alt="EagleAir" class="footer__logo" loading="lazy" />
+            <img src="assets/logo-174.png" srcset="assets/logo-174.png 1x, assets/logo-348.png 2x, assets/logo-522.png 3x" width="174" height="50" alt="EagleAir" class="footer__logo" loading="lazy" />
           </a>
           <div class="footer__desc">
             <p>Your trusted HVAC partner in Sarasota. We provide professional heating, ventilation, and air conditioning services with a commitment to excellence and customer satisfaction.</p>
@@ -1741,7 +1742,7 @@
     }());
   </script>
 
-<script defer src="assets/js/reviews.js"></script>
+<script defer src="assets/js/reviews.js?v=2"></script>
 <script defer src="assets/js/faq.js"></script>
 <script defer src="assets/js/cookie-consent.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>

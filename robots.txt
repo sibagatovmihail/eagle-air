@@ -64,6 +64,6 @@ User-agent: CCBot
 Disallow: /
 
 # ---- Content usage preferences (IETF Content-Signal draft) ----
-Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+# Content-Signal (IETF draft, not a robots.txt directive): search=yes, ai-train=yes, ai-retrieval=yes
 
 Sitemap: https://www.eagleair-hvac.com/sitemap.xml

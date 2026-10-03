@@ -298,6 +298,27 @@
   width: auto;
 }
 
+/* Spacer reserves the fixed header's measured height before syncHeaderHeight()
+   runs, so <main> does not jump down after first paint (CLS). JS still sets the
+   exact value inline. */
+#header-spacer { height: 7.625rem; }
+
+@media (max-width: 64rem) {
+  #header-spacer { height: 7.25rem; }
+}
+
+@media (max-width: 48rem) {
+  #header-spacer { height: 7.125rem; }
+}
+
+@media (max-width: 37.5rem) {
+  #header-spacer { height: 6.875rem; }
+}
+
+@media (max-width: 23.4375rem) {
+  #header-spacer { height: 7.875rem; }
+}
+
 .navbar__logo-vertical {
   display: none;
   /* shown only at ≤ 375px */
@@ -2470,10 +2491,13 @@
 .reviews__dots {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
+/* ::before widens the tap target to 24px (WCAG 2.5.8) without changing the dot;
+   the 1rem gap keeps neighbouring targets from overlapping. */
 .reviews__dot {
+  position: relative;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
@@ -2482,6 +2506,12 @@
   padding: 0;
   cursor: pointer;
   transition: background-color 0.25s ease, width 0.25s ease, border-radius 0.25s ease;
+}
+
+.reviews__dot::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
 }
 
 .reviews__dot--active {

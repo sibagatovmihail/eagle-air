@@ -95,7 +95,7 @@
   }
 
   function buildStars(rating) {
-    var html = '<div class="rv-stars" aria-label="' + rating + ' out of 5 stars">';
+    var html = '<div class="rv-stars" role="img" aria-label="' + rating + ' out of 5 stars">';
     for (var i = 1; i <= 5; i++) {
       var op = i <= rating ? '1' : '0.25';
       html += '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="' + STAR_PATH + '" fill="#ef7d1f" opacity="' + op + '"/></svg>';
