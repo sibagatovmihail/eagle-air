@@ -4236,7 +4236,8 @@ body.rv-scroll-locked {
   color: var(--text-body);
 }
 
-.areas__sub a {
+.areas__sub a,
+.home-areas__sub a {
   color: var(--text-heading);
   text-decoration: underline;
   text-underline-offset: 0.15em;
@@ -4686,4 +4687,17 @@ body.rv-scroll-locked {
   .guide__body h2 { font-size: 1.3125rem; }
   .guide__answer { padding: var(--space-md); }
   .guide__answer p { font-size: 1rem; }
+}
+
+/* service-area lists are plain text now (city pages were consolidated into service-areas.html) */
+.footer__areas-list li {
+  font-size: 0.875rem;
+  color: #d1d5dc;
+  line-height: 1.5;
+}
+
+.home-areas__list li {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--text-body);
 }

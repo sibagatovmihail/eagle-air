@@ -3,8 +3,88 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "eagle-air-blush.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "eagle-air-blush.vercel.app"
+        }
+      ],
       "destination": "https://www.eagleair-hvac.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/bradenton.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/venice.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/north-port.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/lakewood-ranch.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/englewood.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/palmetto.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/osprey.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/nokomis.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/siesta-key.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/longboat-key.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/port-charlotte.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/punta-gorda.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/rotonda-west.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/deep-creek.html",
+      "destination": "/service-areas.html",
+      "permanent": true
+    },
+    {
+      "source": "/murdock.html",
+      "destination": "/service-areas.html",
       "permanent": true
     }
   ],
@@ -12,24 +92,54 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/styles/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/(.*)\\.html",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ]
 }
